@@ -124,7 +124,7 @@ const coursesData = {
     ],
     level: "Todos los niveles",
     price: "$180",
-    image: "https://images.unsplash.com/photo-1587569196482-fea46f5e8422?auto=format&fit=crop&q=80&w=1000"
+    image: "https://images.unsplash.com/photo-1694151425826-db0e185368dd?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 };
 

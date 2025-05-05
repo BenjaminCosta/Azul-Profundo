@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function AboutUs() {
   return (
-    <section id="nosotros" className="py-20 bg-white">
+    <section id="nosotros" className="py-10 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Sobre Nosotros</h2>
@@ -41,7 +41,7 @@ export default function AboutUs() {
           <div className="order-1 md:order-2">
             <div className="relative">
               <img 
-                src="" 
+                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1000"
                 alt="Instructor de buceo" 
                 className="rounded-lg shadow-xl w-full"
               />

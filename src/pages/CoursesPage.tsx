@@ -68,17 +68,30 @@ const allCourses = [
     description: "Curso esencial para aprender a responder ante emergencias médicas en entornos acuáticos y terrestres.",
     duration: "2 días",
     level: "Todos los niveles",
-    image: "https://images.unsplash.com/photo-1587569196482-fea46f5e8422?auto=format&fit=crop&q=80&w=400"
+    image: "https://images.unsplash.com/photo-1694151425826-db0e185368dd?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ];
 
 export default function CoursesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
       <Navbar />
 
-      <div className="pt-24 pb-20 bg-gradient-to-b from-ocean-dark to-ocean">
-        <div className="container mx-auto px-4 text-center text-white">
+      {/* Imagen de fondo con superposición azul */}
+      <div
+        className="absolute top-0 left-0 w-full h-[400px] z-0"
+        style={{
+          backgroundImage: `url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="w-full h-full bg-ocean-dark opacity-30"></div>
+      </div>
+
+      {/* Contenido sobre el fondo */}
+      <div className="relative z-10 pt-32 pb-20 text-white">
+        <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Nuestros Cursos de Buceo</h1>
           <p className="text-xl max-w-3xl mx-auto">
             Desde tus primeras experiencias bajo el agua hasta convertirte en un buceador profesional,
@@ -87,7 +100,8 @@ export default function CoursesPage() {
         </div>
       </div>
 
-      <div className="py-16 bg-gray-50">
+      {/* Cards de cursos */}
+      <div className="py-16 bg-gray-50 relative z-10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {allCourses.map((course) => (
