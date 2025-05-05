@@ -41,7 +41,7 @@ export default function AboutUs() {
           <div className="order-1 md:order-2">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=600" 
+                src="" 
                 alt="Instructor de buceo" 
                 className="rounded-lg shadow-xl w-full"
               />

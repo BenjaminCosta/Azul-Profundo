@@ -13,6 +13,7 @@ import TravelPage from "./pages/TravelPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import FaqPage from "./pages/FaqPage";
+import EShop from "./pages/EShop";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/nosotros" element={<AboutUsPage />} />
+          <Route path="/e-shop" element={<EShop />} />
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/cursos" element={<CoursesPage />} />
           <Route path="/cursos/:courseId" element={<CoursePage />} />

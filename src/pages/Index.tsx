@@ -5,7 +5,7 @@ import AboutUs from "@/components/AboutUs";
 import Courses from "@/components/Courses";
 import Travels from "@/components/Travels";
 import Testimonials from "@/components/Testimonials";
-import EShop from "@/components/EShop";
+import EShop from "@/pages/EShop";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import NauiSection from "@/components/NauiSection";
@@ -17,13 +17,8 @@ const Index = () => {
       <Navbar />
       <Hero />
       <AboutUs />
-      <Courses />
-      <Travels />
       <NauiSection />
-      <FaqSection />
       <Testimonials />
-      <EShop />
-      <Contact />
       <Footer />
     </div>
   );
