@@ -1,100 +1,98 @@
-
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-export default function AboutUs() {
+export default function AprendeABucear() {
   return (
-    <section id="nosotros" className="py-10 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Sobre Nosotros</h2>
-          <div className="w-20 h-1 bg-ocean mx-auto"></div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-          <div className="order-2 md:order-1">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">Tu aventura submarina comienza aquí</h3>
-            <p className="text-gray-600 mb-4">
-              Azul Profundo es una escuela de buceo dedicada a formar buceadores responsables y apasionados. Con más de 10 años de experiencia, nuestro equipo de instructores certificados te guiará en cada paso de tu aventura submarina.
-            </p>
-            <p className="text-gray-600 mb-6">
-              Ofrecemos cursos para todos los niveles, desde principiantes hasta profesionales, utilizando equipos de última generación y siguiendo los más altos estándares de seguridad.
-            </p>
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-ocean-50 p-4 rounded-lg">
-                <h4 className="font-bold text-gray-800">+1000</h4>
-                <p className="text-gray-600">Alumnos certificados</p>
-              </div>
-              <div className="bg-ocean-50 p-4 rounded-lg">
-                <h4 className="font-bold text-gray-800">+500</h4>
-                <p className="text-gray-600">Inmersiones guiadas</p>
-              </div>
-              <div className="bg-ocean-50 p-4 rounded-lg">
-                <h4 className="font-bold text-gray-800">+10</h4>
-                <p className="text-gray-600">Años de experiencia</p>
-              </div>
-              <div className="bg-ocean-50 p-4 rounded-lg">
-                <h4 className="font-bold text-gray-800">+20</h4>
-                <p className="text-gray-600">Destinos visitados</p>
-              </div>
-            </div>
-          </div>
-          <div className="order-1 md:order-2">
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1000"
-                alt="Instructor de buceo" 
-                className="rounded-lg shadow-xl w-full"
-              />
-              <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-sand rounded-lg -z-10"></div>
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-ocean-50 rounded-lg -z-10"></div>
-            </div>
-          </div>
-        </div>
+    <>
+      {/* Nuestro Equipo */}
+      <section className="py-24 px-6 text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8 underline">Nuestra Escuela</h2>
 
-        <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">Nuestro Equipo</h3>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-          {/* Instructor 1 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=256" 
-                  alt="Eduardo Cosentino" 
-                  className="w-32 h-32 rounded-full object-cover"
-                />
-                <div>
-                  <h4 className="text-xl font-bold text-gray-800">Eduardo Cosentino</h4>
-                  <p className="text-ocean font-medium mb-3">Director General</p>
-                  <p className="text-gray-600 italic">
-                    "La fascinación con la serie Caza Submarina y las historias del Comandante Cousteau hicieron que me apasionara por el buceo, formando parte esencial en mi vida."
-                  </p>
+          {[
+            {
+              name: "Eduardo Cosentino",
+              role: "Director General",
+              img: "/imagenes/edu.avif",
+              quote:
+                "La fascinación con la serie Caza Submarina y las historias del Comandante Cousteau hicieron que me apasionara por el buceo, formando parte esencial en mi vida.",
+            },
+            {
+              name: "Juan Cosentino",
+              role: "Coordinador de Cursos",
+              img: "/imagenes/juan.jpg",
+              quote:
+                "Descubrí esta actividad gracias a mi padre, quien me inculcó la dedicación y el amor por el buceo prácticamente desde mi niñez.",
+            },
+          ].map((instructor, idx) => (
+            <motion.div
+              key={idx}
+              className="bg-white rounded-lg shadow-lg overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <div className="p-6">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                  <img
+                    src={instructor.img}
+                    alt={instructor.name}
+                    className="w-32 h-32 rounded-full object-cover"
+                  />
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800">{instructor.name}</h4>
+                    <p className="text-ocean font-medium mb-3">{instructor.role}</p>
+                    <p className="text-gray-600 italic">"{instructor.quote}"</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          
-          {/* Instructor 2 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=256" 
-                  alt="Juan Cosentino" 
-                  className="w-32 h-32 rounded-full object-cover"
-                />
-                <div>
-                  <h4 className="text-xl font-bold text-gray-800">Juan Cosentino</h4>
-                  <p className="text-ocean font-medium mb-3">Coordinador de Cursos</p>
-                  <p className="text-gray-600 italic">
-                    "Descubrí esta actividad gracias a mi padre, quien me inculcó la dedicación y el amor por el buceo prácticamente desde mi niñez."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          ))}
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Aprendé a Bucear */}
+      <section
+        id="aprende"
+        className="py-24 px-6 relative text-white text-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=1000')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-ocean opacity-70 z-0"></div>
+
+        <motion.div
+          className="relative z-10 max-w-3xl mx-auto"
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Aprendé a Bucear</h2>
+          <div className="font-semibold">
+            <p className="mb-4 text-lg">
+              En Azul Profundo formamos buceadores con pasión y compromiso. Sumergite en una experiencia única de la mano de instructores certificados y viví el mundo submarino como nunca antes.
+            </p>
+            <p className="mb-4 text-lg">
+              Cursos para todos los niveles, salidas a destinos increíbles y equipamiento profesional.
+            </p>
+            <p className="mb-8 text-lg">
+              Conectá con una comunidad de buceadores y descubrí nuevas oportunidades bajo el agua. ¡Tu aventura comienza acá!
+            </p>
+          </div>
+
+          <Link to="/nosotros">
+            <Button className="bg-transparent text-white font-bold py-4 px-8 text-lg border-2 border-white rounded-none hover:bg-ocean hover:text-white">
+              Ver más
+            </Button>
+          </Link>
+        </motion.div>
+      </section>
+    </>
   );
 }

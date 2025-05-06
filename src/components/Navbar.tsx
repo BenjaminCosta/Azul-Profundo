@@ -141,7 +141,7 @@ export default function Navbar() {
             })}
             <li>
               <Link
-                to="/#eshop"
+                to="/e-shop"
                 className="flex items-center gap-2 py-2 text-lg font-medium text-white bg-sky-500 rounded-md px-4 hover:bg-sky-600"
                 onClick={() => setIsOpen(false)}
               >

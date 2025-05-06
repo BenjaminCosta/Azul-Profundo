@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
@@ -14,21 +14,22 @@ export default function Hero() {
 <p className="text-lg md:text-xl mb-8">
   Tu escuela de buceo preferida. Descubre un nuevo mundo bajo el agua con instructores profesionales y certificados.
 </p>
-
           <div className="flex flex-wrap gap-4">
-            <Button 
-              className="bg-ocean hover:bg-ocean-dark text-white font-bold py-4 px-8 text-lg"
-              onClick={() => document.getElementById('cursos')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Nuestros Cursos
-            </Button>
-            <Button 
-              variant="outline" 
-              className="bg-transparent border-white text-white hover:bg-white hover:text-ocean font-bold py-4 px-8 text-lg"
-              onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Contáctanos
-            </Button>
+            <Link to="/cursos">
+              <Button 
+                className="bg-ocean hover:bg-ocean-dark text-white font-bold py-4 px-8 text-lg"
+              >
+                Nuestros Cursos
+              </Button>
+            </Link>
+            <Link to="/contacto">
+              <Button 
+                variant="outline" 
+                className="bg-transparent border-white text-white hover:bg-white hover:text-ocean font-bold py-4 px-8 text-lg"
+              >
+                Contáctanos
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

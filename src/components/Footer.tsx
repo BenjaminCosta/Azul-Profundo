@@ -2,13 +2,13 @@ import { Facebook, Instagram, MessageCircle, Globe, Phone, MapPin, Mail } from "
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-// Course links to display in the footer
-const courseLinks = [
-  { name: "Open Water Diver", href: "/cursos/open-water-diver" },
-  { name: "Advanced Diver", href: "/cursos/advanced-diver" },
-  { name: "Rescue Diver", href: "/cursos/rescue-diver" },
-  { name: "Master Diver", href: "/cursos/master-diver" },
-  { name: "Todos los cursos", href: "/cursos" },
+// Enlaces rápidos a mostrar en el footer
+const quickLinks = [
+  { name: "Sobre Nosotros", href: "/sobre-nosotros" },
+  { name: "Ubicación", href: "/ubicacion" },
+  { name: "Blog", href: "/blog" },
+  { name: "Testimonios", href: "/testimonios" },
+  { name: "Contacto", href: "/contacto" },
 ];
 
 export default function Footer() {
@@ -23,8 +23,7 @@ export default function Footer() {
           <div className="flex flex-col items-center pr-4 pl-5 border-r border-gray-700">
             <h3 className="text-2xl font-bold mb-4 text-left">Azul Profundo</h3>
             <p className="mb-4 text-gray-400 text-left">
-              Tu escuela de buceo profesional. Descubre el mundo submarino con nosotros y vive una experiencia única explorando los océanos. 
-
+              Tu escuela de buceo profesional. Descubre el mundo submarino con nosotros y vive una experiencia única explorando los océanos.
             </p>
             <div className="flex justify-start space-x-4 mb-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-ocean transition-colors">
@@ -42,12 +41,12 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* Cursos Section */}
+          {/* Enlaces Rápidos Section */}
           <div className="flex flex-col items-center pr-4 pl-5 border-r border-gray-700">
-            <h4 className="font-bold text-lg mb-4 text-left">Cursos</h4>
+            <h4 className="font-bold text-lg mb-4 text-left">Enlaces Rápidos</h4>
             <nav>
               <ul className="space-y-2 text-left">
-                {courseLinks.map((link) => (
+                {quickLinks.map((link) => (
                   <li key={link.name}>
                     <Link to={link.href} className="text-gray-400 hover:text-ocean transition-colors">
                       {link.name}
@@ -60,39 +59,36 @@ export default function Footer() {
           
           {/* Contacto Section */}
           <div className="flex flex-col pr-4 pl-5 max-w-md mx-auto text-left">
-          <h4 className="font-bold text-lg mb-4">Contacto</h4>
+            <h4 className="font-bold text-lg mb-4">Contacto</h4>
 
-          <div className="flex items-center space-x-2 mb-4">
-            <Phone size={24} className="text-ocean" />
-            <a href="tel:+1234567890" className="text-gray-400 hover:text-ocean transition-colors">
-              1234567890
-            </a>
-          </div>
+            <div className="flex items-center space-x-2 mb-4">
+              <Phone size={24} className="text-ocean" />
+              <a href="tel:+1234567890" className="text-gray-400 hover:text-ocean transition-colors">
+                1234567890
+              </a>
+            </div>
 
-          <div className="flex items-center space-x-2 mb-4">
-            <MapPin size={24} className="text-ocean" />
-            <a
-              href="https://maps.google.com?q=Ubicacion+Azul+Profundo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-ocean transition-colors"
-            >
-              Dirección
-            </a>
-          </div>
+            <div className="flex items-center space-x-2 mb-4">
+              <MapPin size={24} className="text-ocean" />
+              <a
+                href="https://maps.google.com?q=Ubicacion+Azul+Profundo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-ocean transition-colors"
+              >
+                Dirección
+              </a>
+            </div>
 
-          <div className="flex items-center space-x-2 mb-4">
-            <Mail size={24} className="text-ocean" />
-            <a href="mailto:info@azulprofundo.com" className="text-gray-400 hover:text-ocean transition-colors">
-              info@azulprofundo.com
-            </a>
-          </div>
+            <div className="flex items-center space-x-2 mb-4">
+              <Mail size={24} className="text-ocean" />
+              <a href="mailto:info@azulprofundo.com" className="text-gray-400 hover:text-ocean transition-colors">
+                info@azulprofundo.com
+              </a>
+            </div>
           </div>
         </div>
 
-      
-
-        
         <div className="border-t border-gray-800 mt-6 pt-4 text-center text-gray-400">
           <p>&copy; {currentYear} Azul Profundo. Todos los derechos reservados.</p>
         </div>

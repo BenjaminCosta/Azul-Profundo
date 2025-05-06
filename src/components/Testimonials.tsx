@@ -1,5 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -33,27 +34,33 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white shadow-lg border-0 relative">
-              <CardContent className="pt-16 pb-8 px-8 text-center">
-                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
-                  <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.name} 
-                      className="w-full h-full object-cover"
-                    />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-white shadow-lg border-0 relative">
+                <CardContent className="pt-16 pb-8 px-8 text-center">
+                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                    <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="text-5xl text-ocean-light mb-4">"</div>
-                <p className="text-gray-600 mb-6 italic">
-                  {testimonial.quote}
-                </p>
-                <div className="mt-4">
-                  <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
-                  <p className="text-gray-500 text-sm">{testimonial.role}</p>
-                </div>
-              </CardContent>
-            </Card>
+                  <div className="text-5xl text-ocean-light mb-4">"</div>
+                  <p className="text-gray-600 mb-6 italic">{testimonial.quote}</p>
+                  <div className="mt-4">
+                    <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
+                    <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
