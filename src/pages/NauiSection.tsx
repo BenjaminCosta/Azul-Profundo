@@ -28,30 +28,35 @@ export default function NauiSection() {
       </section>
 
       {/* Contenido */}
-      <section className="bg-gradient-to-b from-blue-100 to-white py-16 flex-grow">
+      <section className="bg-white py-16 flex-grow">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-gray-800 space-y-6 text-lg leading-relaxed">
-            <p>
-              NAUI (National Association of Underwater Instructors) es una organización sin fines de lucro con más de 60 años de trayectoria, dedicada a la formación de buzos con los más altos estándares de seguridad y profesionalismo.
-            </p>
+          <p>
+  NAUI (National Association of Underwater Instructors) es una organización sin fines de lucro con más de 60 años de trayectoria, dedicada a la formación de buzos con los más altos estándares de seguridad y profesionalismo.
+</p>
 
-            <p>
-              Desde cursos básicos hasta niveles profesionales, NAUI garantiza una enseñanza completa que combina teoría, práctica y respeto por el entorno marino. Ser buzo NAUI es sinónimo de calidad, responsabilidad y pasión por el mundo submarino.
-            </p>
+<p>
+  Desde cursos básicos hasta niveles profesionales, NAUI garantiza una enseñanza completa que combina teoría, práctica y respeto por el entorno marino. Ser buzo NAUI es sinónimo de calidad, responsabilidad y pasión por el mundo submarino.
+</p>
 
-            <p>
-              Como centro afiliado, en Azul Profundo adoptamos su enfoque personalizado y su compromiso con la excelencia para que vivas una experiencia única en cada inmersión.
-            </p>
+<p>
+  En más de 100 países, NAUI forma parte de la comunidad global de buceo con certificaciones ampliamente reconocidas. Sus manuales, metodologías y materiales de estudio son actualizados constantemente para reflejar las mejores prácticas y avances en el sector.
+</p>
 
-            <p>
-              Obtené tu certificación internacional con nosotros y abrí las puertas a nuevas aventuras, viajes de buceo por el mundo y oportunidades laborales en centros de buceo reconocidos.
-            </p>
+<p>
+  Como centro afiliado, en Azul Profundo adoptamos su enfoque personalizado y su compromiso con la excelencia para que vivas una experiencia única en cada inmersión. Nuestro equipo de instructores certificados NAUI te acompaña paso a paso, cuidando cada detalle de tu aprendizaje.
+</p>
+
+<p>
+  Obtené tu certificación internacional con nosotros y abrí las puertas a nuevas aventuras, viajes de buceo por el mundo y oportunidades laborales en centros de buceo reconocidos. Ya sea que busques bucear por placer o construir una carrera en el mundo submarino, NAUI y Azul Profundo son tu mejor elección.
+</p>
+
 
             <div className="mt-12 flex justify-center">
               <img
-                src="/imagenes/naui2.jpg"
+                src="/imagenes/naui4.jpg"
                 alt="NAUI Diving"
-                className="rounded-xl shadow-xl max-w-3xl w-full"
+                className="rounded-xl shadow-xl max-w-2xl w-full"
               />
             </div>
           </div>
