@@ -15,15 +15,14 @@ export default function AboutUsPage() {
             backgroundImage:
               "url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000')", // Puedes reemplazar esta URL por tu propia imagen
           }}
-        ></div>
+          
+        ><div className="w-full h-full bg-ocean-dark opacity-30"></div></div>
         <div className="relative z-10 container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Sobre Nosotros</h1>
           <p className="text-xl max-w-3xl mx-auto">
             Conoce al equipo detrás de Azul Profundo, una escuela de buceo dedicada a formar buceadores responsables y apasionados.
           </p>
         </div>
-        {/* Overlay Azul */}
-        <div className="absolute inset-0 bg-blue-900 opacity-40"></div>
       </section>
 
       {/* Sección de descripción y métricas */}

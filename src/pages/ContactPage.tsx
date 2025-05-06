@@ -14,39 +14,47 @@ export default function ContactPage() {
     email: "",
     message: "",
   });
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     toast.success("¡Mensaje enviado! Te contactaremos pronto.");
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <div className="pt-24 pb-20 bg-gradient-to-b from-ocean-dark to-ocean">
-        <div className="container mx-auto px-4 text-center text-white">
+      {/* Encabezado con imagen de fondo */}
+      <section className="pt-32 pb-20 relative text-white text-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000')",
+          }}
+        >
+          <div className="w-full h-full bg-ocean-dark opacity-30"></div>
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contacto</h1>
           <p className="text-xl max-w-3xl mx-auto">
             ¿Tienes alguna pregunta sobre nuestros cursos o viajes? ¿Necesitas más información? ¡Escríbenos y te responderemos lo antes posible!
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className="py-16 bg-gray-50">
+      {/* Contenido */}
+      <section className="py-16 bg-gray-50 flex-grow">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Formulario */}
             <div>
               <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="mb-6">
@@ -90,6 +98,7 @@ export default function ContactPage() {
               </form>
             </div>
 
+            {/* Información de contacto */}
             <div className="flex flex-col space-y-8">
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Información de contacto</h3>
@@ -127,7 +136,7 @@ export default function ContactPage() {
                   marginWidth={0}
                   src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Playa%20del%20Carmen+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                   style={{ border: 0 }}
-                  allowFullScreen={true}
+                  allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
@@ -135,7 +144,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <Footer />
     </div>

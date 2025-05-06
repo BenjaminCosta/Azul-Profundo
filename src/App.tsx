@@ -14,6 +14,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import FaqPage from "./pages/FaqPage";
 import EShop from "./pages/EShop";
+import NauiSection from "./pages/NauiSection";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/viajes" element={<TravelsPage />} />
           <Route path="/viajes/:travelId" element={<TravelPage />} />
           <Route path="/faq" element={<FaqPage />} />
+          <Route path="/naui" element={<NauiSection />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

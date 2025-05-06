@@ -103,18 +103,18 @@ export default function CoursesPage() {
       {/* Cards de cursos */}
       <div className="py-16 bg-gray-50 relative z-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12"> {/* Cambié la cantidad de columnas */}
             {allCourses.map((course) => (
-              <Card key={course.id} className="overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
-                <div className="h-48 overflow-hidden">
+              <Card key={course.id} className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 transform duration-300 p-6"> {/* Aumenté el padding y ajusté el hover */}
+                <div className="h-56 overflow-hidden"> {/* Aumenté el tamaño de la imagen */}
                   <img 
                     src={course.image} 
                     alt={course.title} 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle>{course.title}</CardTitle>
+                  <CardTitle className="text-xl">{course.title}</CardTitle> {/* Título más grande */}
                   <CardDescription>
                     <span className="inline-block bg-ocean-50 text-ocean-dark text-xs px-2 py-1 rounded mr-2">
                       {course.duration}
@@ -129,7 +129,9 @@ export default function CoursesPage() {
                 </CardContent>
                 <CardFooter>
                   <Link to={`/cursos/${course.id}`} className="w-full">
-                    <Button className="bg-ocean hover:bg-ocean-dark w-full">Ver Detalles</Button>
+                    <Button className="bg-ocean hover:bg-ocean-dark w-full py-3"> {/* Aumenté el tamaño del botón */}
+                      Ver Detalles
+                    </Button>
                   </Link>
                 </CardFooter>
               </Card>

@@ -22,7 +22,7 @@ const faqs = [
     answer: "No es necesario ser un nadador experto, pero sí es importante sentirse cómodo en el agua y tener habilidades básicas de natación. Durante el curso, aprenderás técnicas específicas para moverte bajo el agua que son diferentes a la natación convencional."
   },
   {
-    question: "No tuve una buena experiencia en un bautismo ¿Puede ser distinto con un curso de buceo?",
+    question: "No tuve una buena experiencia en un bautismo, ¿Puede ser distinto con un curso de buceo?",
     answer: "Absolutamente. Un bautismo suele ser una experiencia muy breve y sin mucha preparación. En un curso completo, aprenderás gradualmente, con tiempo para adaptarte al equipo y al entorno subacuático, con instructores que te guiarán paso a paso para superar cualquier ansiedad inicial, lo que hace que la experiencia sea mucho más placentera y satisfactoria."
   },
   {
@@ -43,21 +43,33 @@ const faqs = [
   }
 ];
 
+
 export default function FaqPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <div className="pt-24 pb-20 bg-gradient-to-b from-ocean-dark to-ocean">
-        <div className="container mx-auto px-4 text-center text-white">
+      {/* Encabezado con imagen de fondo */}
+      <section className="pt-32 pb-20 relative text-white text-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000')",
+          }}
+        >
+          <div className="w-full h-full bg-ocean-dark opacity-30"></div>
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Preguntas que nos suelen hacer...</h1>
           <p className="text-xl max-w-3xl mx-auto">
             Aquí encontrarás respuestas a las dudas más comunes sobre el buceo y nuestros cursos.
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className="py-16 bg-gray-50">
+      {/* Contenido de las FAQs */}
+      <section className="py-16 bg-gray-50 flex-grow">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
             <Accordion type="single" collapsible className="w-full">
@@ -74,7 +86,7 @@ export default function FaqPage() {
             </Accordion>
           </div>
         </div>
-      </div>
+      </section>
 
       <Footer />
     </div>

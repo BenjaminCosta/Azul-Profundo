@@ -12,7 +12,7 @@ const allTravels = [
     destination: "Angra dos Reis",
     location: "Brasil",
     date: "15-25 Enero, 2026",
-    description: "Descubre las maravillosas playas y aguas cristalinas de esta joya brasileña. Inmersiones para todos los niveles entre islas tropicales y arrecifes coloridos.",
+    description: "Descubre las maravillosas playas y aguas cristalinas de esta joya brasileña. Inmersiones para todos los niveles entre islas tropicales y arrecifes coloridos, con una abundante vida marina.",
     image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=400",
     spots: 8,
     price: "$1,800"
@@ -54,25 +54,36 @@ export default function TravelsPage() {
     <div className="min-h-screen">
       <Navbar />
 
-      <div className="pt-24 pb-20 bg-gradient-to-b from-ocean-dark to-ocean">
-        <div className="container mx-auto px-4 text-center text-white">
+      {/* Sección de encabezado con fondo e imagen */}
+      <section className="pt-32 pb-20 relative text-white text-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000')",
+          }}
+        >
+          <div className="w-full h-full bg-ocean-dark opacity-30"></div>
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Viajes y Expediciones</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Explora los mejores destinos de buceo del mundo con nuestros viajes guiados por instructores expertos. 
+            Explora los mejores destinos de buceo del mundo con nuestros viajes guiados por instructores expertos.
             Vive experiencias inolvidables en lugares únicos.
           </p>
         </div>
-      </div>
+      </section>
 
+      {/* Contenido principal */}
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {allTravels.map((travel) => (
               <Card key={travel.id} className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
                 <div className="h-64 overflow-hidden relative">
-                  <img 
-                    src={travel.image} 
-                    alt={travel.destination} 
+                  <img
+                    src={travel.image}
+                    alt={travel.destination}
                     className="w-full h-full object-cover hover:scale-110 transition-all duration-700"
                   />
                   <div className="absolute top-0 right-0 bg-coral text-white py-1 px-4 rounded-bl-lg font-medium">

@@ -16,7 +16,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#1c2d48] text-white">
-      <div className="container mx-auto px-12 py-6">
+      <div className="container mx-auto px-16 py-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           
           {/* Azul Profundo Section */}
