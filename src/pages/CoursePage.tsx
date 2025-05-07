@@ -19,7 +19,7 @@ const coursesData = {
     ],
     level: "Principiante",
     price: "$450",
-    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/open.avif"
   },
   "advanced-diver": {
     title: "Advanced Diver",
@@ -34,7 +34,7 @@ const coursesData = {
     ],
     level: "Intermedio",
     price: "$380",
-    image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/avanzado2.jpg"
   },
   "rescue-diver": {
     title: "Rescue Diver",
@@ -49,7 +49,7 @@ const coursesData = {
     ],
     level: "Avanzado",
     price: "$420",
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/rescue.jpg"
   },
   "master-diver": {
     title: "Master Diver",
@@ -64,7 +64,7 @@ const coursesData = {
     ],
     level: "Experto",
     price: "$650",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/master2.jpg"
   },
   "nitrox": {
     title: "Nitrox",
@@ -79,7 +79,7 @@ const coursesData = {
     ],
     level: "Intermedio",
     price: "$220",
-    image: "https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/nitrox.jpg"
   },
   "dive-master": {
     title: "Dive Master",
@@ -94,7 +94,7 @@ const coursesData = {
     ],
     level: "Profesional",
     price: "$950",
-    image: "https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/dive-master.jpg"
   },
   "intro-to-tech": {
     title: "Intro to Tech",
@@ -109,7 +109,7 @@ const coursesData = {
     ],
     level: "Avanzado",
     price: "$580",
-    image: "https://images.unsplash.com/photo-1544551763-92ab472cad5d?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/tech.jpg"
   },
   "primeros-auxilios": {
     title: "Primeros Auxilios",
@@ -124,7 +124,7 @@ const coursesData = {
     ],
     level: "Todos los niveles",
     price: "$180",
-    image: "https://images.unsplash.com/photo-1694151425826-db0e185368dd?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "/imagenes/auxilios.avif"
   }
 };
 

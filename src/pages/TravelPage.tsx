@@ -27,7 +27,7 @@ const travelsData = {
     level: "Apto para todos los niveles de buceo certificados",
     spots: 8,
     price: "$1,800",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/angra.jpg"
   },
   "galapagos": {
     destination: "Islas Galápagos",
@@ -52,7 +52,7 @@ const travelsData = {
     level: "Avanzado (mínimo 50 inmersiones registradas y experiencia en corrientes)",
     spots: 6,
     price: "$3,200",
-    image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/galapagos3.jpg"
   },
   "egipto": {
     destination: "Mar Rojo",
@@ -78,7 +78,7 @@ const travelsData = {
     level: "Intermedio (recomendado Advanced Open Water con +20 inmersiones)",
     spots: 10,
     price: "$2,700",
-    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/egypt.jpg"
   },
   "bonaire": {
     destination: "Bonaire",
@@ -104,7 +104,7 @@ const travelsData = {
     level: "Todos los niveles (ideal para buceadores autónomos)",
     spots: 12,
     price: "$2,400",
-    image: "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/bonaire2.jpg"
   }
 };
 

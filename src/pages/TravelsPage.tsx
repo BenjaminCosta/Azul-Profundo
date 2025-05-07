@@ -13,7 +13,7 @@ const allTravels = [
     location: "Brasil",
     date: "15-25 Enero, 2026",
     description: "Descubre las maravillosas playas y aguas cristalinas de esta joya brasileña. Inmersiones para todos los niveles entre islas tropicales y arrecifes coloridos, con una abundante vida marina.",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=400",
+    image: "/imagenes/angra.jpg",
     spots: 8,
     price: "$1,800"
   },
@@ -23,7 +23,7 @@ const allTravels = [
     location: "Ecuador",
     date: "10-20 Marzo, 2026",
     description: "Uno de los mejores lugares del mundo para el buceo. Podrás nadar junto a lobos marinos, tortugas, pingüinos y tiburones en este santuario natural único.",
-    image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?auto=format&fit=crop&q=80&w=400",
+    image: "/imagenes/galapagos3.jpg",
     spots: 6,
     price: "$3,200"
   },
@@ -33,7 +33,7 @@ const allTravels = [
     location: "Egipto",
     date: "5-15 Mayo, 2026",
     description: "Aguas cristalinas, coloridos arrecifes de coral y una abundante vida marina. Incluye inmersiones en pecios de la Segunda Guerra Mundial y arrecifes prístinos.",
-    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=400",
+    image: "/imagenes/egypt.jpg",
     spots: 10,
     price: "$2,700"
   },
@@ -43,7 +43,7 @@ const allTravels = [
     location: "Caribe Holandés",
     date: "20-30 Julio, 2026",
     description: "Conocido como el paraíso del buceo desde costa, Bonaire ofrece acceso fácil a más de 60 sitios de inmersión y un ecosistema marino protegido con visibilidad excepcional.",
-    image: "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&q=80&w=400",
+    image: "/imagenes/bonaire2.jpg",
     spots: 12,
     price: "$2,400"
   }

@@ -12,7 +12,7 @@ const allCourses = [
     description: "Curso inicial para comenzar tu aventura de buceo. Aprende las habilidades básicas del buceo.",
     duration: "4-5 días",
     level: "Principiante",
-    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=400"
+    image: "/imagenes/open.avif"
   },
   {
     id: "advanced-diver",
@@ -20,7 +20,7 @@ const allCourses = [
     description: "Perfecciona tus habilidades y gana experiencia con 5 inmersiones de especialidad diferentes.",
     duration: "2-3 días",
     level: "Intermedio",
-    image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?auto=format&fit=crop&q=80&w=400"
+    image: "/imagenes/avanzado2.jpg"
   },
   {
     id: "rescue-diver",
@@ -28,7 +28,7 @@ const allCourses = [
     description: "Aprende a prevenir y gestionar problemas en el agua y a realizar rescates de buceadores.",
     duration: "4 días",
     level: "Avanzado",
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=400"
+    image: "/imagenes/rescue.jpg"
   },
   {
     id: "master-diver",
@@ -36,7 +36,7 @@ const allCourses = [
     description: "Conviértete en un buceador experto con habilidades avanzadas y un conocimiento profundo del mundo submarino.",
     duration: "5-7 días",
     level: "Experto",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=400"
+    image: "/imagenes/master2.jpg"
   },
   {
     id: "nitrox",
@@ -44,7 +44,7 @@ const allCourses = [
     description: "Aprende a bucear con mezclas enriquecidas de aire para prolongar tus tiempos de fondo y reducir la fatiga.",
     duration: "2 días",
     level: "Intermedio",
-    image: "https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=400"
+    image: "/imagenes/nitrox.jpg"
   },
   {
     id: "dive-master",
@@ -52,7 +52,7 @@ const allCourses = [
     description: "El primer paso hacia la profesionalización en el buceo. Aprende a guiar buceadores y asistir en cursos.",
     duration: "4-6 semanas",
     level: "Profesional",
-    image: "https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&q=80&w=400"
+    image: "/imagenes/dive-master.jpg"
   },
   {
     id: "intro-to-tech",
@@ -60,7 +60,7 @@ const allCourses = [
     description: "Introducción al buceo técnico, aprendiendo configuraciones avanzadas y técnicas para inmersiones más exigentes.",
     duration: "3-4 días",
     level: "Avanzado",
-    image: "https://images.unsplash.com/photo-1544551763-92ab472cad5d?auto=format&fit=crop&q=80&w=400"
+    image: "/imagenes/tech.jpg"
   },
   {
     id: "primeros-auxilios",
@@ -68,7 +68,7 @@ const allCourses = [
     description: "Curso esencial para aprender a responder ante emergencias médicas en entornos acuáticos y terrestres.",
     duration: "2 días",
     level: "Todos los niveles",
-    image: "https://images.unsplash.com/photo-1694151425826-db0e185368dd?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "/imagenes/auxilios.avif"
   }
 ];
 

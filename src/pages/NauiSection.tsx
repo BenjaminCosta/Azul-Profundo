@@ -55,7 +55,7 @@ export default function NauiSection() {
               </div>
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                  src="/imagenes/avanzado.jpg"
                   alt="Buzo NAUI"
                   className="w-full h-auto object-cover"
                 />

@@ -16,7 +16,7 @@ const coursesData = [
       "Certificación PADI/SSI",
       "Grupos reducidos"
     ],
-    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/open.avif"
   },
   {
     id: "advanced-diver",
@@ -30,7 +30,7 @@ const coursesData = [
       "Instructores expertos",
       "Flexibilidad horaria"
     ],
-    image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/avanzado2.jpg"
   },
   {
     id: "rescue-diver",
@@ -44,7 +44,7 @@ const coursesData = [
       "Primeros auxilios incluidos",
       "Mejora tu confianza"
     ],
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/rescue.jpg"
   },
   {
     id: "all-courses",

@@ -40,14 +40,14 @@ export default function AboutUsPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
               <div>
                 <p className="text-gray-600 text-lg mb-6">
-                  Fundada en 1992, <strong>Azul Profundo</strong> nació del sueño de compartir la pasión por el buceo con el mundo. Lo que comenzó como un pequeño centro de buceo en la costa argentina, hoy se ha convertido en una de las escuelas más reconocidas del país.
+                  Fundada en 1991, <strong>Azul Profundo</strong> nació del sueño de compartir la pasión por el buceo con el mundo. Lo que comenzó como un pequeño centro de buceo en la costa argentina, hoy se ha convertido en una de las escuelas más reconocidas del país.
                 </p>
                 <p className="text-gray-600 text-lg">
                   Durante más de <strong>tres décadas</strong>, hemos formado a miles de buceadores, siempre manteniendo nuestros valores fundamentales: <strong>seguridad, profesionalismo y respeto</strong> por el medio ambiente marino.
                 </p>
               </div>
               <img 
-                src="/imagenes/nosotros2.avif" 
+                src="/imagenes/nosotros4.jpg" 
                 alt="Historia de Azul Profundo" 
                 className="rounded-xl shadow-lg w-full h-auto"
               />
