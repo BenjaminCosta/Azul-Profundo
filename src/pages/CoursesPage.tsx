@@ -86,7 +86,7 @@ export default function CoursesPage() {
           backgroundPosition: "center",
         }}
       >
-        <div className="w-full h-full bg-ocean-dark opacity-30"></div>
+        <div className="w-full h-full bg-ocean-dark opacity-40"></div>
       </div>
 
       {/* Contenido sobre el fondo */}

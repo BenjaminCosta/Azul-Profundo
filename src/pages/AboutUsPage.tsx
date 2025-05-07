@@ -15,7 +15,7 @@ export default function AboutUsPage() {
               "url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000')",
           }}
         >
-          <div className="w-full h-full bg-ocean-dark opacity-30"></div>
+          <div className="w-full h-full bg-ocean-dark opacity-40"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Sobre Nosotros</h1>
