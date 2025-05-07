@@ -9,7 +9,7 @@ const allCourses = [
   {
     id: "open-water-diver",
     title: "Open Water Diver",
-    description: "Curso inicial para comenzar tu aventura de buceo. Aprende las habilidades básicas para sumergirte hasta 18 metros.",
+    description: "Curso inicial para comenzar tu aventura de buceo. Aprende las habilidades básicas del buceo.",
     duration: "4-5 días",
     level: "Principiante",
     image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=400"
@@ -101,11 +101,11 @@ export default function CoursesPage() {
       </div>
 
       {/* Cards de cursos */}
-      <div className="py-16 bg-gray-50 relative z-10">
+      <div className="py-16 bg-gray-50 relative z-10 px-4">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12"> {/* Cambié la cantidad de columnas */}
             {allCourses.map((course) => (
-              <Card key={course.id} className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 transform duration-300 p-6"> {/* Aumenté el padding y ajusté el hover */}
+              <Card key={course.id} className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 transform duration-300"> {/* Aumenté el padding y ajusté el hover */}
                 <div className="h-56 overflow-hidden"> {/* Aumenté el tamaño de la imagen */}
                   <img 
                     src={course.image} 
@@ -125,7 +125,7 @@ export default function CoursesPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 line-clamp-3">{course.description}</p>
+                  <p className="text-gray-600 text-sm line-clamp-3">{course.description}</p>
                 </CardContent>
                 <CardFooter>
                   <Link to={`/cursos/${course.id}`} className="w-full">

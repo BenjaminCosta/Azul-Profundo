@@ -20,8 +20,6 @@ export default function Navbar() {
   const location = useLocation();
 
   useEffect(() => {
-    // Desplazar hacia arriba cada vez que la ubicación cambie
-    window.scrollTo(0, 0);
 
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;

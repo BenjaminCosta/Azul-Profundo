@@ -3,15 +3,17 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, User, Smartphone } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
+    phone: "",
     email: "",
-    message: "",
+    message: ""
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -23,14 +25,20 @@ export default function ContactPage() {
     e.preventDefault();
     console.log("Form submitted:", formData);
     toast.success("¡Mensaje enviado! Te contactaremos pronto.");
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ 
+      firstName: "", 
+      lastName: "", 
+      phone: "", 
+      email: "", 
+      message: "" 
+    });
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Hero Section Mejorada */}
+      {/* Hero Section */}
       <section className="pt-32 pb-20 relative text-white text-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -51,51 +59,83 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contenido Mejorado */}
+      {/* Contenido Principal */}
       <section className="py-16 bg-gradient-to-b from-white to-blue-50 flex-grow">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Sección Izquierda - Imagen y Formulario */}
+            {/* Sección Izquierda - Formulario Ampliado */}
             <div className="space-y-8">
-              {/* Imagen Decorativa */}
-              <div className="rounded-xl overflow-hidden shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1563967949-d97cba787cae?q=80&w=2061&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Buceadores en formación"
-                  className="w-full h-64 object-cover"
-                />
-              </div>
-
-              {/* Tarjeta de Formulario */}
               <div className="bg-white rounded-xl shadow-xl overflow-hidden">
                 <div className="p-8 md:p-10">
-                  <h2 className="text-2xl md:text-3xl font-bold text-ocean mb-6">
-                    Envíanos un Mensaje
+                  <h2 className="text-2xl md:text-3xl font-bold text-ocean mb-6 border-b pb-4">
+                    Formulario de Contacto
                   </h2>
+                  
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-                        Nombre Completo
-                      </label>
-                      <div className="relative">
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          placeholder="Ej: María González"
-                          className="pl-10 py-5 text-base"
-                          required
-                        />
-                        <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-                          👤
-                        </span>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {/* Nombre */}
+                      <div>
+                        <label htmlFor="firstName" className="block text-gray-700 font-medium mb-2">
+                          Nombre *
+                        </label>
+                        <div className="relative">
+                          <Input
+                            id="firstName"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleChange}
+                            placeholder="Ej: María"
+                            className="pl-10 py-4 text-base"
+                            required
+                          />
+                          <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                        </div>
+                      </div>
+                      
+                      {/* Apellido */}
+                      <div>
+                        <label htmlFor="lastName" className="block text-gray-700 font-medium mb-2">
+                          Apellido *
+                        </label>
+                        <div className="relative">
+                          <Input
+                            id="lastName"
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleChange}
+                            placeholder="Ej: González"
+                            className="pl-10 py-4 text-base"
+                            required
+                          />
+                          <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                        </div>
                       </div>
                     </div>
 
+                    {/* Teléfono */}
+                    <div>
+                      <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                        Teléfono *
+                      </label>
+                      <div className="relative">
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          placeholder="Ej: +54 11 1234 5678"
+                          className="pl-10 py-4 text-base"
+                          required
+                        />
+                        <Smartphone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                      </div>
+                    </div>
+
+                    {/* Email */}
                     <div>
                       <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                        Correo Electrónico
+                        Email *
                       </label>
                       <div className="relative">
                         <Input
@@ -105,26 +145,25 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="Ej: ejemplo@email.com"
-                          className="pl-10 py-5 text-base"
+                          className="pl-10 py-4 text-base"
                           required
                         />
-                        <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-                          ✉️
-                        </span>
+                        <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
                       </div>
                     </div>
 
+                    {/* Mensaje */}
                     <div>
                       <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
-                        Tu Mensaje
+                        Mensaje *
                       </label>
                       <Textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="¿En qué podemos ayudarte?"
-                        rows={5}
+                        placeholder="Escribe tu consulta aquí..."
+                        rows={6}
                         className="text-base p-4"
                         required
                       />
@@ -132,7 +171,7 @@ export default function ContactPage() {
 
                     <Button 
                       type="submit" 
-                      className="w-full bg-ocean hover:bg-ocean-dark text-white py-6 text-lg"
+                      className="w-full bg-ocean hover:bg-ocean-dark text-white py-6 text-lg mt-2"
                     >
                       <Send className="mr-2 h-5 w-5" />
                       Enviar Mensaje
@@ -142,12 +181,11 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Sección Derecha - Información de Contacto */}
+            {/* Sección Derecha - Información de Contacto (se mantiene igual) */}
             <div className="space-y-8">
-              {/* Tarjeta de Información */}
               <div className="bg-white rounded-xl shadow-xl overflow-hidden">
                 <div className="p-8 md:p-10">
-                  <h2 className="text-2xl md:text-3xl font-bold text-ocean mb-6">
+                  <h2 className="text-2xl md:text-3xl font-bold text-ocean mb-6 border-b pb-4">
                     Nuestra Información
                   </h2>
                   
@@ -169,7 +207,6 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-gray-800">Teléfono</h3>
                         <p className="text-gray-600">+123 456 7890</p>
-                        <p className="text-gray-600">+987 654 3210</p>
                       </div>
                     </li>
 
@@ -180,7 +217,6 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-gray-800">Email</h3>
                         <p className="text-gray-600">info@azulprofundo.com</p>
-                        <p className="text-gray-600">cursos@azulprofundo.com</p>
                       </div>
                     </li>
 
@@ -191,14 +227,12 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-gray-800">Horario</h3>
                         <p className="text-gray-600">Lunes - Viernes: 9:00 - 18:00</p>
-                        <p className="text-gray-600">Sábados: 9:00 - 14:00</p>
                       </div>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              {/* Mapa */}
               <div className="bg-white rounded-xl shadow-xl overflow-hidden">
                 <div className="p-4">
                   <h3 className="text-xl font-semibold text-gray-800 mb-4 px-4">Nuestra Ubicación</h3>

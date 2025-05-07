@@ -15,6 +15,7 @@ import ContactPage from "./pages/ContactPage";
 import FaqPage from "./pages/FaqPage";
 import EShop from "./pages/EShop";
 import NauiSection from "./pages/NauiSection";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+       <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/nosotros" element={<AboutUsPage />} />
