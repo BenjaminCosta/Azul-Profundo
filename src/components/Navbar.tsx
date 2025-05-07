@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -16,10 +16,31 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled, location]); // Se ejecuta cuando cambia la ubicación o el scroll
+
   return (
-    <header className="fixed top-0 w-full z-50 bg-white shadow-md py-1">
+    <header
+      className={cn(
+        "fixed top-0 w-full z-50 transition-all duration-300",
+        scrolled ? "bg-white shadow-md py-1" : "bg-transparent py-0" // Reducción del padding
+      )}
+    >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
           <img src={logo} alt="Logo" className="h-20 w-auto" />
@@ -27,7 +48,7 @@ export default function Navbar() {
             className="text-[#1c2d48] font-bold text-3xl"
             style={{
               textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
-              fontFamily: '"Montserrat", sans-serif',
+              fontFamily: '"Montserrat", sans-serif', // O cambia por otra fuente que prefieras
             }}
           >
             Azul Profundo
@@ -44,7 +65,7 @@ export default function Navbar() {
                 to={link.href}
                 className={cn(
                   "font-medium transition-colors hover:text-ocean",
-                  "text-gray-700",
+                  scrolled ? "text-gray-700" : "text-white",
                   isActive && "underline underline-offset-4 text-black",
                   "text-lg font-semibold"
                 )}
@@ -65,7 +86,10 @@ export default function Navbar() {
         <div className="flex md:hidden">
           <button
             type="button"
-            className="p-2 rounded-md text-white focus:outline-none"
+            className={cn(
+              "p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800",
+              scrolled ? "text-gray-700" : "text-white"
+            )}
             onClick={() => setIsOpen(!isOpen)}
           >
             <span className="sr-only">Open main menu</span>

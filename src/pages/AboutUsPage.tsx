@@ -6,8 +6,8 @@ export default function AboutUsPage() {
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-32 pb-20 relative text-white text-center">
+      {/* Hero Section Mejorada */}
+      <section className="pt-32 pb-24 relative text-white text-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -15,102 +15,179 @@ export default function AboutUsPage() {
               "url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000')",
           }}
         >
-          <div className="w-full h-full bg-ocean-dark opacity-40"></div>
+          <div className="w-full h-full bg-ocean-dark/40"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Sobre Nosotros</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Conoce al equipo detrás de Azul Profundo, una escuela de buceo dedicada a formar buceadores responsables y apasionados.
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
+            Conoce Azul Profundo
+          </h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto font-medium drop-shadow-md">
+            Más de 30 años formando buceadores responsables y apasionados por el mundo submarino
           </p>
         </div>
       </section>
 
-      {/* Descripción */}
+      {/* Contenido Principal */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Nuestra Historia</h2>
-          <p className="text-gray-600 text-lg mb-8">
-            <strong>Con una trayectoria de más de 30 años formando buzos</strong>, nos caracterizamos por nuestro profesionalismo y calidez en la enseñanza de esta hermosa actividad.
-            El objetivo de nuestros <strong>cursos personalizados</strong> es que te conviertas y sigas evolucionando como buzo seguro que se divierte bajo el agua.
-            Con nosotros encontrarás profesionales altamente capacitados con una vocación clara por enseñar a bucear y disfrutar de experiencias hermosas bajo el agua.
-          </p>
-
-          {/* Métricas */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {[
-              { value: "+1000", label: "Alumnos certificados" },
-              { value: "+500", label: "Inmersiones guiadas" },
-              { value: "+30", label: "Años de experiencia" },
-              { value: "+20", label: "Destinos visitados" },
-            ].map((item, idx) => (
-              <div key={idx} className="bg-ocean-50 p-6 rounded-lg text-center">
-                <h4 className="text-3xl font-bold text-gray-800">{item.value}</h4>
-                <p className="text-gray-600">{item.label}</p>
+        <div className="container mx-auto px-4 max-w-5xl">
+          {/* Nuestra Historia */}
+          <div className="mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-ocean mb-4">Nuestra Historia</h2>
+              <div className="w-20 h-1 bg-ocean mx-auto"></div>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
+              <div>
+                <p className="text-gray-600 text-lg mb-6">
+                  Fundada en 1992, <strong>Azul Profundo</strong> nació del sueño de compartir la pasión por el buceo con el mundo. Lo que comenzó como un pequeño centro de buceo en la costa argentina, hoy se ha convertido en una de las escuelas más reconocidas del país.
+                </p>
+                <p className="text-gray-600 text-lg">
+                  Durante más de <strong>tres décadas</strong>, hemos formado a miles de buceadores, siempre manteniendo nuestros valores fundamentales: <strong>seguridad, profesionalismo y respeto</strong> por el medio ambiente marino.
+                </p>
               </div>
-            ))}
+              <img 
+                src="/imagenes/nosotros2.avif" 
+                alt="Historia de Azul Profundo" 
+                className="rounded-xl shadow-lg w-full h-auto"
+              />
+            </div>
+
+            {/* Métricas destacadas */}
+            <div className="bg-ocean-50 rounded-xl p-8 mb-16">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">En Números</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {[
+                  { value: "1000+", label: "Alumnos certificados", desc: "Desde principiantes hasta instructores" },
+                  { value: "500+", label: "Inmersiones guiadas", desc: "En los mejores destinos del mundo" },
+                  { value: "30+", label: "Años de experiencia", desc: "Formando buceadores desde 1992" },
+                  { value: "20+", label: "Destinos explorados", desc: "De Caribe a Polinesia" },
+                ].map((item, idx) => (
+                  <div key={idx} className="text-center p-4">
+                    <p className="text-4xl font-bold text-ocean mb-2">{item.value}</p>
+                    <h4 className="font-semibold text-gray-800 mb-1">{item.label}</h4>
+                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Equipo */}
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Nuestro Equipo</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-            {[
-              {
-                name: "Eduardo Cosentino",
-                role: "Director General",
-                img: "/imagenes/edu.avif",
-                quote:
-                  "La fascinación con la serie Caza submarina y las historias del Comandante Cousteau hicieron que me apasionara por el buceo formando parte esencial en mi vida",
-              },
-              {
-                name: "Juan Cosentino",
-                role: "Coordinador de Cursos",
-                img: "/imagenes/juan.jpg",
-                quote:
-                  "Descubrí esta actividad gracias a mi padre, quien me inculcó la dedicación y el amor por el buceo prácticamente desde mi niñez",
-              },
-            ].map((person, idx) => (
-              <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="p-6">
-                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                    <img
-                      src={person.img}
-                      alt={person.name}
-                      className="w-32 h-32 rounded-full object-cover"
-                    />
-                    <div>
-                      <h4 className="text-xl font-bold text-gray-800">{person.name}</h4>
-                      <p className="text-ocean font-medium mb-3">{person.role}</p>
-                      <p className="text-gray-600 italic">"{person.quote}"</p>
+          {/* Nuestro Equipo */}
+          <div className="mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-ocean mb-4">Nuestro Equipo</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+                Conoce a los profesionales que hacen de Azul Profundo una experiencia única
+              </p>
+              <div className="w-20 h-1 bg-ocean mx-auto"></div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  name: "Eduardo Cosentino",
+                  role: "Director General",
+                  img: "/imagenes/edu.avif",
+                  bio: "Instructor Trainer con más de 30 años de experiencia. Especialista en buceo técnico y exploración.",
+                  quote: "La fascinación con la serie Caza submarina y las historias del Comandante Cousteau hicieron que me apasionara por el buceo formando parte esencial en mi vida",
+                },
+                {
+                  name: "Juan Cosentino",
+                  role: "Coordinador de Cursos",
+                  img: "/imagenes/juan.jpg",
+                  bio: "Instructor NAUI con más de 30 años formando buceadores. Especialista en fotografía submarina.",
+                  quote: "Descubrí esta actividad gracias a mi padre, quien me inculcó la dedicación y el amor por el buceo prácticamente desde mi niñez",
+                },
+              ].map((person, idx) => (
+                <div key={idx} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                  <div className="p-6">
+                    <div className="flex flex-col sm:flex-row gap-6">
+                      <img
+                        src={person.img}
+                        alt={person.name}
+                        className="w-32 h-32 rounded-full object-cover mx-auto sm:mx-0"
+                      />
+                      <div className="text-center sm:text-left">
+                        <h3 className="text-xl font-bold text-gray-800">{person.name}</h3>
+                        <p className="text-ocean font-medium mb-3">{person.role}</p>
+                        <p className="text-gray-600 text-sm mb-4">{person.bio}</p>
+                        <p className="text-gray-500 italic">"{person.quote}"</p>
+                      </div>
                     </div>
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Nuestra Filosofía */}
+          <div className="mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-ocean mb-4">Nuestra Filosofía</h2>
+              <div className="w-20 h-1 bg-ocean mx-auto"></div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <img
+                src="/imagenes/nosotros3.jpg"
+                alt="Filosofía Azul Profundo"
+                className="rounded-xl shadow-lg w-full h-auto"
+              />
+              <div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Enseñanza Personalizada</h3>
+                <p className="text-gray-600 mb-6">
+                  En Azul Profundo creemos que cada alumno es único. Nuestros <strong>cursos personalizados</strong> se adaptan a tus necesidades, ritmo de aprendizaje y disponibilidad horaria.
+                </p>
+
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Seguridad Primero</h3>
+                <p className="text-gray-600 mb-6">
+                  Mantenemos los más altos <strong>estándares de seguridad</strong> en cada curso y salida de buceo. Nuestro equipo está certificado en primeros auxilios y rescate acuático.
+                </p>
+
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Conservación Marina</h3>
+                <p className="text-gray-600 mb-6">
+                  Promovemos el <strong>buceo responsable</strong> y participamos activamente en proyectos de conservación de los ecosistemas marinos.
+                </p>
+
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Comunidad Azul</h3>
+                <p className="text-gray-600 mb-6">
+                  Formamos una <strong>comunidad apasionada por el mar</strong>. Organizamos encuentros, charlas y salidas para conectar con otros buzos y compartir experiencias.
+                </p>
+
               </div>
-            ))}
+            </div>
+
           </div>
 
-          {/* Cursos */}
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Nuestros Cursos</h2>
-          <div className="flex flex-col md:flex-row gap-8 items-center mb-12">
-            <img
-              src="/GOPR3470-01.jpeg"
-              alt="Cursos de buceo"
-              className="w-full md:w-1/2 rounded-lg shadow-lg object-cover"
-            />
-            <p className="text-gray-600 text-lg">
-              Nuestra gran cantidad de cursos que ofrecemos se caracterizan por el <strong>profesionalismo</strong> y la <strong>pasión</strong> con la que hacemos esta actividad.
-              Actualmente nos enfocamos en <strong>cursos personalizados</strong> donde el ritmo de las clases y la disponibilidad horaria lo decide el alumno.
-            </p>
-          </div>
-
-          {/* Misión */}
-          <div className="mt-12 bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">Nuestra Misión</h3>
-            <p className="text-gray-600 mb-4">
-              En Azul Profundo nos dedicamos a compartir nuestra pasión por el mundo submarino, formando buceadores conscientes, seguros y respetuosos del entorno marino.
-            </p>
-            <p className="text-gray-600">
-              Creemos que el buceo es mucho más que un deporte, es una forma de conectar con la naturaleza y descubrir un universo completamente nuevo que merece ser protegido y respetado.
-            </p>
+          {/* Compromiso */}
+          <div className="bg-ocean-50 rounded-xl p-8 md:p-12">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-ocean mb-4">Nuestro Compromiso</h2>
+              <div className="w-20 h-1 bg-ocean mx-auto"></div>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Excelencia en Formación",
+                  content: "Programas educativos actualizados con los últimos estándares internacionales."
+                },
+                {
+                  title: "Equipo de Calidad",
+                  content: "Utilizamos equipos de primera línea, mantenidos con los más altos estándares."
+                },
+                {
+                  title: "Experiencias Únicas",
+                  content: "Viajes y expediciones a los mejores destinos de buceo del mundo."
+                }
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
+                  <p className="text-gray-600">{item.content}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
