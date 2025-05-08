@@ -12,7 +12,7 @@ const allCourses = [
     description: "Curso inicial para comenzar tu aventura de buceo. Aprende las habilidades básicas del buceo.",
     duration: "4-5 días",
     level: "Principiante",
-    image: "/imagenes/open2.avif"
+    image: "/imagenes/open3.jpg"
   },
   {
     id: "advanced-diver",

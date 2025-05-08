@@ -36,7 +36,7 @@ const coursesData = {
     ],
     level: "Principiante",
     price: "$450 USD",
-    image: "/imagenes/open2.avif",
+    image: "/imagenes/open3.jpg",
     icon: <Anchor className="text-black" />
   },
   "advanced-diver": {
@@ -254,7 +254,7 @@ export default function CoursePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="pt-24 h-[500px] relative bg-ocean-dark overflow-hidden">
+      <div className="pt-24 h-[600px] relative bg-ocean-dark overflow-hidden">
         <img 
           src={course.image} 
           alt={course.title} 

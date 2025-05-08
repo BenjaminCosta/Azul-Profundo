@@ -16,7 +16,7 @@ const coursesData = [
       "Certificación PADI/SSI",
       "Grupos reducidos"
     ],
-    image: "/imagenes/open2.avif"
+    image: "/imagenes/open3.jpg"
   },
   {
     id: "advanced-diver",
