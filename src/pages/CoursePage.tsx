@@ -173,9 +173,6 @@ export default function CoursePage() {
             <span className="bg-ocean/70 px-3 py-1 rounded-full text-sm">
               Nivel: {course.level}
             </span>
-            <span className="bg-ocean/70 px-3 py-1 rounded-full text-sm">
-              Precio: {course.price}
-            </span>
           </div>
         </div>
       </div>

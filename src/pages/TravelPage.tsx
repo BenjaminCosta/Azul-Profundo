@@ -25,9 +25,8 @@ const travelsData = {
       "Guía de buceo profesional de habla hispana"
     ],
     level: "Apto para todos los niveles de buceo certificados",
-    spots: 8,
-    price: "$1,800",
-    image: "/imagenes/angra.jpg"
+    spots: "con alojamiento",
+    image: "/imagenes/angra2.jpg"
   },
   "galapagos": {
     destination: "Islas Galápagos",
@@ -50,8 +49,7 @@ const travelsData = {
       "Visitas terrestres a las islas"
     ],
     level: "Avanzado (mínimo 50 inmersiones registradas y experiencia en corrientes)",
-    spots: 6,
-    price: "$3,200",
+    spots: "a bordo",
     image: "/imagenes/galapagos3.jpg"
   },
   "egipto": {
@@ -76,8 +74,7 @@ const travelsData = {
       "Guías de buceo expertos"
     ],
     level: "Intermedio (recomendado Advanced Open Water con +20 inmersiones)",
-    spots: 10,
-    price: "$2,700",
+    spots: "a bordo",
     image: "/imagenes/egypt.jpg"
   },
   "bonaire": {
@@ -102,8 +99,7 @@ const travelsData = {
       "Guía detallada de los sitios de inmersión"
     ],
     level: "Todos los niveles (ideal para buceadores autónomos)",
-    spots: 12,
-    price: "$2,400",
+    spots: "con alojamiento",
     image: "/imagenes/bonaire2.jpg"
   }
 };
@@ -159,10 +155,7 @@ export default function TravelPage() {
               {travel.level}
             </span>
             <span className="bg-ocean/70 px-3 py-1 rounded-full text-sm">
-              {travel.spots} plazas disponibles
-            </span>
-            <span className="bg-coral px-3 py-1 rounded-full text-sm font-semibold">
-              {travel.price}
+              {travel.spots} 
             </span>
           </div>
         </div>
@@ -200,12 +193,11 @@ export default function TravelPage() {
                 </ul>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                  <Button className="bg-ocean hover:bg-ocean-dark text-white">
-                    Reservar Ahora
-                  </Button>
+                  <Link to={'/contacto'}>
                   <Button variant="outline" className="border-ocean text-ocean hover:bg-ocean hover:text-white">
                     Solicitar Información
                   </Button>
+                  </Link>
                 </div>
               </div>
             </div>

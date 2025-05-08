@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,9 +12,8 @@ const allTravels = [
     location: "Brasil",
     date: "15-25 Enero, 2026",
     description: "Descubre las maravillosas playas y aguas cristalinas de esta joya brasileña. Inmersiones para todos los niveles entre islas tropicales y arrecifes coloridos, con una abundante vida marina.",
-    image: "/imagenes/angra.jpg",
-    spots: 8,
-    price: "$1,800"
+    image: "/imagenes/angra2.jpg",
+    spots: "con alojamiento"
   },
   {
     id: "galapagos",
@@ -24,8 +22,7 @@ const allTravels = [
     date: "10-20 Marzo, 2026",
     description: "Uno de los mejores lugares del mundo para el buceo. Podrás nadar junto a lobos marinos, tortugas, pingüinos y tiburones en este santuario natural único.",
     image: "/imagenes/galapagos3.jpg",
-    spots: 6,
-    price: "$3,200"
+    spots: "a bordo"
   },
   {
     id: "egipto",
@@ -34,8 +31,7 @@ const allTravels = [
     date: "5-15 Mayo, 2026",
     description: "Aguas cristalinas, coloridos arrecifes de coral y una abundante vida marina. Incluye inmersiones en pecios de la Segunda Guerra Mundial y arrecifes prístinos.",
     image: "/imagenes/egypt.jpg",
-    spots: 10,
-    price: "$2,700"
+    spots: "a bordo"
   },
   {
     id: "bonaire",
@@ -44,8 +40,7 @@ const allTravels = [
     date: "20-30 Julio, 2026",
     description: "Conocido como el paraíso del buceo desde costa, Bonaire ofrece acceso fácil a más de 60 sitios de inmersión y un ecosistema marino protegido con visibilidad excepcional.",
     image: "/imagenes/bonaire2.jpg",
-    spots: 12,
-    price: "$2,400"
+    spots: "con alojamiento"
   }
 ];
 
@@ -87,7 +82,7 @@ export default function TravelsPage() {
                     className="w-full h-full object-cover hover:scale-110 transition-all duration-700"
                   />
                   <div className="absolute top-0 right-0 bg-coral text-white py-1 px-4 rounded-bl-lg font-medium">
-                    {travel.spots} plazas disponibles
+                    {travel.spots} 
                   </div>
                 </div>
                 <CardHeader>
@@ -98,9 +93,6 @@ export default function TravelsPage() {
                         <MapPin size={14} className="mr-1" />
                         <span>{travel.location}</span>
                       </div>
-                    </div>
-                    <div className="bg-ocean text-white px-3 py-1 rounded-full text-lg font-semibold">
-                      {travel.price}
                     </div>
                   </div>
                 </CardHeader>
