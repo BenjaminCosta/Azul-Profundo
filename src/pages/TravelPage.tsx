@@ -8,7 +8,7 @@ const travelsData = {
   "galapagos": {
     destination: "Islas Galápagos",
     location: "Ecuador",
-    date: "24-31 Mayo, 2025",
+    date: "24-31 Mayo",
     highlights: [
       { icon: <Fish className="text-ocean" />, text: "Tiburones martillo, ballena y más" },
       { icon: <Waves className="text-ocean" />, text: "Visibilidad 10-25m" },
@@ -33,7 +33,7 @@ const travelsData = {
   "angra-dos-reis": {
     destination: "Angra dos Reis",
     location: "Brasil",
-    date: "24-29 Junio, 2025",
+    date: "24-29 Junio",
     highlights: [
       { icon: <Ship className="text-ocean" />, text: "6 inmersiones embarcadas" },
       { icon: <Fish className="text-ocean" />, text: "Vida marina tropical" },
@@ -57,7 +57,7 @@ const travelsData = {
   "bonaire": {
     destination: "Bonaire",
     location: "Caribe Holandés",
-    date: "8-15 Octubre, 2025",
+    date: "8-15 Octubre",
     highlights: [
       { icon: <Zap className="text-ocean" />, text: "Buceos ilimitados" },
       { icon: <Fish className="text-ocean" />, text: "40m de visibilidad" },
@@ -82,7 +82,7 @@ const travelsData = {
   "egipto": {
     destination: "Mar Rojo & Nilo",
     location: "Egipto",
-    date: "Noviembre 2025",
+    date: "Noviembre",
     highlights: [
       { icon: <Ship className="text-ocean" />, text: "20+ inmersiones" },
       { icon: <Fish className="text-ocean" />, text: "Pecios legendarios" },
@@ -195,7 +195,7 @@ export default function TravelPage() {
                   {travel.itinerary.map((item, index) => (
                     <div key={index} className="flex group">
                       <div className="flex flex-col items-center mr-4">
-                        <div className="w-10 h-10 rounded-full bg-ocean text-white flex items-center justify-center font-bold">
+                        <div className="w-20 h-10 rounded-full bg-ocean text-white text-sm flex items-center justify-center font-bold">
                           {item.day}
                         </div>
                         {index < travel.itinerary.length - 1 && (
