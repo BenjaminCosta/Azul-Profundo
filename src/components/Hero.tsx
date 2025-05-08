@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <section className="relative h-screen bg-hero-pattern bg-cover bg-center">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/30"></div>
       <div className="absolute inset-0 bg-wave-pattern bg-repeat-x animate-wave"></div>
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-start">
         <div className="max-w-2xl text-white">

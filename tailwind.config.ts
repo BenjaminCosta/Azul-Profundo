@@ -112,8 +112,10 @@ export default {
 			},
 			backgroundImage: {
 				'hero-pattern': "url('/imagenes/tiburon.jpeg')",
+				'wave-pattern': "linear-gradient(to right, rgba(14, 165, 233, 0.2) 0%, rgba(14, 165, 233, 0) 50%, rgba(14, 165, 233, 0.2) 100%)",
 			},
 		}
 	},
 	plugins: [tailwindcssAnimate],
+
 } satisfies Config;
