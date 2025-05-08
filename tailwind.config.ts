@@ -1,4 +1,4 @@
-
+import tailwindcssAnimate from "tailwindcss-animate";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -111,10 +111,9 @@ export default {
 				'wave': 'wave 15s linear infinite',
 			},
 			backgroundImage: {
-				'hero-pattern': "url('https://images.unsplash.com/photo-1518877593221-1f28583780b4?auto=format&fit=crop&q=80&w=1920')",
-				'wave-pattern': "linear-gradient(to right, rgba(14, 165, 233, 0.2) 0%, rgba(14, 165, 233, 0) 50%, rgba(14, 165, 233, 0.2) 100%)",
+				'hero-pattern': "url('/imagenes/tiburon.jpeg')",
 			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;
