@@ -53,7 +53,7 @@ export default function FaqPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000')",
+              "url('/imagenes/hero2.avif')",
           }}
         >
           <div className="w-full h-full bg-ocean-dark/40"></div>

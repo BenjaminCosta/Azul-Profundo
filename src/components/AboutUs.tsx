@@ -6,7 +6,7 @@ export default function AprendeABucear() {
   return (
     <>
       {/* Nuestro Equipo */}
-      <section className="py-24 px-6 text-center">
+      <section className="py-24 px-20 text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 ">Nuestra Escuela</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">

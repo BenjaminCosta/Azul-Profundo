@@ -19,7 +19,7 @@ const coursesData = {
     ],
     level: "Principiante",
     price: "$450",
-    image: "/imagenes/open.avif"
+    image: "/imagenes/open2.avif"
   },
   "advanced-diver": {
     title: "Advanced Diver",
@@ -199,12 +199,11 @@ export default function CoursePage() {
                 </ul>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                  <Button className="bg-ocean hover:bg-ocean-dark text-white">
-                    Reservar Ahora
-                  </Button>
+                <Link to={'/contacto'}> 
                   <Button variant="outline" className="border-ocean text-ocean hover:bg-ocean hover:text-white">
                     Solicitar Información
                   </Button>
+                </Link>  
                 </div>
               </div>
             </div>

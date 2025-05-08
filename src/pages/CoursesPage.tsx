@@ -12,7 +12,7 @@ const allCourses = [
     description: "Curso inicial para comenzar tu aventura de buceo. Aprende las habilidades básicas del buceo.",
     duration: "4-5 días",
     level: "Principiante",
-    image: "/imagenes/open.avif"
+    image: "/imagenes/open2.avif"
   },
   {
     id: "advanced-diver",
@@ -81,7 +81,7 @@ export default function CoursesPage() {
       <div
         className="absolute top-0 left-0 w-full h-[400px] z-0"
         style={{
-          backgroundImage: `url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000")`,
+          backgroundImage: "url('/imagenes/hero2.avif')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

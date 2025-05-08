@@ -7,12 +7,12 @@ export default function AboutUsPage() {
       <Navbar />
 
       {/* Hero Section Mejorada */}
-      <section className="pt-32 pb-24 relative text-white text-center">
+      <section className="pt-32 pb-20 relative text-white text-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000')",
+              "url('/imagenes/hero2.avif')",
           }}
         >
           <div className="w-full h-full bg-ocean-dark/40"></div>
@@ -49,7 +49,7 @@ export default function AboutUsPage() {
               <img 
                 src="/imagenes/nosotros4.jpg" 
                 alt="Historia de Azul Profundo" 
-                className="rounded-xl shadow-lg w-full h-auto"
+                className="rounded-xl shadow-lg w-full h-auto border-4 border-white"
               />
             </div>
 
@@ -84,40 +84,78 @@ export default function AboutUsPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {[
-                {
-                  name: "Eduardo Cosentino",
-                  role: "Director General",
-                  img: "/imagenes/edu.avif",
-                  bio: "Instructor Trainer con más de 30 años de experiencia. Especialista en buceo técnico y exploración.",
-                  quote: "La fascinación con la serie Caza submarina y las historias del Comandante Cousteau hicieron que me apasionara por el buceo formando parte esencial en mi vida",
-                },
-                {
-                  name: "Juan Cosentino",
-                  role: "Coordinador de Cursos",
-                  img: "/imagenes/juan.jpg",
-                  bio: "Instructor NAUI con más de 30 años formando buceadores. Especialista en fotografía submarina.",
-                  quote: "Descubrí esta actividad gracias a mi padre, quien me inculcó la dedicación y el amor por el buceo prácticamente desde mi niñez",
-                },
-              ].map((person, idx) => (
-                <div key={idx} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                  <div className="p-6">
-                    <div className="flex flex-col sm:flex-row gap-6">
-                      <img
-                        src={person.img}
-                        alt={person.name}
-                        className="w-32 h-32 rounded-full object-cover mx-auto sm:mx-0"
-                      />
-                      <div className="text-center sm:text-left">
-                        <h3 className="text-xl font-bold text-gray-800">{person.name}</h3>
-                        <p className="text-ocean font-medium mb-3">{person.role}</p>
-                        <p className="text-gray-600 text-sm mb-4">{person.bio}</p>
-                        <p className="text-gray-500 italic">"{person.quote}"</p>
-                      </div>
+              {/* Eduardo Cosentino */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                <div className="p-6">
+                  <div className="flex flex-col sm:flex-row gap-6">
+                    <img
+                      src="/imagenes/edu2.avif"
+                      alt="Eduardo Cosentino"
+                      className="w-44 h-44 rounded-full object-cover mx-auto sm:mx-0 border-4 border-ocean-100 shadow-md"
+                    />
+                    <div className="text-center sm:text-left">
+                      <h3 className="text-xl font-bold text-gray-800">Eduardo Cosentino</h3>
+                      <p className="text-ocean font-medium mb-3">Director General</p>
+                      <p className="text-gray-600 text-sm mb-4">Fundador del Centro de Buceo Azul Profundo con más de 40 años de experiencia en buceo.</p>
                     </div>
                   </div>
+                  <div className="mt-6 pt-6 border-t border-gray-100">
+                    <h4 className="font-semibold text-gray-800 mb-3">Credenciales:</h4>
+                    <ul className="text-sm text-gray-600 space-y-2 columns-2">
+                      <li>Instructor NAUI</li>
+                      <li>Instructor FAAS-CMAS</li>
+                      <li>Instructor de Nitrox</li>
+                      <li>Buzo 2° categoría PNA</li>
+                      <li>Buzo Intro to Tec NAUI</li>
+                      <li>Buzo Técnicas Descompresivas</li>
+                      <li>Buzo Trimix NAUI</li>
+                      <li>Primeros auxilios DAN</li>
+                      <li>Proveedor de Oxígeno DAN</li>
+                      <li>Especialista en Vida Marina</li>
+                      <li>Medicina Hiperbárica</li>
+                      <li>Arqueología Subacuática</li>
+                      <li>Timonel de yate</li>
+                    </ul>
+                  </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Juan Cosentino */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                <div className="p-6">
+                  <div className="flex flex-col sm:flex-row gap-6">
+                    <img
+                      src="/imagenes/juan2.avif"
+                      alt="Juan Cosentino"
+                      className="w-44 h-44 rounded-full object-cover mx-auto sm:mx-0 border-4 border-ocean-100 shadow-md"
+                    />
+                    <div className="text-center sm:text-left">
+                      <h3 className="text-xl font-bold text-gray-800">Juan Cosentino</h3>
+                      <p className="text-ocean font-medium mb-3">Coordinador de Cursos</p>
+                      <p className="text-gray-600 text-sm mb-4">Apasionado por la docencia y el buceo desde los 12 años.</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 pt-6 border-t border-gray-100">
+                    <h4 className="font-semibold text-gray-800 mb-3">Credenciales:</h4>
+                    <ul className="text-sm text-gray-600 space-y-2 columns-2">
+                      <li>Instructor Técnico NAUI</li>
+                      <li>Instructor Recreativo NAUI</li>
+                      <li>Instructor FAAS-CMAS</li>
+                      <li>Instructor SSI/SN.SI</li>
+                      <li>Instructor de Nitrox</li>
+                      <li>Instructor Stress & Rescate</li>
+                      <li>Instructor Primeros Auxilios</li>
+                      <li>Instructor Proveedor Oxígeno</li>
+                      <li>Buzo Técnicas Descompresivas</li>
+                      <li>Buzo Trimix NAUI</li>
+                      <li>Buzo Rebreather Prism II</li>
+                      <li>Medicina Hiperbárica</li>
+                      <li>Arqueología Subacuática</li>
+                      <li>Timonel de yate</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -132,7 +170,7 @@ export default function AboutUsPage() {
               <img
                 src="/imagenes/nosotros3.jpg"
                 alt="Filosofía Azul Profundo"
-                className="rounded-xl shadow-lg w-full h-auto"
+                className="rounded-xl shadow-lg w-full h-auto border-4 border-white"
               />
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Enseñanza Personalizada</h3>

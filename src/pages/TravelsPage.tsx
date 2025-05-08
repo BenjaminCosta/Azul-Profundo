@@ -60,7 +60,7 @@ export default function TravelsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1000')",
+              "url('/imagenes/hero2.avif')",
           }}
         >
           <div className="w-full h-full bg-ocean-dark opacity-40"></div>
@@ -117,9 +117,11 @@ export default function TravelsPage() {
                       Ver Detalles
                     </Button>
                   </Link>
+                  <Link to={'/contacto'}>
                   <Button className="bg-ocean hover:bg-ocean-dark text-white">
                     Reservar
                   </Button>
+                  </Link>
                 </CardFooter>
               </Card>
             ))}
@@ -130,9 +132,11 @@ export default function TravelsPage() {
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Si tienes en mente un destino que no aparece en nuestra lista, podemos organizar un viaje a medida para ti y tu grupo.
             </p>
+            <Link to={'/contacto'}>
             <Button className="bg-ocean hover:bg-ocean-dark text-white">
               Contacta con nosotros
             </Button>
+            </Link>
           </div>
         </div>
       </div>
