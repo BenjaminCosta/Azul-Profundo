@@ -125,9 +125,9 @@ export default function TravelsPage() {
               Si tienes en mente un destino que no aparece en nuestra lista, podemos organizar un viaje a medida para ti y tu grupo.
             </p>
             <Link to={'/contacto'}>
-            <Button className="bg-ocean hover:bg-ocean-dark text-white">
-              Contacta con nosotros
-            </Button>
+              <Button className="bg-ocean hover:bg-ocean-dark text-white">
+                Contacta con nosotros
+              </Button>
             </Link>
           </div>
         </div>

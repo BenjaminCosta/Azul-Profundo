@@ -52,7 +52,7 @@ const travelsData = {
     ],
     level: "Todos los niveles",
     spots: "Grupo íntimo (8 personas)",
-    image: "/imagenes/angra2.jpg"
+    image: "/imagenes/angra4.jpg"
   },
   "bonaire": {
     destination: "Bonaire",
