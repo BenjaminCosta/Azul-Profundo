@@ -59,7 +59,7 @@ const coursesData = [
       "Modalidad intensiva y regular"
     ],
     cta: "Descubre tu próximo desafío",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1000"
+    image: "/imagenes/todoscursos.avif"
   }
 ];
 
