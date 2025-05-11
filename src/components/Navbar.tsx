@@ -46,56 +46,56 @@ export default function Navbar() {
             alt="Logo" 
             className={cn(
               "h-28 w-auto transition-all duration-300 group-hover:opacity-90",
-              scrolled ? "h-24" : "h-28"
+              scrolled ? "h-16 md:h-24" : "h-20 md:h-28"
             )} 
           />
         </Link>
 
         <nav className="hidden md:flex items-center mt-7 space-x-2">
-  {navLinks.map((link) => {
-    const isActive = location.pathname === link.href;
-    return (
-      <div key={link.name} className="relative group">
-        <Link
-          to={link.href}
-          className={cn(
-            "px-4 py-2 font-medium transition-all duration-300",
-            scrolled ? "text-gray-800" : "text-white",
-            isActive ? "text-black font-semibold" : "hover:text-ocean",
-            "text-[18px] font-sans tracking-wide"
-          )}
-        >
-          {link.name}
-          <span
-            className={cn(
-              "absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-black rounded-full transition-all duration-300",
-              isActive ? "w-2/3" : "w-0 group-hover:w-1/2"
-            )}
-          ></span>
-        </Link>
-      </div>
-    );
-  })}
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.href;
+              return (
+                <div key={link.name} className="relative group">
+                  <Link
+                    to={link.href}
+                    className={cn(
+                      "px-4 py-2 font-medium transition-all duration-300",
+                      scrolled ? "text-gray-800" : "text-white",
+                      isActive ? "text-black font-semibold" : "hover:text-ocean",
+                      "text-[18px] font-sans tracking-wide"
+                    )}
+                  >
+                    {link.name}
+                    <span
+                      className={cn(
+                        "absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-black rounded-full transition-all duration-300",
+                        isActive ? "w-2/3" : "w-0 group-hover:w-1/2"
+                      )}
+                    ></span>
+                  </Link>
+                </div>
+              );
+            })}
 
-  {/* Botón E-shop perfectamente alineado */}
-  <div className="ml-6 pl-6 border-l border-gray-200/50 flex items-center">
-    <Link to="/e-shop">
-      <Button 
-        className={cn(
-          "transition-all duration-500 flex items-center gap-2 px-4 py-2 rounded-l h-[42px]",
-          scrolled 
-            ? "bg-gradient-to-r from-ocean to-blue-600 hover:from-blue-600 hover:to-ocean shadow-md" 
-            : "bg-gradient-to-r from-ocean to-blue-600 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/40",
-          "group"
-        )} 
-        variant="default"
-      >
-        <ShoppingCart size={18} className="group-hover:scale-110 transition-transform" />
-        <span className="font-semibold leading-none">E-shop</span>
-      </Button>
-    </Link>
-  </div>
-</nav>
+            {/* Botón E-shop perfectamente alineado */}
+            <div className="ml-6 pl-6 border-l border-gray-400/40 flex items-center">
+              <Link to="/e-shop">
+                <Button 
+                  className={cn(
+                    "transition-all duration-500 flex items-center gap-2 px-4 py-2 rounded-l h-[42px]",
+                    scrolled 
+                      ? "bg-gradient-to-r from-ocean to-blue-600 hover:from-blue-600 hover:to-ocean shadow-md" 
+                      : "bg-gradient-to-r from-ocean to-blue-600 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/40",
+                    "group"
+                  )} 
+                  variant="default"
+                >
+                  <ShoppingCart size={18} className="group-hover:scale-110 transition-transform" />
+                  <span className="font-semibold leading-none">E-shop</span>
+                </Button>
+              </Link>
+            </div>
+          </nav>
 
 
         {/* Mobile Navigation Toggle (se mantiene igual) */}
@@ -109,7 +109,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
           >
             <span className="sr-only">Open main menu</span>
-            {isOpen ? <X size={40} /> : <Menu size={40} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -123,7 +123,7 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between p-4 border-b">
           <div className="flex items-center space-x-2">
-            <img src={logo} alt="Logo" className="h-8 w-auto" />
+            <img src={logo} alt="Logo" className="h-16 w-auto" />
             <div className="text-ocean font-bold text-2xl">Azul Profundo</div>
           </div>
           <button
