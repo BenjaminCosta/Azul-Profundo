@@ -61,7 +61,7 @@ export default function Navbar() {
           className={cn(
             "px-4 py-2 font-medium transition-all duration-300",
             scrolled ? "text-gray-800" : "text-white",
-            isActive ? "text-black font-semibold" : "hover:text-ocean/90",
+            isActive ? "text-black font-semibold" : "hover:text-ocean",
             "text-[18px] font-sans tracking-wide"
           )}
         >
@@ -82,7 +82,7 @@ export default function Navbar() {
     <Link to="/e-shop">
       <Button 
         className={cn(
-          "transition-all duration-500 flex items-center gap-2 px-4 py-2 rounded-xl h-[42px]",
+          "transition-all duration-500 flex items-center gap-2 px-4 py-2 rounded-l h-[42px]",
           scrolled 
             ? "bg-gradient-to-r from-ocean to-blue-600 hover:from-blue-600 hover:to-ocean shadow-md" 
             : "bg-gradient-to-r from-ocean to-blue-600 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/40",
