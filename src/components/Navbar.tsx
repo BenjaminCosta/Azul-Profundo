@@ -46,7 +46,7 @@ export default function Navbar() {
             alt="Logo" 
             className={cn(
               "h-28 w-auto transition-all duration-300 group-hover:opacity-90",
-              scrolled ? "h-16 md:h-24" : "h-20 md:h-28"
+              scrolled ? "h-20 md:h-24" : "h-24 md:h-28"
             )} 
           />
         </Link>
@@ -109,7 +109,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
           >
             <span className="sr-only">Open main menu</span>
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
