@@ -20,7 +20,6 @@ export default function Navbar() {
   const location = useLocation();
 
   useEffect(() => {
-
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
       if (isScrolled !== scrolled) {
@@ -29,61 +28,78 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrolled, location]); // Se ejecuta cuando cambia la ubicación o el scroll
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [scrolled]);
 
   return (
     <header
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-white shadow-md py-1" : "bg-transparent py-0" // Reducción del padding
+        scrolled ? "bg-white/95 backdrop-blur-sm shadow-sm py-1" : "bg-transparent py-2"
       )}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center space-x-2">
-          <img src={logo} alt="Logo" className="h-20 w-auto" />
-          <span
-            className="text-[#1c2d48] font-bold text-3xl"
-            style={{
-              textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
-              fontFamily: '"Montserrat", sans-serif', // O cambia por otra fuente que prefieras
-            }}
-          >
-            Azul Profundo
-          </span>
+      <div className="container mx-auto px-6 flex items-start justify-between"> {/* Cambiado a items-start */}
+        {/* Logo */}
+        <Link to="/" className="flex items-center group "> {/* Añadido mt-2 */}
+          <img 
+            src={logo} 
+            alt="Logo" 
+            className={cn(
+              "h-28 w-auto transition-all duration-300 group-hover:opacity-90",
+              scrolled ? "h-24" : "h-28"
+            )} 
+          />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6 mt-0">
-          {navLinks.map((link) => {
-            const isActive = location.pathname === link.href;
-            return (
-              <Link
-                key={link.name}
-                to={link.href}
-                className={cn(
-                  "font-medium transition-colors hover:text-ocean",
-                  scrolled ? "text-gray-700" : "text-white",
-                  isActive && "underline underline-offset-4 text-black",
-                  "text-lg font-semibold"
-                )}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-          <Link to="/e-shop">
-            <Button className="bg-sky-500 hover:bg-sky-600 text-white flex items-center gap-2" variant="default">
-              <ShoppingCart size={18} />
-              E-shop
-            </Button>
-          </Link>
-        </nav>
+        <nav className="hidden md:flex items-center mt-7 space-x-2">
+  {navLinks.map((link) => {
+    const isActive = location.pathname === link.href;
+    return (
+      <div key={link.name} className="relative group">
+        <Link
+          to={link.href}
+          className={cn(
+            "px-4 py-2 font-medium transition-all duration-300",
+            scrolled ? "text-gray-800" : "text-white",
+            isActive ? "text-black font-semibold" : "hover:text-ocean/90",
+            "text-[18px] font-sans tracking-wide"
+          )}
+        >
+          {link.name}
+          <span
+            className={cn(
+              "absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-black rounded-full transition-all duration-300",
+              isActive ? "w-2/3" : "w-0 group-hover:w-1/2"
+            )}
+          ></span>
+        </Link>
+      </div>
+    );
+  })}
 
-        {/* Mobile Navigation Toggle */}
-        <div className="flex md:hidden">
+  {/* Botón E-shop perfectamente alineado */}
+  <div className="ml-6 pl-6 border-l border-gray-200/50 flex items-center">
+    <Link to="/e-shop">
+      <Button 
+        className={cn(
+          "transition-all duration-500 flex items-center gap-2 px-4 py-2 rounded-xl h-[42px]",
+          scrolled 
+            ? "bg-gradient-to-r from-ocean to-blue-600 hover:from-blue-600 hover:to-ocean shadow-md" 
+            : "bg-gradient-to-r from-ocean to-blue-600 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/40",
+          "group"
+        )} 
+        variant="default"
+      >
+        <ShoppingCart size={18} className="group-hover:scale-110 transition-transform" />
+        <span className="font-semibold leading-none">E-shop</span>
+      </Button>
+    </Link>
+  </div>
+</nav>
+
+
+        {/* Mobile Navigation Toggle (se mantiene igual) */}
+        <div className="flex md:hidden mt-4"> {/* Añadido mt-2 */}
           <button
             type="button"
             className={cn(
@@ -93,12 +109,12 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
           >
             <span className="sr-only">Open main menu</span>
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={40} /> : <Menu size={40} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile Navigation Menu (se mantiene igual) */}
       <div
         className={cn(
           "md:hidden fixed inset-0 z-40 bg-white transform transition-transform ease-in-out duration-300",
