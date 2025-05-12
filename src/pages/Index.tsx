@@ -5,7 +5,6 @@ import AboutUs from "@/components/AboutUs";
 import Courses from "@/components/Courses";
 import Travels from "@/components/Travels";
 import Testimonials from "@/components/Testimonials";
-import EShop from "@/pages/EShop";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import NauiSection from "@/pages/NauiSection";
