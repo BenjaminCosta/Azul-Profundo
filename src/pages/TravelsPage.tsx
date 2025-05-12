@@ -58,7 +58,7 @@ export default function TravelsPage() {
               "url('/imagenes/hero2.avif')",
           }}
         >
-          <div className="w-full h-full bg-ocean-dark opacity-40"></div>
+          <div className="w-full h-full bg-ocean-dark/40"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Viajes y Expediciones</h1>

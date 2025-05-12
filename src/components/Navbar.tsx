@@ -9,7 +9,6 @@ const navLinks = [
   { name: "Nosotros", href: "/nosotros" },
   { name: "Cursos", href: "/cursos" },
   { name: "Viajes", href: "/viajes" },
-  { name: "Naui", href: "/naui" },
   { name: "FAQ", href: "/faq" },
   { name: "Contacto", href: "/contacto" }
 ];
