@@ -54,7 +54,7 @@ const ShopPage = () => {
       
       {/* Hero Section con gradiente oceánico */}
       <div className="bg-gradient-to-b from-blue-950/60 via-blue-500/50 to-ocean-light/40">
-        <div className="container mx-auto px-4 py-16 md:py-40 text-center">
+        <div className="container mx-auto px-4 pt-40 pb-16 md:pt-40 md:pb-20 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             Tienda de Buceo Azul Profundo
           </h1>
