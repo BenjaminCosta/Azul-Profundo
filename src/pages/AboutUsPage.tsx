@@ -33,19 +33,16 @@ export default function AboutUsPage() {
           {/* Nuestra Historia */}
           <div className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-ocean mb-4">Nuestra Historia</h2>
+              <h2 className="text-3xl font-bold text-ocean mb-4">Sobre Nosotros</h2>
               <div className="w-20 h-1 bg-ocean mx-auto"></div>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-              <div>
-                <p className="text-gray-600 text-lg mb-6">
-                  Fundada en 1991, <strong>Azul Profundo</strong> nació del sueño de compartir la pasión por el buceo con el mundo. Lo que comenzó como un pequeño centro de buceo en la costa argentina, hoy se ha convertido en una de las escuelas más reconocidas del país.
-                </p>
-                <p className="text-gray-600 text-lg">
-                  Durante más de <strong>tres décadas</strong>, hemos formado a miles de buceadores, siempre manteniendo nuestros valores fundamentales: <strong>seguridad, profesionalismo y respeto</strong> por el medio ambiente marino.
-                </p>
-              </div>
+            <p className="text-gray-600 text-lg leading-relaxed">
+                En nuestro <strong>centro de buceo</strong>, te invitamos a descubrir el <strong>mundo submarino</strong> de manera segura y llena de aventura. Con un enfoque <strong>cercano y profesional</strong>, nuestros <strong>cursos personalizados</strong> te acompañarán en cada paso para que te conviertas en un <strong>buzo confiado</strong> y disfrutes al máximo cada inmersión.
+                <br /><br />
+                Contamos con un <strong>equipo de instructores apasionados</strong> y con <strong>amplia experiencia</strong> para guiarte y compartir con vos <strong>experiencias increíbles</strong> bajo el agua. ¡Prepárate para vivir <strong>momentos inolvidables</strong> y convertirte en un verdadero <strong>explorador acuático</strong>!
+              </p>
               <img 
                 src="/imagenes/nosotros4.jpg" 
                 alt="Historia de Azul Profundo" 
@@ -53,15 +50,18 @@ export default function AboutUsPage() {
               />
             </div>
 
-            {/* Métricas destacadas */}
-            <div className="bg-ocean-50 rounded-xl p-8 mb-16">
+           
+          </div>
+
+           {/* Métricas destacadas */}
+           <div className="bg-ocean-50 rounded-xl p-8 mb-16">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">En Números</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { value: "1000+", label: "Alumnos certificados", desc: "Desde principiantes hasta instructores" },
+                  { value: "1000+", label: "Alumnos certificados", desc: "Desde principiantes hasta divemaster" },
                   { value: "500+", label: "Inmersiones guiadas", desc: "En los mejores destinos del mundo" },
-                  { value: "30+", label: "Años de experiencia", desc: "Formando buceadores desde 1992" },
-                  { value: "20+", label: "Destinos explorados", desc: "De Caribe a Polinesia" },
+                  { value: "30+", label: "Años de experiencia", desc: "Formando buceadores desde 1991" },
+                  { value: "20+", label: "Destinos explorados", desc: "Alrededor del mundo" },
                 ].map((item, idx) => (
                   <div key={idx} className="text-center p-4">
                     <p className="text-4xl font-bold text-ocean mb-2">{item.value}</p>
@@ -71,6 +71,44 @@ export default function AboutUsPage() {
                 ))}
               </div>
             </div>
+
+          {/* Nuestra Filosofía */}
+          <div className="mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-ocean mb-4">Nuestra Filosofía</h2>
+              <div className="w-20 h-1 bg-ocean mx-auto"></div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <img
+                src="/imagenes/nosotros3.jpg"
+                alt="Filosofía Azul Profundo"
+                className="rounded-xl shadow-lg w-full h-auto border-4 border-white"
+              />
+              <div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Enseñanza Personalizada</h3>
+                <p className="text-gray-600 mb-6">
+                  En Azul Profundo creemos que cada alumno es único. Nuestros <strong>cursos personalizados</strong> se adaptan a tus necesidades, ritmo de aprendizaje y disponibilidad horaria.
+                </p>
+
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Seguridad Primero</h3>
+                <p className="text-gray-600 mb-6">
+                  Mantenemos los más altos <strong>estándares de seguridad</strong> en cada curso y salida de buceo.inculcando a nuestros alumnos a priorizar siempre la seguridad en sus inmersiones. Nuestro equipo de profesionales está certificado en primeros auxilios y asistencia en el agua.
+                </p>  
+
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Conservación Marina</h3>
+                <p className="text-gray-600 mb-6">
+                  Promovemos el <strong>buceo responsable</strong> y participamos activamente en proyectos de conservación de los ecosistemas marinos.
+                </p>
+
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Comunidad Azul</h3>
+                <p className="text-gray-600 mb-6">
+                  Formamos una <strong>comunidad apasionada por el mar</strong>. Organizamos encuentros, charlas y salidas para conectar con otros buzos y compartir experiencias.
+                </p>
+
+              </div>
+            </div>
+
           </div>
 
           {/* Nuestro Equipo */}
@@ -119,6 +157,7 @@ export default function AboutUsPage() {
                   </div>
                 </div>
               </div>
+              
 
               {/* Juan Cosentino */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
@@ -159,44 +198,8 @@ export default function AboutUsPage() {
             </div>
           </div>
 
-          {/* Nuestra Filosofía */}
-          <div className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-ocean mb-4">Nuestra Filosofía</h2>
-              <div className="w-20 h-1 bg-ocean mx-auto"></div>
-            </div>
+          
 
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <img
-                src="/imagenes/nosotros3.jpg"
-                alt="Filosofía Azul Profundo"
-                className="rounded-xl shadow-lg w-full h-auto border-4 border-white"
-              />
-              <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Enseñanza Personalizada</h3>
-                <p className="text-gray-600 mb-6">
-                  En Azul Profundo creemos que cada alumno es único. Nuestros <strong>cursos personalizados</strong> se adaptan a tus necesidades, ritmo de aprendizaje y disponibilidad horaria.
-                </p>
-
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Seguridad Primero</h3>
-                <p className="text-gray-600 mb-6">
-                  Mantenemos los más altos <strong>estándares de seguridad</strong> en cada curso y salida de buceo. Nuestro equipo está certificado en primeros auxilios y rescate acuático.
-                </p>
-
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Conservación Marina</h3>
-                <p className="text-gray-600 mb-6">
-                  Promovemos el <strong>buceo responsable</strong> y participamos activamente en proyectos de conservación de los ecosistemas marinos.
-                </p>
-
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Comunidad Azul</h3>
-                <p className="text-gray-600 mb-6">
-                  Formamos una <strong>comunidad apasionada por el mar</strong>. Organizamos encuentros, charlas y salidas para conectar con otros buzos y compartir experiencias.
-                </p>
-
-              </div>
-            </div>
-
-          </div>
 
           {/* Compromiso */}
           <div className="bg-ocean-50 rounded-xl p-8 md:p-12">
@@ -213,7 +216,7 @@ export default function AboutUsPage() {
                 },
                 {
                   title: "Equipo de Calidad",
-                  content: "Utilizamos equipos de primera línea, mantenidos con los más altos estándares."
+                  content: "Utilizamos equipos de primera línea, mantenidos con los más altos estándares en services oficiales."
                 },
                 {
                   title: "Experiencias Únicas",

@@ -83,8 +83,7 @@ export default function CoursesCarousel() {
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">Transforma tu relación con el océano</h2>
           <p className="text-lg text-ocean-dark max-w-2xl mx-auto">
-          Elegí hasta donde querés llegar.. 
-
+          Desde tus primeras experiencias bajo el agua hasta convertirte en buceador profesional, tenemos el curso para cada etapa de tu aventura submarina.
           </p>
         </div>
 

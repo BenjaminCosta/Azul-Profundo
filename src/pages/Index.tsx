@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import NauiSection from "@/pages/NauiSection";
 import FaqSection from "@/components/FaqSection";
 import CursosCarousel from "@/components/CursosCarousel";
+import ImagesCarousel from "@/components/ImagesCarousel"
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Hero />
       <Testimonials />
       <AboutUs />
+      <ImagesCarousel />
       <CursosCarousel />
       <Footer />
     </div>
