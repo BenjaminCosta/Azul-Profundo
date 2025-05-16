@@ -10,9 +10,9 @@ const travelsData = {
     location: "Ecuador",
     date: "24-31 Mayo",
     highlights: [
-      { icon: <Fish className="text-ocean" />, text: "Tiburones martillo, ballena y más" },
-      { icon: <Waves className="text-ocean" />, text: "Visibilidad 10-25m" },
-      { icon: <Sun className="text-ocean" />, text: "Temperatura 16-20°C" }
+      { icon: <Fish className="text-yellow-200" />, text: "Tiburones martillo, ballena y más" },
+      { icon: <Waves className="text-yellow-200" />, text: "Visibilidad 10-25m" },
+      { icon: <Sun className="text-yellow-200" />, text: "Temperatura 16-20°C" }
     ],
     description: "El laboratorio viviente de Darwin te espera con uno de los ecosistemas marinos más espectaculares del planeta. Bucea entre cardúmenes gigantes, tiburones ballena juguetones y las únicas iguanas marinas del mundo. Cada inmersión es un encuentro con la evolución en su estado más puro.",
     itinerary: [
@@ -35,9 +35,9 @@ const travelsData = {
     location: "Brasil",
     date: "24-29 Junio",
     highlights: [
-      { icon: <Ship className="text-ocean" />, text: "6 inmersiones embarcadas" },
-      { icon: <Fish className="text-ocean" />, text: "Vida marina tropical" },
-      { icon: <Sun className="text-ocean" />, text: "Aguas a 26°C" }
+      { icon: <Ship className="text-yellow-200" />, text: "6 inmersiones embarcadas" },
+      { icon: <Fish className="text-yellow-200" />, text: "Vida marina tropical" },
+      { icon: <Sun className="text-yellow-200" />, text: "Aguas a 26°C" }
     ],
     description: "Entre las 365 islas de este paraíso tropical, descubrirás arrecifes vibrantes y naufragios accesibles. Perfecto para combinar buceo relajado con la cultura carioca y playas de arena blanca.",
     itinerary: [
@@ -59,9 +59,9 @@ const travelsData = {
     location: "Caribe Holandés",
     date: "8-15 Octubre",
     highlights: [
-      { icon: <Zap className="text-ocean" />, text: "Buceos ilimitados" },
-      { icon: <Fish className="text-ocean" />, text: "40m de visibilidad" },
-      { icon: <Sun className="text-ocean" />, text: "Aguas a 29°C" }
+      { icon: <Zap className="text-yellow-200" />, text: "Buceos ilimitados" },
+      { icon: <Fish className="text-yellow-200" />, text: "40m de visibilidad" },
+      { icon: <Sun className="text-yellow-200" />, text: "Aguas a 29°C" }
     ],
     description: "El paraíso del buceo autónomo, donde podrás sumergirte cuando quieras en más de 60 sitios marcados. Arrecifes multicolor, dos naufragios y la libertad de explorar a tu ritmo con tanques ilimitados y Nitrox incluido.",
     itinerary: [
@@ -77,16 +77,16 @@ const travelsData = {
     ],
     level: "Recomendado autónomos",
     spots: "Grupo mediano (10 personas)",
-    image: "/imagenes/bonaire2.jpg"
+    image: "/imagenes/bonaire3.jpg"
   },
   "egipto": {
     destination: "Mar Rojo & Nilo",
     location: "Egipto",
     date: "Noviembre",
     highlights: [
-      { icon: <Ship className="text-ocean" />, text: "20+ inmersiones" },
-      { icon: <Fish className="text-ocean" />, text: "Pecios legendarios" },
-      { icon: <Sun className="text-ocean" />, text: "Cultura faraónica" }
+      { icon: <Ship className="text-yellow-200" />, text: "20+ inmersiones" },
+      { icon: <Fish className="text-yellow-200" />, text: "Pecios legendarios" },
+      { icon: <Sun className="text-yellow-200" />, text: "Cultura faraónica" }
     ],
     description: "La combinación perfecta: buceo en los legendarios sitios del Mar Rojo y exploración de los templos faraónicos. Una semana en yate de lujo haciendo inmersiones increíbles seguida de un crucero por el Nilo descubriendo la historia antigua.",
     itinerary: [

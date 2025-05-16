@@ -11,7 +11,6 @@ import NauiSection from "@/pages/NauiSection";
 import FaqSection from "@/components/FaqSection";
 import CursosCarousel from "@/components/CursosCarousel";
 import ImagesCarousel from "@/components/ImagesCarousel"
-
 const Index = () => {
   return (
     <div className="min-h-screen">

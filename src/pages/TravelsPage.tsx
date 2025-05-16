@@ -21,7 +21,7 @@ const allTravels = [
     location: "Ecuador",
     date: "10-20 Marzo, 2026",
     description: "Uno de los mejores lugares del mundo para el buceo. Podrás nadar junto a lobos marinos, tortugas, pingüinos y tiburones en este santuario natural único.",
-    image: "/imagenes/galapagos3.jpg",
+    image: "/imagenes/galapagos.jpg",
     spots: "a bordo"
   },
   {
@@ -30,7 +30,7 @@ const allTravels = [
     location: "Egipto",
     date: "5-15 Mayo, 2026",
     description: "Aguas cristalinas, coloridos arrecifes de coral y una abundante vida marina. Incluye inmersiones en pecios de la Segunda Guerra Mundial y arrecifes prístinos.",
-    image: "/imagenes/egypt.jpg",
+    image: "/imagenes/egypt2.jpg",
     spots: "a bordo"
   },
   {
