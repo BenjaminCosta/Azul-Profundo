@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const divingImages = [
   {
     id: 1,
-    image: "/imagenes/carousel1.jpg",
+    image: "/imagenes/carousel7.jpg",
     title: "Exploración de Naufragios",
     description: "Descubrí fascinantes pecios históricos y su ecosistema único"
   },
@@ -17,7 +17,7 @@ const divingImages = [
   },
   {
     id: 3,
-    image: "imagenes/carousel6.jpg",
+    image: "imagenes/carousel8.jpg",
     title: "Biodiversidad Submarina",
     description: "Maravillate con los coloridos ecosistemas de arrecifes"
   },
