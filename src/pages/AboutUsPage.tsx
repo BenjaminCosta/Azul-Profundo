@@ -1,5 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { 
+  GraduationCap,  // Para "Excelencia en Formación"
+  ShieldCheck,    // Para "Equipo de Calidad"
+  MapPin,         // Para "Experiencias Únicas"
+  // ... otros iconos que ya tengas importados
+} from "lucide-react";
 
 export default function AboutUsPage() {
   return (
@@ -201,35 +207,64 @@ export default function AboutUsPage() {
           
 
 
-          {/* Compromiso */}
-          <div className="bg-ocean-50 rounded-xl p-8 md:p-12">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-ocean mb-4">Nuestro Compromiso</h2>
-              <div className="w-20 h-1 bg-ocean mx-auto"></div>
+          {/* Sección Compromiso - Versión Final */}
+<div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+  <div className="flex flex-col lg:flex-row h-full">
+    {/* Contenido de texto - Izquierda */}
+    <div className="w-full lg:w-1/2 p-10 lg:p-12 flex flex-col justify-center">
+      <div className="mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-ocean-dark mb-4 relative pb-3">
+          Nuestro Compromiso
+          <span className="absolute bottom-0 left-0 w-24 h-[3px] bg-ocean-light rounded-full"></span>
+        </h2>
+        <p className="text-gray-700">Lo que nos diferencia y nos impulsa cada día</p>
+      </div>
+      
+      <div className="space-y-6">
+        {[
+          {
+            title: "Excelencia en Formación",
+            content: "Programas educativos actualizados con los últimos estándares internacionales.",
+            icon: <GraduationCap className="h-6 w-6" />
+          },
+          {
+            title: "Equipo de Calidad",
+            content: "Utilizamos equipos de primera línea, mantenidos con los más altos estándares.",
+            icon: <ShieldCheck className="h-6 w-6" />
+          },
+          {
+            title: "Experiencias Únicas",
+            content: "Viajes y expediciones a los mejores destinos de buceo del mundo.",
+            icon: <MapPin className="h-6 w-6" />
+          }
+        ].map((item, idx) => (
+          <div 
+            key={idx} 
+            className="flex items-start p-4 hover:bg-ocean-light/5 rounded-lg transition-colors"
+          >
+            <div className="bg-ocean-light/10 p-2.5 rounded-lg mr-4 text-ocean-dark">
+              {item.icon}
             </div>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Excelencia en Formación",
-                  content: "Programas educativos actualizados con los últimos estándares internacionales."
-                },
-                {
-                  title: "Equipo de Calidad",
-                  content: "Utilizamos equipos de primera línea, mantenidos con los más altos estándares en services oficiales."
-                },
-                {
-                  title: "Experiencias Únicas",
-                  content: "Viajes y expediciones a los mejores destinos de buceo del mundo."
-                }
-              ].map((item, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
-                  <p className="text-gray-600">{item.content}</p>
-                </div>
-              ))}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-1.5">{item.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{item.content}</p>
             </div>
           </div>
+        ))}
+      </div>
+    </div>
+    
+    {/* Imagen - Derecha */}
+    <div className="w-full lg:w-1/2 h-64 lg:h-auto flex">
+      <img 
+        src="/imagenes/compromiso.jpg" 
+        alt="Nuestro compromiso con el buceo"
+        className="w-full h-full object-cover object-center"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</div>
         </div>
       </section>
 
