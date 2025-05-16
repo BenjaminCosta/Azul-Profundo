@@ -50,7 +50,7 @@ export default function TravelsPage() {
       <Navbar />
 
       {/* Sección de encabezado con fondo e imagen */}
-      <section className="pt-32 pb-20 relative text-white text-center">
+      <section className="pt-40 pb-20 relative text-white text-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{

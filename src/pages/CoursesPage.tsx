@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Clock, ChevronRight, Anchor, Gauge, LifeBuoy, Star, Activity, UserCheck, Layers, HeartPulse } from "lucide-react";
 
-const allCourses = [
+// eslint-disable-next-line react-refresh/only-export-components
+export const allCourses = [
   {
     id: "open-water-diver",
     title: "Open Water Diver",
@@ -88,6 +89,7 @@ const allCourses = [
   }
 ];
 
+
 export default function CoursesPage() {
   return (
     <div className="min-h-screen relative">
@@ -106,7 +108,7 @@ export default function CoursesPage() {
       </div>
 
       {/* Contenido sobre el fondo (igual al original) */}
-      <div className="relative z-10 pt-32 pb-20 text-white">
+      <div className="relative z-10 pt-40 pb-20 text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Nuestros Cursos de Buceo</h1>
           <p className="text-xl max-w-3xl mx-auto">

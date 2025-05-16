@@ -55,7 +55,7 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 relative text-white text-center">
+      <section className="pt-40 pb-20 relative text-white text-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/imagenes/hero2.avif')" }}>
           <div className="w-full h-full bg-ocean-dark/40"></div>
         </div>

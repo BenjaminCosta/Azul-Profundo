@@ -28,7 +28,7 @@ const travelsData = {
     ],
     level: "Intermedio/Avanzado",
     spots: "Grupo reducido (12 max)",
-    image: "/imagenes/galapagos3.jpg"
+    image: "/imagenes/galapagos2.jpg"
   },
   "angra-dos-reis": {
     destination: "Angra dos Reis",

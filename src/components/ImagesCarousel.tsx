@@ -78,7 +78,7 @@ export default function DivingCarousel() {
               backgroundPosition: 'center 30%'
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/60 to-black/70 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-black/80 to-black/10 flex items-center justify-center">
               <div className="text-center text-white max-w-2xl px-4">
                 <motion.h3 
                   initial={{ y: 20, opacity: 0 }}
