@@ -53,15 +53,16 @@ export const updateProduct = async (
   return data;
 };
 
-// Eliminar producto (soft delete)
+// Eliminar producto PERMANENTEMENTE
 export const deleteProduct = async (id: string): Promise<void> => {
   const { error } = await supabase
     .from('products')
-    .update({ is_active: false, updated_at: new Date().toISOString() })
+    .delete()
     .eq('id', id);
 
   if (error) throw new Error(error.message);
 };
+
 // Agregar estos métodos
 export const getInactiveProducts = async (): Promise<Product[]> => {
   const { data, error } = await supabase

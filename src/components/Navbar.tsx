@@ -34,7 +34,7 @@ export default function Navbar() {
     <header
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-white/95 backdrop-blur-sm shadow-sm py-1" : "bg-transparent py-2"
+        scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm py-1" : "bg-transparent py-2"
       )}
     >
       <div className="container mx-auto px-6 flex items-start justify-between"> {/* Cambiado a items-start */}
@@ -117,7 +117,7 @@ export default function Navbar() {
       <div
         className={cn(
           "md:hidden fixed inset-0 z-40 bg-white transform transition-transform ease-in-out duration-300",
-          isOpen ? "translate-x-0" : "translate-x-full"
+          isOpen ? "translate-x-0 " : "translate-x-full "
         )}
       >
         <div className="flex items-center justify-between p-4 border-b">

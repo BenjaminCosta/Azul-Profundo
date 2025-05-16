@@ -11,6 +11,7 @@ const AdminPage = () => {
           <p className="mt-2 text-lg text-gray-600">
             Gestión completa de productos y catálogo
           </p>
+          
         </div>
       </header>
 

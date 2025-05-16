@@ -78,7 +78,7 @@ export default function DivingCarousel() {
               backgroundPosition: 'center 30%'
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/70 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/60 to-black/70 flex items-center justify-center">
               <div className="text-center text-white max-w-2xl px-4">
                 <motion.h3 
                   initial={{ y: 20, opacity: 0 }}
@@ -105,17 +105,17 @@ export default function DivingCarousel() {
       {/* Controles de navegación */}
       <button 
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-ocean/30 hover:bg-white/50 p-3 rounded-full z-10 transition-all shadow-lg hover:shadow-xl"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-ocean/10 hover:bg-white/10 p-3 rounded-full z-10 transition-all shadow-lg hover:shadow-xl"
         aria-label="Slide anterior"
       >
-        <ChevronLeft size={28} className="text-white" />
+        <ChevronLeft size={20} className="text-white/20" />
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-ocean/30 hover:bg-white/50 p-3 rounded-full z-10 transition-all shadow-lg hover:shadow-xl"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-ocean/10 hover:bg-white/10 p-3 rounded-full z-10 transition-all shadow-lg hover:shadow-xl"
         aria-label="Slide siguiente"
       >
-        <ChevronRight size={28} className="text-white" />
+        <ChevronRight size={20} className="text-white/30" />
       </button>
 
     </section>
