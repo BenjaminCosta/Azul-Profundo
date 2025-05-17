@@ -24,7 +24,7 @@ export const allCourses = [
     duration: "2-3 días",
     level: "Intermedio",
     price: "$380",
-    image: "/imagenes/avanzado2.jpg",
+    image: "/imagenes/avanzado3.jpg",
     icon: <Gauge className="text-ocean" />
   },
   {
@@ -84,7 +84,7 @@ export const allCourses = [
     duration: "2 días",
     level: "Todos los niveles",
     price: "$180",
-    image: "/imagenes/auxilios.avif",
+    image: "/imagenes/auxilios2.jpg",
     icon: <HeartPulse className="text-ocean" />
   }
 ];

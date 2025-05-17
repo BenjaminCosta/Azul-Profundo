@@ -17,7 +17,7 @@ const divingImages = [
   },
   {
     id: 3,
-    image: "imagenes/carousel8.jpg",
+    image: "imagenes/coral.jpg",
     title: "Biodiversidad Submarina",
     description: "Maravillate con los coloridos ecosistemas de arrecifes"
   },
