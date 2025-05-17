@@ -7,38 +7,38 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqs = [
+const faqs = [ 
   {
     question: "¿Por qué un curso de buceo?",
-    answer: "Un curso de buceo te permite explorar un mundo completamente nuevo bajo el agua, conocer ecosistemas marinos únicos, y vivir una experiencia de libertad y aventura incomparable. Además, te proporciona las habilidades y conocimientos necesarios para bucear de manera segura y responsable en cualquier parte del mundo."
+    answer: "Un curso de buceo te permite explorar un mundo completamente nuevo bajo el agua, conocer ecosistemas marinos únicos y vivir una experiencia de libertad y aventura incomparable. Además, te proporciona las habilidades y conocimientos necesarios para bucear de manera segura y responsable en cualquier parte del mundo. En Azul Profundo contamos con tres agencias de gran prestigio internacional que avalan nuestro profesionalismo."
   },
   {
-    question: "¿Qué se necesita para bucear?",
+    question: "¿Qué se necesita para aprender a bucear?",
     answer: "Primero que nada ganas. Ganas por aprender, por conocer, por explorar y por querer participar de aventuras y desafíos nuevos. También se necesita dedicación y esfuerzo. En Azul Profundo te acompañamos en todas tus etapas de aprendizaje y experiencias para que cumplas tus objetivos."
   },
   {
-    question: "¿Hace falta saber nadar perfecto?",
-    answer: "No es necesario ser un nadador experto, pero sí es importante sentirse cómodo en el agua y tener habilidades básicas de natación. Durante el curso, aprenderás técnicas específicas para moverte bajo el agua que son diferentes a la natación convencional."
+    question: "¿Hace falta saber nadar?",
+    answer: "No es necesario ser un nadador experto, pero sí es importante sentirse cómodo en el agua y tener habilidades básicas de natación. En Azul Profundo aprenderás técnicas específicas para moverte bajo el agua que son diferentes a la natación convencional."
   },
   {
     question: "No tuve una buena experiencia en un bautismo, ¿Puede ser distinto con un curso de buceo?",
-    answer: "Absolutamente. Un bautismo suele ser una experiencia muy breve y sin mucha preparación. En un curso completo, aprenderás gradualmente, con tiempo para adaptarte al equipo y al entorno subacuático, con instructores que te guiarán paso a paso para superar cualquier ansiedad inicial, lo que hace que la experiencia sea mucho más placentera y satisfactoria."
+    answer: "Absolutamente. Un bautismo suele ser una experiencia muy breve y sin mucha preparación. En un curso completo, aprenderás gradualmente, con tiempo para adaptarte al equipo y al entorno subacuático. En Azul Profundo encontrarás instructores que te guiarán paso a paso para superar cualquier ansiedad inicial, lo que hace que la experiencia sea mucho más placentera y satisfactoria."
   },
   {
     question: "¿Necesito contar con algún elemento para el curso?",
-    answer: "Para comenzar el curso básico, sólo necesitas traje de baño, toalla y ganas de aprender. Nosotros proporcionamos todo el equipo especializado (regulador, tanque, chaleco, traje, etc.). A medida que avances, podrás ir adquiriendo tu propio equipo si lo deseas, y estaremos encantados de asesorarte."
+    answer: "Para comenzar el curso inicial, sólo necesitas traje de baño, toalla y ganas de aprender. En Azul Profundo te proporcionamos todo el equipo especializado (regulador, tanque, chaleco, traje, etc.) y a medida que avances, podrás ir adquiriendo tu propio equipo si lo deseas, y estaremos encantados de asesorarte."
   },
   {
     question: "¿Hasta qué edad se puede bucear?",
-    answer: "No hay un límite de edad superior para bucear, siempre que estés en buena condición física y de salud. Tenemos alumnos que han comenzado a bucear después de los 60 años. Para niños, existen programas especiales a partir de los 8 años, con limitaciones apropiadas según su edad y desarrollo."
+    answer: "Mientras te mantengas saludable, el cuerpo te lo permita y tu mente esté despejada y con ganas de seguir explorando nuevas sensaciones, podrás bucear. No hay límite de edad."
   },
   {
     question: "¿Qué horarios se cursa?",
-    answer: "Ofrecemos horarios flexibles para adaptarnos a tus necesidades. Tenemos cursos en días de semana por la tarde/noche, y también los fines de semana. Además, durante las vacaciones escolares, ofrecemos cursos intensivos. Contáctanos para conocer los horarios actuales y encontrar el que mejor se adapte a tu agenda."
+    answer: "En Azul Profundo nuestros cursos son personalizados, así que los horarios y modalidad de cursada los propones vos. Podemos cursar en la semana, los fines de semana, durante la mañana, tarde o noche. Cuando nos contactes diseñaremos juntos la modalidad, regularidad y horarios que mejor se adapten a tus necesidades."
   },
   {
     question: "¿Cuánto dura el curso?",
-    answer: "La duración varía según el nivel y tipo de curso. El curso básico (Open Water Diver) generalmente se completa en 4-5 días, combinando sesiones teóricas, prácticas en piscina e inmersiones en aguas abiertas. También ofrecemos formatos más extensos para quienes prefieren un aprendizaje más pausado."
+    answer: "El ritmo del curso lo pone tu velocidad de aprender. No hay un límite máximo de clases. En Azul Profundo los cursos duran hasta que se aprenden los conocimientos y los ejercicios en el agua salen a la perfección."
   }
 ];
 

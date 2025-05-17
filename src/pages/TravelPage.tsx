@@ -109,7 +109,7 @@ const travelsData = {
     image: "/imagenes/cenote2.jpg",
     buttonText: "Consultar"
   },
-  "mar-rojo": {
+  "egipto": {
     destination: "Mar Rojo & Egipto",
     location: "Egipto",
     flag: "/imagenes/eg.svg",
