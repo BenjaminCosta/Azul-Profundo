@@ -9,40 +9,65 @@ const allTravels = [
   {
     id: "angra-dos-reis",
     destination: "Angra dos Reis",
-    location: "Brasil",
-    date: "15-25 Enero, 2026",
-    description: "Descubre las maravillosas playas y aguas cristalinas de esta joya brasileña. Inmersiones para todos los niveles entre islas tropicales y arrecifes coloridos, con una abundante vida marina.",
+    country: "Brasil",
+    flag: "/imagenes/br.svg",
+    date: "Destino con salidas frecuentes",
+    description: "Descubre las maravillosas playas y aguas cristalinas y cálidas de esta joya brasileña que con sus más de 300 islas ofrece un sinfín de experiencias, con abundante vida marina.",
     image: "/imagenes/angra2.jpg",
     spots: "con alojamiento"
   },
   {
     id: "galapagos",
     destination: "Galápagos",
-    location: "Ecuador",
-    date: "10-20 Marzo, 2026",
-    description: "Uno de los mejores lugares del mundo para el buceo. Podrás nadar junto a lobos marinos, tortugas, pingüinos y tiburones en este santuario natural único.",
+    country: "Ecuador",
+    flag: "/imagenes/ec.svg",
+    date: "Destino con salidas frecuentes",
+    description: "Ubicadas en un aislado sector del Océano Pacífico, las Islas Galápagos representan uno de los lugares de mayor biodiversidad del Planeta, siendo uno de los tres mejores lugares del mundo para bucear.",
     image: "/imagenes/galapagos.jpg",
     spots: "a bordo"
   },
   {
     id: "egipto",
     destination: "Mar Rojo",
-    location: "Egipto",
-    date: "5-15 Mayo, 2026",
-    description: "Aguas cristalinas, coloridos arrecifes de coral y una abundante vida marina. Incluye inmersiones en pecios de la Segunda Guerra Mundial y arrecifes prístinos.",
+    country: "Egipto",
+    flag: "/imagenes/eg.svg",
+    date: "Destino con salidas frecuentes",
+    description: "Las pirámides de Egipto y el río Nilo se combinan con las aguas cristalinas, coloridos arrecifes y muchos naufragios rodeados de una abundante vida marina en este destino.",
     image: "/imagenes/egypt2.jpg",
     spots: "a bordo"
   },
   {
     id: "bonaire",
     destination: "Bonaire",
-    location: "Caribe Holandés",
-    date: "20-30 Julio, 2026",
-    description: "Conocido como el paraíso del buceo desde costa, Bonaire ofrece acceso fácil a más de 60 sitios de inmersión y un ecosistema marino protegido con visibilidad excepcional.",
+    country: "Caribe Holandés",
+    flag: "/imagenes/nl.svg",
+    date: "Destino con salidas frecuentes",
+    description: "Conocido como el paraíso de los buceadores, esta isla de las Antillas Holandesas ofrece acceso fácil a más de 60 sitios de inmersión y un ecosistema marino protegido con visibilidad excepcional y agua cálida.",
     image: "/imagenes/bonaire2.jpg",
+    spots: "con alojamiento"
+  },
+  {
+    id: "cenotes",
+    destination: "Cenotes",
+    country: "México",
+    flag: "/imagenes/mx.svg",
+    date: "Destino con salidas frecuentes",
+    description: "Las cuevas de los cenotes mexicanos son escenarios únicos para aquellos intrépidos que quieren conocer las entrañas de la Tierra.",
+    image: "/imagenes/cenote2.jpg",
+    spots: "con alojamiento"
+  },
+  {
+    id: "roatan",
+    destination: "Roatán",
+    country: "Honduras",
+    flag: "/imagenes/hn.svg",
+    date: "Destino con salidas frecuentes",
+    description: "Esta famosa isla del mar Caribe de aguas transparentes y cálidas te permite bucear en cañadones sumergidos y con un gran arrecife de coral.",
+    image: "/imagenes/roatan.jpg",
     spots: "con alojamiento"
   }
 ];
+
 
 export default function TravelsPage() {
   return (
@@ -86,15 +111,20 @@ export default function TravelsPage() {
                   </div>
                 </div>
                 <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-2xl">{travel.destination}</CardTitle>
-                      <div className="flex items-center text-gray-500 mt-1">
-                        <MapPin size={14} className="mr-1" />
-                        <span>{travel.location}</span>
-                      </div>
-                    </div>
+                   <div className="flex justify-between items-start">
+                    <CardTitle className="text-2xl">{travel.destination}</CardTitle>
+                  <div className="flex items-center text-gray-500 mt-1">
+                     
+                    <MapPin size={14} className="mr-1" />
+                    <img
+                      src={travel.flag}
+                      alt={travel.country}
+                      className="w-5 h-4 mr-2 object-cover rounded-sm shadow-sm"
+                    />
+                    <span>{travel.country}</span>
                   </div>
+                  </div>
+
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center text-gray-500 text-sm mb-3">

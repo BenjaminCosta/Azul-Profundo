@@ -5,106 +5,164 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Anchor, Compass, ArrowLeft, Waves, Fish, Ship, Sun, Zap } from "lucide-react";
 
 const travelsData = {
-  "galapagos": {
-    destination: "Islas Galápagos",
-    location: "Ecuador",
-    date: "24-31 Mayo",
-    highlights: [
-      { icon: <Fish className="text-yellow-200" />, text: "Tiburones martillo, ballena y más" },
-      { icon: <Waves className="text-yellow-200" />, text: "Visibilidad 10-25m" },
-      { icon: <Sun className="text-yellow-200" />, text: "Temperatura 16-20°C" }
-    ],
-    description: "El laboratorio viviente de Darwin te espera con uno de los ecosistemas marinos más espectaculares del planeta. Bucea entre cardúmenes gigantes, tiburones ballena juguetones y las únicas iguanas marinas del mundo. Cada inmersión es un encuentro con la evolución en su estado más puro.",
-    itinerary: [
-      { day: "Día 1", title: "Llegada a Santa Cruz", description: "Check-in en hotel y tarde libre para explorar Puerto Ayora" },
-      { day: "Días 2-6", title: "Buceo intensivo", description: "2 inmersiones diarias en sitios como Gordon Rocks, Seymour y Daphne" },
-      { day: "Día 7", title: "Aventura terrestre", description: "Visita a los cráteres gemelos y reserva de tortugas gigantes" }
-    ],
-    included: [
-      { category: "Alojamiento", items: ["7 noches en hotel boutique", "Habitaciones dobles con A/C"] },
-      { category: "Buceo", items: ["12 inmersiones guiadas", "Snacks entre buceos", "Guías PADI multilingües"] },
-      { category: "Comidas", items: ["Desayunos buffet", "Almuerzos en restaurante local"] },
-      { category: "Logística", items: ["Transfer aeropuerto-hotel", "Toallas de buceo", "Asistencia 24/7"] }
-    ],
-    level: "Intermedio/Avanzado",
-    spots: "Grupo reducido (12 max)",
-    image: "/imagenes/galapagos2.jpg"
-  },
   "angra-dos-reis": {
     destination: "Angra dos Reis",
     location: "Brasil",
-    date: "24-29 Junio",
+    flag: "/imagenes/br.svg",
     highlights: [
-      { icon: <Ship className="text-yellow-200" />, text: "6 inmersiones embarcadas" },
-      { icon: <Fish className="text-yellow-200" />, text: "Vida marina tropical" },
-      { icon: <Sun className="text-yellow-200" />, text: "Aguas a 26°C" }
+      { icon: <Ship className="text-yellow-200" />, text: "8 inmersiones embarcadas" },
+      { icon: <Fish className="text-yellow-200" />, text: "Aguas cálidas (20-26°C)" },
+      { icon: <Sun className="text-yellow-200" />, text: "Actividades acuáticas" }
     ],
-    description: "Entre las 365 islas de este paraíso tropical, descubrirás arrecifes vibrantes y naufragios accesibles. Perfecto para combinar buceo relajado con la cultura carioca y playas de arena blanca.",
+    description: "Descubre las maravillosas playas y aguas cristalinas y cálidas de esta joya brasileña que con sus más de 300 islas ofrece un sinfín de experiencias, con abundante vida marina. Este maravilloso archipiélago subtropical permite inmersiones seguras y relajadas en un calmo mar transparente y cálido. Ideal para los que recién se inician o para los que buscan entrenar y mantenerse activos. Nos alojamos en una Pousada especializada en operaciones de buceo ubicada sobre el mar en habitaciones dobles con el desayuno y cenas tipo buffet incluidas. Todos los días nos embarcamos en el muelle de la Pousada para hacer las dos inmersiones diarias y por las tardes podemos recorrer las islas o practicar deportes acuaticos como stand up paddle, kayac, etc.",
     itinerary: [
-      { day: "Día 1", title: "Check-in frente al mar", description: "Llegada y acomodación en pousada boutique" },
-      { day: "Días 2-5", title: "Rutina de buceo", description: "Inmersiones matutinas y tardes libres para explorar" },
+      { day: "Día 1", title: "Llegada", description: "Check-in en la Pousada y orientación" },
+      { day: "Días 2-5", title: "Buceo y exploración", description: "2 inmersiones diarias embarcadas y tardes libres para actividades acuáticas" },
       { day: "Día 6", title: "Despedida", description: "Último buceo y traslado al aeropuerto" }
     ],
     included: [
-      { category: "Hospedaje", items: ["Pousada frente al mar", "Habitaciones con vista"] },
-      { category: "Experiencia", items: ["8 inmersiones totales", "Guía local especializado"] },
-      { category: "Gastronomía", items: ["Desayuno buffet", "Cenas con productos locales"] }
+      { category: "Hospedaje", items: ["5 noches en Pousada frente al mar", "Habitaciones dobles"] },
+      { category: "Experiencia", items: ["8 buceos embarcados", "Buceos libres desde el muelle", "Guía de buceo"] },
+      { category: "Gastronomía", items: ["Desayuno buffet diario", "Cenas buffet con bebidas sin alcohol"] },
+      { category: "Extra", items: ["Actividades acuáticas (SUP, kayak)", "Snacks y bebidas a bordo", "Toallas de buceo"] }
     ],
     level: "Todos los niveles",
-    spots: "Grupo íntimo (8 personas)",
-    image: "/imagenes/angra4.jpg"
+    spots: "Grupo reducido",
+    image: "/imagenes/angra4.jpg",
+    buttonText: "Consultar"
+  },
+  "galapagos": {
+    destination: "Islas Galápagos",
+    location: "Ecuador",
+    flag: "/imagenes/ec.svg",
+    highlights: [
+      { icon: <Fish className="text-yellow-200" />, text: "Gran biodiversidad marina" },
+      { icon: <Ship className="text-yellow-200" />, text: "12 inmersiones embarcadas" },
+      { icon: <Sun className="text-yellow-200" />, text: "Excursiones terrestres" }
+    ],
+    description: "Ubicadas en un aislado sector del Océano Pacífico, las Islas Galápagos representan uno de los lugares de mayor biodiversidad del Planeta, siendo uno de los tres mejores lugares del mundo para bucear.Cuna de la teoría de la evolución de Darwin, el archipiélago es visitado constantemente por gigantes cardúmenes de peces de todo tipo, gran variedad de tiburones (ballena, punta blanca, punta negra, galápagos, tigre y martillo) y rayas (moteada, manta, diablo, etc.), el gran mola mola (pez luna) e infinidad de especies marinas (tortugas, lobos marinos, ballenas jorobadas, orcas y delfines). No hay otro lugar en la Tierra así.Los dos buceos diarios son por la mañana y embarcados, regresando al Hotel después de almorzar en un restaurant en el puerto (incluido). Para los que quieren saltearse buceos o los que todavía no se animan a esta pasión submarina hay excursiones a lugares de gran interés que pueden contratarse ahí mismo.",
+    itinerary: [
+      { day: "Día 1", title: "Llegada", description: "Transfer al hotel y briefing inicial" },
+      { day: "Días 2-7", title: "Buceo y exploración", description: "2 buceos diarios embarcados por la mañana" },
+      { day: "Día 8", title: "Despedida", description: "Transfer al aeropuerto" }
+    ],
+    included: [
+      { category: "Hospedaje", items: ["7 noches en hotel", "Habitaciones dobles"] },
+      { category: "Experiencia", items: ["12 buceos embarcados", "Guía de buceo"] },
+      { category: "Gastronomía", items: ["Desayuno y almuerzo diarios", "Bebidas sin alcohol"] },
+      { category: "Extra", items: ["Transfer in/out", "Snacks a bordo", "Toallas de buceo"] }
+    ],
+    level: "Intermedio/Avanzado",
+    spots: "Grupo reducido",
+    image: "/imagenes/galapagos3.jpg",
+    buttonText: "Consultar"
   },
   "bonaire": {
     destination: "Bonaire",
     location: "Caribe Holandés",
-    date: "8-15 Octubre",
+    flag: "/imagenes/nl.svg",
     highlights: [
       { icon: <Zap className="text-yellow-200" />, text: "Buceos ilimitados" },
-      { icon: <Fish className="text-yellow-200" />, text: "40m de visibilidad" },
-      { icon: <Sun className="text-yellow-200" />, text: "Aguas a 29°C" }
+      { icon: <Fish className="text-yellow-200" />, text: "30m de visibilidad" },
+      { icon: <Sun className="text-yellow-200" />, text: "Nitrox free" }
     ],
-    description: "El paraíso del buceo autónomo, donde podrás sumergirte cuando quieras en más de 60 sitios marcados. Arrecifes multicolor, dos naufragios y la libertad de explorar a tu ritmo con tanques ilimitados y Nitrox incluido.",
+    description: "Conocido como el paraíso de los buceadores, esta isla de las Antillas Holandesas ofrece acceso fácil a más de 60 sitios de inmersión y un ecosistema marino protegido con visibilidad excepcional y agua cálida. Rodeada por un fondo coralino multicolor explotado de vida, cada inmersión es única, pudiendo ver una gran variedad de peces, muchas veces agrupados en escuelas revoloteando a través del coral. También hay dos naufragios accesibles (un carguero y un pesquero). La libertad de elegir a lo largo de toda la isla los puntos de buceo a realizar desde la orilla nos permite movernos a nuestro tiempo y hacer las cosas a nuestro modo ya que contamos con cantidad de tanques ilimitados a cualquier hora. El Resort donde nos alojamos se encuentra situado frente al mar, está dedicado exclusivamente al buceo y dispone de piletas, restaurants y bares.",
     itinerary: [
-      { day: "Día 1", title: "Llegada y orientación", description: "Check-in en resort y briefing inicial" },
-      { day: "Días 2-7", title: "Buceo libre", description: "4 inmersiones diarias (mañana/tarde/noche)" },
-      { day: "Día 8", title: "Despedida", description: "Últimas inmersiones y check-out" }
+      { day: "Día 1", title: "Llegada", description: "Check-in en resort y orientación" },
+      { day: "Días 2-7", title: "Buceo libre", description: "Buceos ilimitados de costa diurnos/nocturnos" },
+      { day: "Día 8", title: "Despedida", description: "Check-out y transfer al aeropuerto" }
     ],
     included: [
-      { category: "Alojamiento", items: ["7 noches en resort especializado", "Apartamentos con cocina"] },
-      { category: "Movilidad", items: ["Camioneta 4x4 incluida", "Kilometraje libre"] },
-      { category: "Buceo", items: ["Tanques ilimitados", "Nitrox incluido", "Buceos nocturnos"] },
-      { category: "Servicios", items: ["Desayuno buffet", "Lockers para equipo", "Toallas"] }
+      { category: "Hospedaje", items: ["7 noches en resort especializado"] },
+      { category: "Experiencia", items: ["Buceos ilimitados", "Nitrox", "Lockers para equipo"] },
+      { category: "Movilidad", items: ["Alquiler de vehículo incluido"] },
+      { category: "Gastronomía", items: ["Desayuno buffet"] }
     ],
-    level: "Recomendado autónomos",
-    spots: "Grupo mediano (10 personas)",
-    image: "/imagenes/bonaire3.jpg"
+    level: "Recomendado para autónomos",
+    spots: "Grupo mediano",
+    image: "/imagenes/bonaire3.jpg",
+    buttonText: "Consultar"
   },
-  "egipto": {
-    destination: "Mar Rojo & Nilo",
-    location: "Egipto",
-    date: "Noviembre",
+  "cenotes": {
+    destination: "Cenotes Mayas",
+    location: "México",
+    flag: "/imagenes/mx.svg",
     highlights: [
-      { icon: <Ship className="text-yellow-200" />, text: "20+ inmersiones" },
-      { icon: <Fish className="text-yellow-200" />, text: "Pecios legendarios" },
-      { icon: <Sun className="text-yellow-200" />, text: "Cultura faraónica" }
+      { icon: <Zap className="text-yellow-200" />, text: "12 buceos en cenotes" },
+      { icon: <Waves className="text-yellow-200" />, text: "Aguas cristalinas" },
+      { icon: <Sun className="text-yellow-200" />, text: "Excursiones terrestres" }
     ],
-    description: "La combinación perfecta: buceo en los legendarios sitios del Mar Rojo y exploración de los templos faraónicos. Una semana en yate de lujo haciendo inmersiones increíbles seguida de un crucero por el Nilo descubriendo la historia antigua.",
+    description: "Las cuevas de los cenotes mexicanos son escenarios únicos para aquellos intrépidos que quieren conocer las entrañas de la Tierra. Sus aguas son extremadamente transparentes lo que da aun más la sensación de volar. Bucear en los cenotes de Yucatán es una experiencia única. No hay nada que se pueda comparar a este lugar sagrado para la cultura maya ya que te encuentras buceando en agua dulce a través de estalactitas y estalagmitas que la naturaleza ha ido esculpiendo pacientemente durante millones de años. Para los que quieren saltearse buceos o los que todavía no se animan a esta pasión submarina hay excursiones a lugares de gran interés que pueden contratarse ahí mismo.",
     itinerary: [
-      { day: "Días 1-3", title: "El Cairo", description: "Pirámides, museo y bazar" },
-      { day: "Días 4-10", title: "Mar Rojo", description: "Buceo intensivo en yate de lujo" },
+      { day: "Día 1", title: "Llegada", description: "Transfer al hotel y orientación" },
+      { day: "Días 2-7", title: "Buceo en cenotes", description: "2 inmersiones diarias en diferentes cenotes" },
+      { day: "Día 8", title: "Despedida", description: "Transfer al aeropuerto" }
+    ],
+    included: [
+      { category: "Hospedaje", items: ["7 noches en hotel", "Habitaciones dobles"] },
+      { category: "Experiencia", items: ["12 buceos en cenotes", "Guía especializado"] },
+      { category: "Gastronomía", items: ["Desayuno buffet"] },
+      { category: "Logística", items: ["Traslados a cenotes", "Entradas incluidas", "Snacks entre buceos"] }
+    ],
+    level: "Intermedio (buena flotabilidad)",
+    spots: "Grupo reducido",
+    image: "/imagenes/cenote2.jpg",
+    buttonText: "Consultar"
+  },
+  "mar-rojo": {
+    destination: "Mar Rojo & Egipto",
+    location: "Egipto",
+    flag: "/imagenes/eg.svg",
+    highlights: [
+      { icon: <Ship className="text-yellow-200" />, text: "Yate privado de buceo" },
+      { icon: <Fish className="text-yellow-200" />, text: "Turismo en El Cairo" },
+      { icon: <Sun className="text-yellow-200" />, text: "Crucero por el Nilo" }
+    ],
+    description: "Las pirámides de Egipto y el río Nilo se combinan con las aguas cristalinas, coloridos arrecifes y muchos naufragios rodeados de una abundante vida marina en este destino. La combinación perfecta: Recorrer las maravillas del mundo antiguo y bucear en un vida abordo privado por el Mar Rojo son cosas que obligatoriamente hay que hacer en esta vida. Las grandes pirámides de Ghiza y templos milenarios son las claras señales de que estamos en tierra de faraones. Como salido de un cuento de Agatha Christie, el crucero por el Nilo completa esta parte del viaje de “turismo”. Luego, vivimos una semana a bordo de un yate de lujo recorriendo el Mar Rojo y buceando en puntos emblemáticos (arrecifes coralinos y grandes naufragios, algunos de la segunda guerra mundial). Alojados en camarotes dobles, dispondremos de 4 tanques de buceo diarios para hacer las inmersiones más maravillosas que la famosa ruta norte de los naufragios del Mar Rojo nos puede ofrecer.",
+    itinerary: [
+      { day: "Días 1-3", title: "El Cairo", description: "Visita a las pirámides y museos" },
+      { day: "Días 4-10", title: "Mar Rojo", description: "Semana de buceo en yate privado" },
       { day: "Días 11-14", title: "Nilo", description: "Crucero visitando templos faraónicos" }
     ],
     included: [
-      { category: "Alojamiento", items: ["3 noches El Cairo (5*)", "7 noches yate buceo", "4 noches crucero Nilo"] },
-      { category: "Buceo", items: ["20-24 inmersiones", "Nitrox incluido", "Guías expertos"] },
-      { category: "Cultura", items: ["Visitas a templos", "Guía egiptólogo", "Entradas incluidas"] },
-      { category: "Gastronomía", items: ["Pensión completa", "Bebidas no alcohólicas"] }
+      { category: "Hospedaje", items: ["3 noches El Cairo", "7 noches en yate", "4 noches crucero"] },
+      { category: "Experiencia", items: ["4 buceos diarios", "Guías expertos"] },
+      { category: "Gastronomía", items: ["Pensión completa", "Bebidas no alcohólicas"] },
+      { category: "Logística", items: ["Transfer aeropuerto", "Vuelo El Cairo-Luxor", "Transfer Aswan-Hurghada"] }
     ],
     level: "Intermedio",
-    spots: "Grupo reducido (12 personas)",
-    image: "/imagenes/egypt.jpg"
+    spots: "Grupo reducido",
+    image: "/imagenes/egypt.jpg",
+    buttonText: "Consultar"
+  },
+  "roatan": {
+    destination: "Roatán",
+    location: "Honduras",
+    flag: "/imagenes/hn.svg",
+    highlights: [
+      { icon: <Fish className="text-yellow-200" />, text: "18 buceos embarcados" },
+      { icon: <Waves className="text-yellow-200" />, text: "30m de visibilidad" },
+      { icon: <Sun className="text-yellow-200" />, text: "Pensión completa" }
+    ],
+    description: "Esta famosa isla del mar caribe de aguas transparentes y cálidas te permite bucear en cañadones sumergidos y con un gran arrecife de coral. La isla de Roatán, Honduras, se caracteriza por un fondo coralino donde abunda la vida marina y los cañadones sumergidos que te invitan a explorar y recorrer sus laberintos pasadizos. Se puede ver una gran variedad de peces, muchas veces agrupados en escuelas revoloteando a través del coral y para los amantes de los naufragios, hay tres de gran tamaño que se pueden visitar. Alojados en un Resort de buceo, nos embarcamos todos los días desde el muelle del lugar para realizar 3 buceos diurnos (dos por la mañana y uno por la tarde), lo que permite disfrutar de la tarde de la playa privada del Hotel o realizar más buceos desde la orilla. Para los que quieren saltearse buceos o los que todavía no se animan a esta pasión submarina hay excursiones a lugares de gran interés que pueden contratarse ahí mismo o simplemente practicar deportes acuáticos (stand up paddle, kayak, etc).",
+    itinerary: [
+      { day: "Día 1", title: "Llegada", description: "Transfer al resort y orientación" },
+      { day: "Días 2-7", title: "Buceo intensivo", description: "3 buceos diarios (2 mañana, 1 tarde)" },
+      { day: "Día 8", title: "Despedida", description: "Transfer al aeropuerto" }
+    ],
+    included: [
+      { category: "Hospedaje", items: ["7 noches en resort", "Habitaciones dobles"] },
+      { category: "Experiencia", items: ["18 buceos", "Buceos ilimitados de costa", "Lockers para equipo"] },
+      { category: "Gastronomía", items: ["Pensión completa"] },
+      { category: "Logística", items: ["Transfer aeropuerto", "Toallas de buceo", "Guía local"] }
+    ],
+    level: "Todos los niveles",
+    spots: "Grupo reducido",
+    image: "/imagenes/roatan2.jpg",
+    buttonText: "Consultar"
   }
 };
+
 
 export default function TravelPage() {
   const { travelId } = useParams();
@@ -138,14 +196,19 @@ export default function TravelPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-3 leading-tight">{travel.destination}</h1>
             <div className="flex items-center mb-6">
               <MapPin size={24} className="mr-3" />
-              <span className="text-2xl">{travel.location}</span>
+              <span className="text-2xl flex items-center">
+                {travel.location}
+                {travel.flag && (
+                  <img 
+                    src={travel.flag} 
+                    alt={`Bandera de ${travel.location}`} 
+                    className="ml-2 h-5 w-auto object-contain"
+                  />
+                )}
+              </span>
             </div>
             
             <div className="flex flex-wrap gap-3 mb-8">
-              <span className="bg-ocean/90 px-4 py-2 rounded-full text-sm flex items-center backdrop-blur-sm">
-                <Calendar size={18} className="mr-2" />
-                {travel.date}
-              </span>
               <span className="bg-ocean/90 px-4 py-2 rounded-full text-sm backdrop-blur-sm">
                 Nivel: {travel.level}
               </span>
@@ -177,7 +240,7 @@ export default function TravelPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">{travel.description}</p>
                 
                 <div className="bg-ocean-light/10 p-6 rounded-xl border border-ocean-light/20 mb-8">
-                  <h3 className="font-bold text-lg text-ocean-dark mb-3">¿Por qué elegir este viaje?</h3>
+                  <h3 className="font-bold text-lg text-ocean-dark mb-3">Lo más destacado:</h3>
                   <ul className="space-y-2">
                     {travel.highlights.map((item, index) => (
                       <li key={index} className="flex items-start">
@@ -243,7 +306,7 @@ export default function TravelPage() {
                   <p className="mb-4 text-ocean-light">Plazas limitadas - Reserva tu lugar</p>
                   <Link to="/contacto">
                     <Button className="w-full bg-white text-ocean-dark hover:bg-gray-100 font-bold py-3">
-                      Contactar ahora
+                      {travel.buttonText || "Contactar ahora"}
                     </Button>
                   </Link>
                 </div>
@@ -258,7 +321,7 @@ export default function TravelPage() {
   );
 }
 
-// Componente de sección reutilizable
+// Componente de sección reutilizable (sin cambios)
 function Section({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) {
   return (
     <section className="mb-12">
@@ -271,7 +334,7 @@ function Section({ title, icon, children }: { title: string; icon: React.ReactNo
   );
 }
 
-// Componente de no encontrado
+// Componente de no encontrado (sin cambios)
 function NotFound() {
   return (
     <div className="min-h-screen flex flex-col">
