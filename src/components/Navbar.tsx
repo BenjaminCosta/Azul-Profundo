@@ -31,26 +31,27 @@ export default function Navbar() {
   }, [scrolled]);
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm py-1" : "bg-transparent py-2"
-      )}
-    >
-      <div className="container mx-auto px-6 flex items-start justify-between"> {/* Cambiado a items-start */}
-        {/* Logo */}
-        <Link to="/" className="flex items-center group "> {/* Añadido mt-2 */}
-          <img 
-            src={logo} 
-            alt="Logo" 
-            className={cn(
-              "h-28 w-auto transition-all duration-300 group-hover:opacity-90",
-              scrolled ? "h-24 md:h-28" : "h-28 md:h-32"
-            )} 
-          />
-        </Link>
+    <>
+      <header
+        className={cn(
+          "fixed top-0 w-full z-50 transition-all duration-300",
+          scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm py-1" : "bg-transparent py-2"
+        )}
+      >
+        <div className="container mx-auto px-6 flex items-start justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center group">
+            <img 
+              src={logo} 
+              alt="Logo" 
+              className={cn(
+                "h-28 w-auto transition-all duration-300 group-hover:opacity-90",
+                scrolled ? "h-24 md:h-28" : "h-28 md:h-32"
+              )} 
+            />
+          </Link>
 
-        <nav className="hidden md:flex items-center mt-7 space-x-2">
+          <nav className="hidden md:flex items-center mt-7 space-x-2">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.href;
               return (
@@ -76,7 +77,7 @@ export default function Navbar() {
               );
             })}
 
-            {/* Botón E-shop perfectamente alineado */}
+            {/* Botón E-shop */}
             <div className="ml-6 pl-6 border-l border-gray-400/40 flex items-center">
               <Link to="/e-shop">
                 <Button 
@@ -96,28 +97,28 @@ export default function Navbar() {
             </div>
           </nav>
 
-
-        {/* Mobile Navigation Toggle (se mantiene igual) */}
-        <div className="flex md:hidden mt-4"> {/* Añadido mt-2 */}
-          <button
-            type="button"
-            className={cn(
-              "p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800",
-              scrolled ? "text-gray-700" : "text-white"
-            )}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <span className="sr-only">Open main menu</span>
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          {/* Mobile Navigation Toggle */}
+          <div className="flex md:hidden mt-4">
+            <button
+              type="button"
+              className={cn(
+                "p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800",
+                scrolled ? "text-gray-700" : "text-white"
+              )}
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <span className="sr-only">Open main menu</span>
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile Navigation Menu (se mantiene igual) */}
+      {/* Mobile Navigation Menu - afuera del header */}
       <div
         className={cn(
-          "md:hidden fixed inset-0 z-40 bg-white transform transition-transform ease-in-out duration-300",
-          isOpen ? "translate-x-0 " : "translate-x-full "
+          "fixed inset-0 z-[999] bg-white transition-transform duration-300",
+          isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
         <div className="flex items-center justify-between p-4 border-b">
@@ -165,6 +166,6 @@ export default function Navbar() {
           </ul>
         </nav>
       </div>
-    </header>
+    </>
   );
 }

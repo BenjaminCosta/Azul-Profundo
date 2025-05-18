@@ -23,21 +23,41 @@ export default function Footer() {
               Tu escuela de buceo profesional. Descubre el mundo submarino con nosotros.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-ocean transition-colors">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-ocean transition-colors"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-ocean transition-colors">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-ocean transition-colors"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="hover:text-ocean transition-colors">
+              <a
+                href="https://wa.me/1234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-ocean transition-colors"
+              >
                 <MessageCircle size={20} />
               </a>
-              <a href="https://azulprofundo.com" target="_blank" rel="noopener noreferrer" className="hover:text-ocean transition-colors">
+              <a
+                href="https://azulprofundo.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-ocean transition-colors"
+              >
                 <Globe size={20} />
               </a>
             </div>
           </div>
-          
+
           {/* Enlaces Rápidos - Segunda columna */}
           <div className="flex flex-col items-center text-center md:border-r md:border-gray-700">
             <h4 className="text-lg font-bold mb-4">Enlaces Rápidos</h4>
@@ -45,8 +65,8 @@ export default function Footer() {
               <ul className="space-y-2">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
-                    <Link 
-                      to={link.href} 
+                    <Link
+                      to={link.href}
                       className="text-gray-400 hover:text-ocean transition-colors text-sm"
                     >
                       {link.name}
@@ -56,34 +76,37 @@ export default function Footer() {
               </ul>
             </nav>
           </div>
-          
+
           {/* Contacto - Tercera columna */}
           <div className="flex flex-col items-center text-center">
             <h4 className="text-lg font-bold mb-4">Contacto</h4>
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <Phone size={18} className="text-ocean" />
-                <a href="tel:+1234567890" className="text-gray-400 hover:text-ocean transition-colors text-sm">
-                  +123 456 7890
-                </a>
+            <div className="space-y-3 max-w-xs">
+              <div className="flex items-start gap-2">
+                <MapPin size={18} className="text-ocean mt-1" />
+                <div className="text-gray-400 text-sm leading-snug">
+                  Av. Combatiente de Malvinas 3236
+                </div>
               </div>
-              
-              <div className="flex items-center gap-2">
-                <MapPin size={18} className="text-ocean" />
-                <a
-                  href="https://maps.google.com?q=Ubicacion+Azul+Profundo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-ocean transition-colors text-sm"
-                >
-                  Av. del Mar 1234, Playa Grande
-                </a>
+
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-2">
+                  <Phone size={18} className="text-ocean" />
+                  <a
+                    href="tel:+5491136302150"
+                    className="text-gray-400 hover:text-ocean transition-colors text-sm"
+                  >
+                    +54 9 11 3630-2150
+                  </a>
+                </div>
               </div>
-              
+
               <div className="flex items-center gap-2">
                 <Mail size={18} className="text-ocean" />
-                <a href="mailto:info@azulprofundo.com" className="text-gray-400 hover:text-ocean transition-colors text-sm">
-                  info@azulprofundo.com
+                <a
+                  href="mailto:Azulprofundo-buceo@hotmail.com"
+                  className="text-gray-400 hover:text-ocean transition-colors text-sm"
+                >
+                  Azulprofundo-buceo@hotmail.com
                 </a>
               </div>
             </div>
@@ -96,13 +119,13 @@ export default function Footer() {
         </div>
 
         {/* WhatsApp floating button */}
-        <a 
-          href="https://wa.me/1234567890"
+        <a
+          href="https://wa.me/+5491136302150"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-50 transition-all hover:scale-110"
         >
-          <MessageCircle size={20} />
+          <MessageCircle size={28} />
         </a>
       </div>
     </footer>

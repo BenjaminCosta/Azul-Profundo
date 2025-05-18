@@ -158,7 +158,7 @@ const travelsData = {
     ],
     level: "Todos los niveles",
     spots: "Grupo reducido",
-    image: "/imagenes/roatan.jpg",
+    image: "/imagenes/roatan3.jpg",
     buttonText: "Consultar"
   }
 };

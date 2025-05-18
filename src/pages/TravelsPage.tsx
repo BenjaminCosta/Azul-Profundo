@@ -63,7 +63,7 @@ const allTravels = [
     flag: "/imagenes/hn.svg",
     date: "Destino con salidas frecuentes",
     description: "Esta famosa isla del mar Caribe de aguas transparentes y cálidas te permite bucear en cañadones sumergidos y con un gran arrecife de coral.",
-    image: "/imagenes/roatan3.jpg",
+    image: "/imagenes/roatan2.jpg",
     spots: "con alojamiento"
   }
 ];
