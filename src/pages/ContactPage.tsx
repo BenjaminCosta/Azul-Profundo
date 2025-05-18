@@ -1,3 +1,4 @@
+"use client";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,6 +10,8 @@ import { useState, useRef } from "react";
 import { toast } from "sonner";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import ContactInfo from "@/components/ContactInfo";
+import emailjs from "@emailjs/browser";
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -21,6 +24,7 @@ export default function ContactPage() {
 
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -31,24 +35,37 @@ export default function ContactPage() {
     setCaptchaToken(token);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!captchaToken) {
       toast.error("Por favor, completa el captcha.");
       return;
     }
 
-    console.log("Form submitted:", formData);
-    toast.success("¡Mensaje enviado! Te contactaremos pronto.");
-    setFormData({ 
-      firstName: "", 
-      lastName: "", 
-      phone: "", 
-      email: "", 
-      message: "" 
-    });
-    setCaptchaToken(null);
-    captchaRef.current?.resetCaptcha();
+    try {
+      const templateParams = {
+        name: `${formData.firstName} ${formData.lastName}`,
+        phone: formData.phone,
+        email: formData.email,
+        message: formData.message,
+        time: new Date().toLocaleString(),
+      };
+
+      await emailjs.send(
+        "service_pxqbdh7",          // Reemplazar con tu SERVICE ID
+        "template_srshhtm",         // Reemplazar con tu TEMPLATE ID
+        templateParams,
+        "5LU4B4p8JEgxzEvVn"       // Reemplazar con tu PUBLIC KEY de EmailJS
+      );
+
+      toast.success("¡Mensaje enviado! Te contactaremos pronto.");
+      setFormData({ firstName: "", lastName: "", phone: "", email: "", message: "" });
+      setCaptchaToken(null);
+      captchaRef.current?.resetCaptcha();
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast.error("Ocurrió un error al enviar el mensaje. Inténtalo nuevamente.");
+    }
   };
 
   return (
@@ -57,7 +74,10 @@ export default function ContactPage() {
 
       {/* Hero Section */}
       <section className="pt-40 pb-20 relative text-white text-center">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/imagenes/hero2.avif')" }}>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/imagenes/hero2.avif')" }}
+        >
           <div className="w-full h-full bg-ocean-dark/40"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4">
@@ -76,46 +96,101 @@ export default function ContactPage() {
             <div className="space-y-8">
               <div className="bg-white rounded-xl shadow-xl overflow-hidden">
                 <div className="p-8 md:p-10">
-                  <h2 className="text-2xl md:text-3xl font-bold text-ocean mb-6 border-b pb-4">Formulario de Contacto</h2>
-                  
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <h2 className="text-2xl md:text-3xl font-bold text-ocean mb-6 border-b pb-4">
+                    Formulario de Contacto
+                  </h2>
+
+                  <form onSubmit={handleSubmit} ref={formRef} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="firstName" className="block text-gray-700 font-medium mb-2">Nombre *</label>
+                        <label htmlFor="firstName" className="block text-gray-700 font-medium mb-2">
+                          Nombre *
+                        </label>
                         <div className="relative">
-                          <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Ej: María" className="pl-10 py-4 text-base" required />
+                          <Input
+                            id="firstName"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleChange}
+                            placeholder="Ej: María"
+                            className="pl-10 py-4 text-base"
+                            required
+                          />
                           <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
                         </div>
                       </div>
 
                       <div>
-                        <label htmlFor="lastName" className="block text-gray-700 font-medium mb-2">Apellido *</label>
+                        <label htmlFor="lastName" className="block text-gray-700 font-medium mb-2">
+                          Apellido *
+                        </label>
                         <div className="relative">
-                          <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Ej: González" className="pl-10 py-4 text-base" required />
+                          <Input
+                            id="lastName"
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleChange}
+                            placeholder="Ej: González"
+                            className="pl-10 py-4 text-base"
+                            required
+                          />
                           <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
                         </div>
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">Teléfono *</label>
+                      <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                        Teléfono *
+                      </label>
                       <div className="relative">
-                        <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Ej: +54 11 1234 5678" className="pl-10 py-4 text-base" required />
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          placeholder="Ej: +54 11 1234 5678"
+                          className="pl-10 py-4 text-base"
+                          required
+                        />
                         <Smartphone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email *</label>
+                      <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                        Email *
+                      </label>
                       <div className="relative">
-                        <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="Ej: ejemplo@email.com" className="pl-10 py-4 text-base" required />
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder="Ej: ejemplo@email.com"
+                          className="pl-10 py-4 text-base"
+                          required
+                        />
                         <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Mensaje *</label>
-                      <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Escribe tu consulta aquí..." rows={6} className="text-base p-4" required />
+                      <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                        Mensaje *
+                      </label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Escribe tu consulta aquí..."
+                        rows={6}
+                        className="text-base p-4"
+                        required
+                      />
                     </div>
 
                     {/* Captcha */}
@@ -136,24 +211,15 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Info de contacto (sin cambios) */}
-            {/* ... */}
-            {/* Sección Derecha - Información de Contacto (se mantiene igual) */}
-                {/* Sección Derecha - Información de Contacto */}
-<div className="space-y-8">
-
-  <ContactInfo />
-</div>
-
-                  </div>
-                </div>
-              </section>
+            {/* Info de contacto */}
+            <div className="space-y-8">
+              <ContactInfo />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
   );
 }
-
-
-
-
