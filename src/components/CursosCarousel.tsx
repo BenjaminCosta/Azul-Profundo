@@ -30,7 +30,7 @@ const coursesData = [
       "Instructores expertos",
       "Flexibilidad horaria"
     ],
-    image: "/imagenes/avanzado2.jpg"
+    image: "/imagenes/avanzado3.jpg"
   },
   {
     id: "rescue-diver",
