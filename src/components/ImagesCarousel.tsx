@@ -11,7 +11,7 @@ const divingImages = [
   },
   {
     id: 2,
-    image: "/imagenes/carousel2.jpg",
+    image: "/imagenes/carousel10.jpg",
     title: "Buceo Técnico Profesional",
     description: "Cursos avanzados para explorar límites submarinos con seguridad"
   },
@@ -78,7 +78,7 @@ export default function DivingCarousel() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1, duration: 0.6 }}
-                  className="text-3xl md:text-5xl font-bold mb-4 text-ocean-light drop-shadow-[0_4px_8px_rgba(0,0,0,0.7)]"
+                  className="text-3xl md:text-5xl font-bold mb-4 text-ocean-light drop-shadow-[0_10px_14px_rgba(0,0,0,0.9)]"
                 >
                   {divingImages[currentIndex].title}
                 </motion.h3>
@@ -86,7 +86,7 @@ export default function DivingCarousel() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 2, duration: 0.6 }}
-                  className="text-lg md:text-xl max-w-xl mx-auto text-gray-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]"
+                  className="text-lg md:text-xl max-w-xl mx-auto text-gray-100 drop-shadow-[0_6x_8px_rgba(0,0,0,0.6)]"
                 >
                   {divingImages[currentIndex].description}
                 </motion.p>

@@ -8,6 +8,7 @@ import { MapPin, Phone, Mail, Clock, Send, User, Smartphone } from "lucide-react
 import { useState, useRef } from "react";
 import { toast } from "sonner";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import ContactInfo from "@/components/ContactInfo";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -138,82 +139,15 @@ export default function ContactPage() {
             {/* Info de contacto (sin cambios) */}
             {/* ... */}
             {/* Sección Derecha - Información de Contacto (se mantiene igual) */}
+                {/* Sección Derecha - Información de Contacto */}
 <div className="space-y-8">
-<div className="bg-white rounded-xl shadow-xl overflow-hidden">
-  <div className="p-8 md:p-10">
-    <h2 className="text-2xl md:text-3xl font-bold text-ocean mb-6 border-b pb-4">
-      Nuestra Información
-    </h2>
-    
-    <ul className="space-y-6">
-      <li className="flex items-start">
-        <div className="bg-ocean/10 p-3 rounded-full mr-4">
-          <MapPin className="text-ocean" size={20} />
-        </div>
-        <div>
-          <h3 className="font-semibold text-gray-800">Dirección</h3>
-          <p className="text-gray-600">Av. del Mar 1234, Playa Grande, Ciudad Costera</p>
-        </div>
-      </li>
 
-      <li className="flex items-start">
-        <div className="bg-ocean/10 p-3 rounded-full mr-4">
-          <Phone className="text-ocean" size={20} />
-        </div>
-        <div>
-          <h3 className="font-semibold text-gray-800">Teléfono</h3>
-          <p className="text-gray-600">+123 456 7890</p>
-        </div>
-      </li>
-
-      <li className="flex items-start">
-        <div className="bg-ocean/10 p-3 rounded-full mr-4">
-          <Mail className="text-ocean" size={20} />
-        </div>
-        <div>
-          <h3 className="font-semibold text-gray-800">Email</h3>
-          <p className="text-gray-600">info@azulprofundo.com</p>
-        </div>
-      </li>
-
-      <li className="flex items-start">
-        <div className="bg-ocean/10 p-3 rounded-full mr-4">
-          <Clock className="text-ocean" size={20} />
-        </div>
-        <div>
-          <h3 className="font-semibold text-gray-800">Horario</h3>
-          <p className="text-gray-600">Lunes - Viernes: 9:00 - 18:00</p>
-        </div>
-      </li>
-    </ul>
-  </div>
+  <ContactInfo />
 </div>
 
-<div className="bg-white rounded-xl shadow-xl overflow-hidden">
-  <div className="p-4">
-    <h3 className="text-xl font-semibold text-gray-800 mb-4 px-4">Nuestra Ubicación</h3>
-    <div className="w-full h-80 rounded-lg overflow-hidden">
-      <iframe
-        title="Azul Profundo location"
-        width="100%"
-        height="100%"
-        frameBorder="0"
-        scrolling="no"
-        marginHeight={0}
-        marginWidth={0}
-        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Playa%20del%20Carmen+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-        style={{ border: 0 }}
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-  </div>
-</div>
-</div>
-          </div>
-        </div>
-      </section>
+                  </div>
+                </div>
+              </section>
 
       <Footer />
     </div>
