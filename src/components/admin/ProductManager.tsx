@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { 
-  createProduct, 
-  updateProduct, 
-  deleteProduct, 
+import {
+  createProduct,
+  updateProduct,
+  deleteProduct,
   getProducts,
   getInactiveProducts,
-  uploadProductImage 
+  uploadProductImage
 } from '../../services/products';
 import { Product } from '../../types/product';
 import { ProductForm } from './ProductForm';
@@ -59,7 +59,7 @@ export const ProductManager = () => {
         setProducts([newProduct, ...products]);
       }
       setCurrentProduct(null);
-      await loadProducts(); // Recargar ambos listados
+      await loadProducts();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error al guardar el producto');
     }
@@ -81,10 +81,7 @@ export const ProductManager = () => {
             }
           }
         },
-        {
-          label: 'No',
-          onClick: () => {}
-        }
+        { label: 'No', onClick: () => {} }
       ]
     });
   };
@@ -92,7 +89,7 @@ export const ProductManager = () => {
   const toggleProductStatus = async (id: string, isActive: boolean) => {
     try {
       await updateProduct(id, { is_active: isActive });
-      await loadProducts(); // Recargar ambos listados
+      await loadProducts();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error al cambiar estado');
     }
@@ -102,64 +99,58 @@ export const ProductManager = () => {
   if (error) return <div className="text-red-500 p-4">Error: {error}</div>;
 
   const renderProductsTable = (productsList: Product[], isActive: boolean) => (
-    <div className="bg-white rounded-lg shadow overflow-hidden mb-8">
-      <table className="min-w-full divide-y divide-gray-200">
+    <div className="bg-white rounded-lg shadow overflow-hidden mb-8 overflow-x-auto">
+      <table className="min-w-full divide-y divide-gray-200 text-sm">
         <thead className="bg-gray-50">
           <tr>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Imagen</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Precio</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Destacado</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
+            <th className="px-4 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">Imagen</th>
+            <th className="px-4 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
+            <th className="px-4 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">Precio</th>
+            <th className="px-4 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">Destacado</th>
+            <th className="px-4 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {productsList.map((product) => (
             <tr key={product.id}>
-              <td className="px-6 py-4 whitespace-nowrap">
+              <td className="px-4 py-3 whitespace-nowrap">
                 {product.image_url && (
-                  <img 
-                    src={product.image_url} 
+                  <img
+                    src={product.image_url}
                     alt={product.name}
                     className="h-10 w-10 rounded-full object-cover"
                   />
                 )}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap">
-                <div className="font-medium">{product.name}</div>
-                <div className="text-sm text-gray-500">{product.description.substring(0, 50)}...</div>
+              <td className="px-4 py-3 whitespace-nowrap max-w-[150px]">
+                <div className="font-medium truncate">{product.name}</div>
+                <div className="text-xs text-gray-500 truncate">{product.description.substring(0, 50)}...</div>
               </td>
-              <td className="px-6 py-4 whitespace-nowrap">
+              <td className="px-4 py-3 whitespace-nowrap">
                 ${product.price.toLocaleString('es-AR')}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap">
+              <td className="px-4 py-3 whitespace-nowrap">
                 <span className={`px-2 py-1 text-xs rounded-full ${
                   product.featured ? 'bg-purple-100 text-purple-800' : 'bg-gray-100 text-gray-800'
                 }`}>
                   {product.featured ? 'Destacado' : 'Normal'}
                 </span>
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                <button
-                  onClick={() => setCurrentProduct(product)}
-                  className="text-blue-600 hover:text-blue-900"
-                >
+              <td className="px-4 py-3 whitespace-nowrap text-xs md:text-sm  md:items-center flex flex-col sm:flex-row sm:space-x-2 space-y-1 sm:space-y-0">
+                <button onClick={() => setCurrentProduct(product)} className="text-blue-600 hover:text-blue-900">
                   Editar
                 </button>
                 <button
                   onClick={() => toggleProductStatus(product.id, !isActive)}
                   className={`${
-                    isActive 
-                      ? 'text-yellow-600 hover:text-yellow-900' 
+                    isActive
+                      ? 'text-yellow-600 hover:text-yellow-900'
                       : 'text-green-600 hover:text-green-900'
                   }`}
                 >
                   {isActive ? 'Desactivar' : 'Activar'}
                 </button>
-                <button
-                  onClick={() => handleDelete(product.id)}
-                  className="text-red-600 hover:text-red-900"
-                >
+                <button onClick={() => handleDelete(product.id)} className="text-red-600 hover:text-red-900">
                   Eliminar
                 </button>
               </td>
@@ -172,14 +163,14 @@ export const ProductManager = () => {
 
   return (
     <div className="container mx-auto px-4 py-6">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
         <h2 className="text-2xl font-bold">Gestión de Productos</h2>
-        <div className="flex space-x-4">
+        <div className="flex flex-col sm:flex-row gap-2">
           <button
             onClick={() => setShowInactive(!showInactive)}
-            className={`px-4 py-2 rounded-md transition-colors ${
-              showInactive 
-                ? 'bg-gray-600 text-white hover:bg-gray-700' 
+            className={`px-4 py-2 rounded-md transition-colors text-sm ${
+              showInactive
+                ? 'bg-gray-600 text-white hover:bg-gray-700'
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
             }`}
           >
@@ -195,7 +186,7 @@ export const ProductManager = () => {
               featured: false,
               is_active: true
             })}
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm"
           >
             + Nuevo Producto
           </button>
@@ -203,7 +194,7 @@ export const ProductManager = () => {
       </div>
 
       {currentProduct ? (
-        <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+        <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md mb-8">
           <h3 className="text-xl font-semibold mb-4">
             {currentProduct.id ? 'Editar Producto' : 'Crear Nuevo Producto'}
           </h3>
@@ -230,7 +221,7 @@ export const ProductManager = () => {
           {products.length === 0 ? (
             <div className="bg-white p-8 rounded-lg shadow text-center">
               <p className="text-gray-500">No hay productos activos</p>
-              <button 
+              <button
                 onClick={() => setCurrentProduct({
                   name: '',
                   description: '',
@@ -240,7 +231,7 @@ export const ProductManager = () => {
                   featured: false,
                   is_active: true
                 })}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
               >
                 Crear primer producto
               </button>
