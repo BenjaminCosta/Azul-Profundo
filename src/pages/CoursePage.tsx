@@ -269,7 +269,7 @@ const shortDescription = matchingCourse.description;
                     </Button>
                   </Link>
                   
-                  <Link to="/preguntas-frecuentes">
+                  <Link to="/faq">
                     <Button variant="ghost" className="w-full text-white hover:bg-blue-700/50 py-5">
                       <UserCheck className="mr-2" />
                       Tengo preguntas
