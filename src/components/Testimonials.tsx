@@ -44,7 +44,6 @@ export default function Testimonials() {
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     setIsAutoPlaying(false);
-    // Reiniciar temporizador después de interacción manual
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
@@ -52,7 +51,6 @@ export default function Testimonials() {
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false);
-    // Reiniciar temporizador después de interacción manual
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
@@ -62,7 +60,7 @@ export default function Testimonials() {
       interval = setInterval(() => {
         setDirection(1);
         setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-      }, 10000); // 10 segundos
+      }, 10000);
     }
     return () => clearInterval(interval);
   }, [isAutoPlaying, currentIndex]);
@@ -75,16 +73,62 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-b from-ocean-light/30 via-ocean/50 to-ocean-dark/90">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Qué Dicen Nuestros Alumnos
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-700/70 via-red-600/90 to-red-700/70 mx-auto rounded-full"></div>
-        </div>
+    <section className="relative py-24 overflow-hidden">
+      {/* Fondo con degradado oceánico y blur */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ 
+          backgroundImage: 'url(/imagenes/bg4.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-ocean-dark/80 via-ocean/70 to-ocean-light/60 backdrop-blur-sm"></div>
+      
+      {/* Burbujas decorativas */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(50)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-white/20"
+            style={{
+              width: `${Math.random() * 10 + 10}px`,
+              height: `${Math.random() * 10 + 10}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -100],
+              opacity: [0.5, 0],
+              transition: {
+                duration: Math.random() * 10 + 10,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "linear"
+              }
+            }}
+          />
+        ))}
+      </div>
 
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Encabezado */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Que Dicen Nuestros Alumnos
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-red-700/50 via-red-900/60 to-red-700/50 mx-auto rounded-full"></div>
+        </motion.div>
+
+        {/* Contenedor de testimonios */}
         <div className="relative">
+          
           <div className="overflow-hidden">
             <div className="flex justify-center gap-6">
               <AnimatePresence custom={direction} mode="wait">
@@ -114,8 +158,10 @@ export default function Testimonials() {
                     transition={{ type: "spring", stiffness: 300, damping: 25 }}
                     className="w-full max-w-sm flex-shrink-0"
                   >
+                    
                     <Card className="bg-white shadow-lg border-0 relative h-full min-h-[420px]">
                       <CardContent className="pt-24 pb-8 px-6 text-center h-full flex flex-col">
+                        
                         <div className="absolute pt-12 -top-10 left-1/2 transform -translate-x-1/2">
                           <motion.div
                             initial={{ scale: 0.8 }}
@@ -144,27 +190,30 @@ export default function Testimonials() {
                 ))}
               </AnimatePresence>
             </div>
+          
           </div>
 
+          {/* Controles de navegación */}
           <Button 
             onClick={prevTestimonial}
             variant="ghost"
             size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full w-12 h-12 hover:bg-ocean-50 hover:shadow-xl transition-all"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/90 backdrop-blur-md shadow-lg rounded-full w-12 h-12 hover:bg-white hover:shadow-xl transition-all"
           >
-            <ChevronLeft className="text-ocean" size={24} />
+            <ChevronLeft className="text-ocean-dark" size={24} />
           </Button>
           <Button 
             onClick={nextTestimonial}
             variant="ghost"
             size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full w-12 h-12 hover:bg-ocean-50 hover:shadow-xl transition-all"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/90 backdrop-blur-md shadow-lg rounded-full w-12 h-12 hover:bg-white hover:shadow-xl transition-all"
           >
-            <ChevronRight className="text-ocean" size={24} />
+            <ChevronRight className="text-ocean-dark" size={24} />
           </Button>
         </div>
 
-        <div className="flex justify-center mt-8 gap-2">
+        {/* Indicadores */}
+        <div className="flex justify-center mt-10 gap-2">
           {testimonials.map((_, index) => (
             <motion.button
               key={index}
@@ -175,7 +224,7 @@ export default function Testimonials() {
                 setTimeout(() => setIsAutoPlaying(true), 10000);
               }}
               whileHover={{ scale: 1.2 }}
-              className={`w-3 h-3 rounded-full transition-all ${currentIndex === index ? 'bg-yellow-300 w-6' : 'bg-gray-300'}`}
+              className={`w-3 h-3 rounded-full transition-all ${currentIndex === index ? 'bg-white w-6' : 'bg-white/50'}`}
             />
           ))}
         </div>

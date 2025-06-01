@@ -1,66 +1,58 @@
+
 import { Facebook, Instagram, MessageCircle, Globe, Phone, MapPin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 const quickLinks = [
   { name: "Inicio", href: "/" },
   { name: "Cursos", href: "/cursos" },
   { name: "Viajes", href: "/viajes" },
   { name: "Contacto", href: "/contacto" },
 ];
+const socialLinks = [
+  { icon: <Facebook size={24} />, href: "https://facebook.com", color: "hover:bg-blue-600" },
+  { icon: <Instagram size={24} />, href: "https://instagram.com", color: "hover:bg-pink-600" },
+  { icon: <MessageCircle size={24} />, href: "https://wa.me/1234567890", color: "hover:bg-green-500" },
+  { icon: <Globe size={24} />, href: "https://azulprofundo.com", color: "hover:bg-blue-400" },
+];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1c2d48] text-white">
-      <div className="container mx-auto px-16 py-8">
+    <footer className="bg-gradient-to-b from-[#1c2d48] to-[#0f1a2e] text-white">
+      <div className="container mx-auto px-16 pt-12 pb-8">
         {/* Secciones principales */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Azul Profundo - Primera columna */}
           <div className="flex flex-col items-center text-center md:border-r md:border-gray-700">
-            <h3 className="text-xl font-bold mb-4">Azul Profundo</h3>
+            <h3 className="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+              Azul Profundo
+            </h3>
             <p className="mb-4 text-gray-400 text-sm max-w-xs">
               Tu escuela de buceo profesional. Descubre el mundo submarino con nosotros.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-ocean transition-colors"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-ocean transition-colors"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://wa.me/1234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-ocean transition-colors"
-              >
-                <MessageCircle size={20} />
-              </a>
-              <a
-                href="https://azulprofundo.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-ocean transition-colors"
-              >
-                <Globe size={20} />
-              </a>
+           <div className="flex space-x-3">
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`bg-gray-700 text-white p-3 rounded-full transition-all duration-300 ${social.color} hover:text-white hover:shadow-lg`}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
             </div>
           </div>
 
           {/* Enlaces Rápidos - Segunda columna */}
           <div className="flex flex-col items-center text-center md:border-r md:border-gray-700">
-            <h4 className="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+            <h4 className="text-xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+              Enlaces Rápidos
+            </h4>
             <nav>
               <ul className="space-y-2">
                 {quickLinks.map((link) => (
@@ -79,7 +71,9 @@ export default function Footer() {
 
           {/* Contacto - Tercera columna */}
           <div className="flex flex-col items-center text-center">
-            <h4 className="text-lg font-bold mb-4">Contacto</h4>
+            <h4 className="text-xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+              Contacto
+            </h4>
             <div className="space-y-3 max-w-xs">
               <div className="flex items-start gap-2">
                 <MapPin size={18} className="text-ocean mt-1" />

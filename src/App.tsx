@@ -14,7 +14,6 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import FaqPage from "./pages/FaqPage";
 import  ShopPage  from "./pages/ShopPage";
-import NauiSection from "./pages/NauiSection";
 import ScrollToTop from "./components/ScrollToTop";
 import AdminPage from "./pages/AdminPage";
 
@@ -37,7 +36,6 @@ const App = () => (
           <Route path="/viajes" element={<TravelsPage />} />
           <Route path="/viajes/:travelId" element={<TravelPage />} />
           <Route path="/faq" element={<FaqPage />} />
-          <Route path="/naui" element={<NauiSection />} />
           <Route path="/admin" element={<AdminPage />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

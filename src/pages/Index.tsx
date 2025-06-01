@@ -7,7 +7,6 @@ import Travels from "@/components/Travels";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import NauiSection from "@/pages/NauiSection";
 import FaqSection from "@/components/FaqSection";
 import CursosCarousel from "@/components/CursosCarousel";
 import ImagesCarousel from "@/components/ImagesCarousel"
