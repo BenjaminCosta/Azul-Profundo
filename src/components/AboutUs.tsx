@@ -6,7 +6,7 @@ export default function AprendeABucear() {
   return (
     <>
       {/* Nuestro Equipo */}
-      <section className="py-24 px-6 sm:px-20 text-center bg-white"
+      <section className="py-32 px-6 sm:px-20 text-center bg-white"
       >
         <h2 className="text-4xl font-extrabold text-ocean-dark mb-4">Nuestra Escuela</h2>
 

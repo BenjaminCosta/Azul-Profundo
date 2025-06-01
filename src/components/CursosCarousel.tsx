@@ -78,7 +78,7 @@ export default function CoursesCarousel() {
   const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + coursesData.length) % coursesData.length);
 
   return (
-    <section className="py-12 bg-white relative overflow-hidden">
+    <section className="py-32 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">Transforma tu relación con el océano</h2>

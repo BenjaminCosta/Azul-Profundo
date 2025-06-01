@@ -92,31 +92,28 @@ export const allCourses = [
 
 export default function CoursesPage() {
   return (
-    <div className="min-h-screen relative">
-      <Navbar />
-
-      {/* Hero Section (igual al original) */}
-      <div
-        className="absolute top-0 left-0 w-full h-[400px] z-0"
-        style={{
-          backgroundImage: "url('/imagenes/hero2.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="w-full h-full bg-ocean-dark opacity-30"></div>
-      </div>
-
-      {/* Contenido sobre el fondo (igual al original) */}
-      <div className="relative z-10 pt-44 pb-24 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Nuestros Cursos de Buceo</h1>
-          <p className="text-xl max-w-3xl mx-auto drop-shadow-md">
-            Desde tus primeras experiencias bajo el agua hasta convertirte en un buceador profesional,
-            tenemos el curso perfecto para cada etapa de tu aventura submarina.
-          </p>
-        </div>
-      </div>
+    <div className="min-h-screen">
+          <Navbar />
+    
+          {/* Sección de encabezado con fondo e imagen */}
+          <section className="pt-44 pb-24 relative text-white text-center">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+               backgroundImage: "url('/imagenes/hero2.jpg')",
+                  
+              }}
+            >
+              <div className="w-full h-full bg-ocean-dark/40"></div>
+            </div>
+            <div className="relative z-10 container mx-auto px-4">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Nuestros Cursos de Buceo</h1>
+              <p className="text-xl max-w-3xl mx-auto drop-shadow-md">
+                Desde tus primeras experiencias bajo el agua hasta convertirte en un buceador profesional, tenemos el curso perfecto para cada etapa de tu aventura submarina.
+              </p>
+            </div>
+          </section>
+      
 
       {/* Cards de cursos (versión mejorada) */}
       <div className="py-16 bg-gray-50 relative z-10 px-4">

@@ -95,6 +95,7 @@ export default function DivingCarousel() {
           </div>
         </motion.div>
       </AnimatePresence>
+
     </section>
   );
 }
