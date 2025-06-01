@@ -56,7 +56,7 @@ export default function FaqPage() {
               "url('/imagenes/hero2.jpg')",
           }}
         >
-          <div className="w-full h-full bg-ocean-dark/30"></div>
+          <div className="w-full h-full bg bg-gradient-to-t from-ocean-dark/30 to-cyan-200/30"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">

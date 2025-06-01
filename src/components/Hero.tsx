@@ -84,7 +84,7 @@ export default function Hero() {
     
     {/* Imagen 2 */}
     <motion.div
-      className="absolute right-32 top-4 xl:right-40 xl:top-0 w-44 h-24 xl:w-80 xl:h-44 rounded-lg overflow-hidden border-4 border-white shadow-xl"
+      className="absolute right-32 top-4 xl:right-44 xl:top-0 w-44 h-24 xl:w-80 xl:h-44 rounded-lg overflow-hidden border-4 border-white shadow-xl"
       whileHover={{ zIndex: 50, scale: 1.05 }}
     >
       <img 
