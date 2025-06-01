@@ -73,7 +73,7 @@ const ShopPage = () => {
       
       {/* Animated Hero Section */}
       <motion.div 
-        className="relative h-96 md:h-[500px] w-full bg-cover bg-center transition-all duration-1000 ease-in-out"
+        className="relative h-[600px] md:h-[500px] w-full bg-cover bg-center transition-all duration-1000 ease-in-out"
         style={{
           backgroundImage: backgrounds[currentBg],
           backgroundSize: "cover",

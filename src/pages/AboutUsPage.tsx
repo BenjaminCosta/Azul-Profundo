@@ -13,15 +13,15 @@ export default function AboutUsPage() {
       <Navbar />
 
       {/* Hero Section Mejorada */}
-      <section className="pt-40 pb-20 relative text-white text-center">
+      <section className="pt-44 pb-24 relative text-white text-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/imagenes/hero2.avif')",
+              "url('/imagenes/hero2.jpg')",
           }}
         >
-          <div className="w-full h-full bg-ocean-dark/40"></div>
+          <div className="w-full h-full bg-ocean-dark/30"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">

@@ -75,19 +75,19 @@ export default function TravelsPage() {
       <Navbar />
 
       {/* Sección de encabezado con fondo e imagen */}
-      <section className="pt-40 pb-20 relative text-white text-center">
+      <section className="pt-44 pb-24 relative text-white text-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('/imagenes/hero2.avif')",
+           backgroundImage: "url('/imagenes/hero2.jpg')",
+              
           }}
         >
           <div className="w-full h-full bg-ocean-dark/40"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Viajes y Expediciones</h1>
-          <p className="text-xl max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto drop-shadow-md">
             Explora los mejores destinos de buceo del mundo con nuestros viajes guiados por instructores expertos.
             Vive experiencias inolvidables en lugares únicos.
           </p>

@@ -99,19 +99,19 @@ export default function CoursesPage() {
       <div
         className="absolute top-0 left-0 w-full h-[400px] z-0"
         style={{
-          backgroundImage: "url('/imagenes/hero2.avif')",
+          backgroundImage: "url('/imagenes/hero2.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="w-full h-full bg-ocean-dark opacity-40"></div>
+        <div className="w-full h-full bg-ocean-dark opacity-30"></div>
       </div>
 
       {/* Contenido sobre el fondo (igual al original) */}
-      <div className="relative z-10 pt-40 pb-20 text-white">
+      <div className="relative z-10 pt-44 pb-24 text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Nuestros Cursos de Buceo</h1>
-          <p className="text-xl max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto drop-shadow-md">
             Desde tus primeras experiencias bajo el agua hasta convertirte en un buceador profesional,
             tenemos el curso perfecto para cada etapa de tu aventura submarina.
           </p>
