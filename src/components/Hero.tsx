@@ -62,51 +62,52 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/30"></div>
       <div className="absolute inset-0 bg-wave-pattern bg-repeat-x animate-wave"></div>
       
-      {/* Galería de imágenes - Solo visible en md y arriba */}
-      <div className="hidden lg:block absolute right-4 lg:right-8 top-1/3 z-10 w-1/4 max-w-xs">
-        <motion.div 
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="relative h-64"
-        >
-          {/* Imagen 1 */}
-          <motion.div
-            className="absolute right-0 -top-8 w-32 h-40 xl:w-40 xl:h-48 rounded-lg overflow-hidden border-4 border-white shadow-xl"
-            whileHover={{ zIndex: 50, scale: 1.05 }}
-          >
-            <img 
-              src="/imagenes/bg1.jpg" 
-              alt="Buceo 1" 
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-          
-          {/* Imagen 2 */}
-          <motion.div
-            className="absolute right-32 top-4 w-44 h-24 xl:w-60 xl:h-32 rounded-lg overflow-hidden border-4 border-white shadow-xl"
-            whileHover={{ zIndex: 50, scale: 1.05 }}
-          >
-            <img 
-              src="/imagenes/foca.jpg" 
-              alt="Buceo 2" 
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-          
-          {/* Imagen 3 */}
-          <motion.div
-            className="absolute right-16 top-32 w-28 h-32 xl:w-36 xl:h-40 rounded-lg overflow-hidden border-4 border-white shadow-xl -rotate-3"
-            whileHover={{ zIndex: 50, scale: 1.05 }}
-          >
-            <img 
-              src="/imagenes/tortuga.jpeg" 
-              alt="Buceo 3" 
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-        </motion.div>
-      </div>
+      {/* Galería de imágenes - Solo visible en lg y arriba */}
+<div className="hidden lg:block absolute right-4 lg:right-8 top-1/3 z-10 w-1/4 max-w-xs">
+  <motion.div 
+    initial={{ x: 100, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ delay: 0.3, duration: 0.8 }}
+    className="relative h-64"
+  >
+    {/* Imagen 1 */}
+    <motion.div
+      className="absolute right-0 -top-8 xl:right-0 xl:-top-20 w-32 h-40 xl:w-56 xl:h-80 rounded-lg overflow-hidden border-4 border-white shadow-xl"
+      whileHover={{ zIndex: 50, scale: 1.05 }}
+    >
+      <img 
+        src="/imagenes/barco.jpeg" 
+        alt="Buceo 1" 
+        className="w-full h-full object-cover"
+      />
+    </motion.div>
+    
+    {/* Imagen 2 */}
+    <motion.div
+      className="absolute right-32 top-4 xl:right-40 xl:top-0 w-44 h-24 xl:w-80 xl:h-44 rounded-lg overflow-hidden border-4 border-white shadow-xl"
+      whileHover={{ zIndex: 50, scale: 1.05 }}
+    >
+      <img 
+        src="/imagenes/foca.jpg" 
+        alt="Buceo 2" 
+        className="w-full h-full object-cover"
+      />
+    </motion.div>
+    
+    {/* Imagen 3 */}
+    <motion.div
+      className="absolute right-16 top-32 xl:right-24 xl:top-40 w-28 h-32 xl:w-56 xl:h-52 rounded-lg overflow-hidden border-4 border-white shadow-xl -rotate-3"
+      whileHover={{ zIndex: 50, scale: 1.05 }}
+    >
+      <img 
+        src="/imagenes/tortuga.jpeg" 
+        alt="Buceo 3" 
+        className="w-full h-full object-cover"
+      />
+    </motion.div>
+  </motion.div>
+</div>
+
 
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-start">
         <motion.div 
