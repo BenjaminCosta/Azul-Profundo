@@ -127,9 +127,6 @@ export default function CoursesPage() {
                     alt={course.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute bottom-4 right-4 bg-white/90 p-2 rounded-full">
-                    {course.icon}
-                  </div>
                 </div>
                 
                 <CardHeader className="pb-3">

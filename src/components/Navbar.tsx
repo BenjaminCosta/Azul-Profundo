@@ -46,7 +46,7 @@ export default function Navbar() {
               alt="Logo" 
               className={cn(
                 "h-28 w-auto transition-all duration-300 group-hover:opacity-90",
-                scrolled ? "h-24 md:h-28" : "h-28 md:h-32"
+                scrolled ? "h-24 md:h-28" : "h-28 md:h-36"
               )} 
             />
           </Link>

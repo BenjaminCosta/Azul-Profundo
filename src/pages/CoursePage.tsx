@@ -46,20 +46,12 @@ const shortDescription = matchingCourse.description;
             {/* Contenido */}
             <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-4xl mx-auto text-center">
-                <Link 
-                  to="/cursos" 
-                  className="inline-flex items-center p-2 text-blue-200 hover:text-white mb-8 transition-colors group"
-                >
-                  <ArrowLeft size={20} className="mr-2 transition-transform group-hover:-translate-x-1" />
-                  <span className="font-semibold">Volver a cursos</span>
-                </Link>
-
-                <div className="mb-4 text-blue-300 uppercase tracking-widest font-semibold flex justify-center items-center">
+                <div className="mb-4 text-yellow-100 uppercase tracking-widest font-bold flex justify-center items-center">
                   <Zap className="mr-2 h-5 w-5" />
                   {course.frase}
                 </div>
                 
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight drop-shadow-md">
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-md">
                   {course.nombre}
                 </h1>
                 
@@ -203,10 +195,10 @@ const shortDescription = matchingCourse.description;
               </div>
 
               {/* Requisitos */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-500">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-yellow-500">
                 <div className="flex items-center mb-6">
-                  <div className="bg-red-100 p-3 rounded-full mr-4">
-                    <AlertCircle className="text-red-600 h-6 w-6" />
+                  <div className="bg-yellow-100 p-3 rounded-full mr-4">
+                    <AlertCircle className="text-orange-400 h-6 w-6" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-800">
                     Requisitos
@@ -215,8 +207,8 @@ const shortDescription = matchingCourse.description;
                 
                 <ul className="space-y-4">
                   {course.requisitos.map((req, index) => (
-                    <li key={index} className="flex items-start p-3 bg-red-50 rounded-lg hover:bg-red-100 transition-colors">
-                      <span className="bg-white text-red-600 font-bold rounded-full w-6 h-6 flex items-center justify-center mr-4 flex-shrink-0">
+                    <li key={index} className="flex items-start p-3 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition-colors">
+                      <span className="bg-white text-ocean-dark font-bold rounded-full w-6 h-6 flex items-center justify-center mr-4 flex-shrink-0">
                         {index + 1}
                       </span>
                       <span className="text-gray-700">{req}</span>
@@ -234,18 +226,11 @@ const shortDescription = matchingCourse.description;
                 <div className="space-y-4">
                   <div className="bg-blue-700/80 p-4 rounded-lg hover:bg-blue-700 transition-colors">
                     <h4 className="font-semibold mb-2 flex items-center">
-                      <Sun className="mr-2 h-5 w-5" />
-                      Turno mañana
+                      Flexible
                     </h4>
-                    <p>09:00 - 12:00</p>
+                    <p>Mañana o Tarde</p>
                   </div>
-                  <div className="bg-blue-700/80 p-4 rounded-lg hover:bg-blue-700 transition-colors">
-                    <h4 className="font-semibold mb-2 flex items-center">
-                      <Moon className="mr-2 h-5 w-5" />
-                      Turno tarde
-                    </h4>
-                    <p>14:00 - 17:00</p>
-                  </div>
+
                 </div>
               </div>
 
