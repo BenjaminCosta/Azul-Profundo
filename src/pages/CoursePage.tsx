@@ -51,11 +51,11 @@ const shortDescription = matchingCourse.description;
                   {course.frase}
                 </div>
                 
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-md">
+                <h1 className="text-4xl md:text-6xl font-bold text-blue-50 mb-6 leading-tight drop-shadow-md">
                   {course.nombre}
                 </h1>
                 
-                <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto drop-shadow-sm">
+                <p className="text-xl text-white mb-10 max-w-2xl mx-auto drop-shadow-md font-semibold">
                   {shortDescription}
                 </p>
 

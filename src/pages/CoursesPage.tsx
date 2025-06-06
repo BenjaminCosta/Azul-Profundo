@@ -133,9 +133,6 @@ export default function CoursesPage() {
                   <CardTitle className="text-xl font-bold text-gray-800">{course.title}</CardTitle>
                   <CardDescription className="flex flex-wrap gap-2 mt-2">
                     <span className="inline-flex items-center bg-ocean-light/20 text-ocean-dark text-xs px-3 py-1 rounded-full">
-                      <Clock className="mr-1 h-3 w-3" /> {course.duration}
-                    </span>
-                    <span className="inline-flex items-center bg-ocean-light/20 text-ocean-dark text-xs px-3 py-1 rounded-full">
                       {course.level}
                     </span>
                   </CardDescription>

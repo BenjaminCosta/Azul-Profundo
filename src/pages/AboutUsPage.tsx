@@ -35,16 +35,16 @@ export default function AboutUsPage() {
 
       {/* Contenido Principal */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-8 max-w-6xl">
           {/* Nuestra Historia */}
           <div className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-ocean mb-4">Sobre Nosotros</h2>
+              <h2 className="text-4xl font-bold text-ocean mb-4">Sobre Nosotros</h2>
               <div className="w-20 h-1 bg-ocean mx-auto"></div>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-gray-600 text-xl leading-relaxed">
                 En nuestro <strong>centro de buceo</strong>, te invitamos a descubrir el <strong>mundo submarino</strong> de manera segura y llena de aventura. Con un enfoque <strong>cercano y profesional</strong>, nuestros <strong>cursos personalizados</strong> te acompañarán en cada paso para que te conviertas en un <strong>buzo confiado</strong> y disfrutes al máximo cada inmersión.
                 <br /><br />
                 Contamos con un <strong>equipo de instructores apasionados</strong> y con <strong>amplia experiencia</strong> para guiarte y compartir con vos <strong>experiencias increíbles</strong> bajo el agua. ¡Prepárate para vivir <strong>momentos inolvidables</strong> y convertirte en un verdadero <strong>explorador acuático</strong>!
@@ -81,11 +81,11 @@ export default function AboutUsPage() {
           {/* Nuestra Filosofía */}
           <div className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-ocean mb-4">Nuestra Filosofía</h2>
+              <h2 className="text-4xl font-bold text-ocean mb-4">Nuestra Filosofía</h2>
               <div className="w-20 h-1 bg-ocean mx-auto"></div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid md:grid-cols-2 gap-8 items-center text-lg">
               <img
                 src="/imagenes/nosotros3.jpg"
                 alt="Filosofía Azul Profundo"
@@ -120,8 +120,8 @@ export default function AboutUsPage() {
           {/* Nuestro Equipo */}
           <div className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-ocean mb-4">Nuestro Equipo</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+              <h2 className="text-4xl font-bold text-ocean mb-4">Nuestro Equipo</h2>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-6">
                 Conoce a los profesionales que hacen de Azul Profundo una experiencia única
               </p>
               <div className="w-20 h-1 bg-ocean mx-auto"></div>

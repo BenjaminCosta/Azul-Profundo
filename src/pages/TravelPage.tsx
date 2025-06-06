@@ -219,7 +219,7 @@ export default function TravelPage() {
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {travel.highlights.map((highlight, index) => (
-                <div key={index} className="bg-white/10 p-3 rounded-lg backdrop-blur-sm flex items-center">
+                <div key={index} className="bg-white/10 p-3 rounded-lg backdrop-blur-lg flex items-center">
                   <div className="mr-2">{highlight.icon}</div>
                   <span className="text-sm">{highlight.text}</span>
                 </div>

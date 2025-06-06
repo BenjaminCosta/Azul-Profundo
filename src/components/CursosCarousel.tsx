@@ -81,8 +81,8 @@ export default function CoursesCarousel() {
     <section className="py-32 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">Transforma tu relación con el océano</h2>
-          <p className="text-lg text-ocean-dark max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-800 mb-2">Transforma tu relación con el océano</h2>
+          <p className="text-xl text-ocean-dark max-w-2xl mx-auto">
           Desde tus primeras experiencias bajo el agua hasta convertirte en buceador profesional, tenemos el curso para cada etapa de tu aventura submarina.
           </p>
         </div>

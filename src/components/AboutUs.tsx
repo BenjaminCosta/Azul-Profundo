@@ -8,9 +8,9 @@ export default function AprendeABucear() {
       {/* Nuestro Equipo */}
       <section className="py-32 px-6 sm:px-20 text-center bg-white"
       >
-        <h2 className="text-4xl font-extrabold text-ocean-dark mb-4">Nuestra Escuela</h2>
+        <h2 className="text-5xl font-extrabold text-ocean-dark mb-4">Nuestra Escuela</h2>
 
-        <p className="text-lg text-gray-800 max-w-3xl mx-auto mb-12">
+        <p className="text-xl text-gray-800 max-w-3xl mx-auto mb-12">
           Desde hace más de 30 años en <strong className="text-gray-800">Azul Profundo</strong> formamos buceadores con pasión y compromiso.
           <span className="text-ocean-dark"> Sumergite en una experiencia única</span> de la mano de <span className="text-ocean-dark">instructores certificados</span> y viví el mundo submarino como nunca antes...
           <Link to="/nosotros">

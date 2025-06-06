@@ -12,7 +12,7 @@ const divingImages = [
   {
     id: 2,
     image: "/imagenes/carousel10.jpg",
-    title: "Buceo Técnico Profesional",
+    title: "Buceo Técnico",
     description: "Cursos avanzados para explorar límites submarinos con seguridad"
   },
   {

@@ -70,11 +70,11 @@ export default function FaqPage() {
 
       {/* Sección de FAQs Mejorada */}
       <section className="py-16 bg-gradient-to-b from-white to-blue-50 flex-grow">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="container mx-auto px-2">
+          <div className="max-w-5xl mx-auto">
             <div className="bg-white rounded-xl shadow-xl overflow-hidden">
               <div className="p-8 md:p-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-ocean mb-8 text-center">
+                <h2 className="text-2xl md:text-4xl font-bold text-ocean mb-16 text-center">
                   ¿Tienes dudas? Aquí las respondemos
                 </h2>
                 
@@ -85,10 +85,10 @@ export default function FaqPage() {
                       value={`item-${index}`}
                       className="border-b border-gray-200 last:border-b-0"
                     >
-                      <AccordionTrigger className="text-lg md:text-xl font-semibold text-gray-800 hover:text-ocean py-4">
+                      <AccordionTrigger className="text-lg md:text-2xl font-semibold text-gray-800 hover:text-ocean py-4">
                         <span className="text-left">{faq.question}</span>
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-600 pb-4 leading-relaxed">
+                      <AccordionContent className="text-gray-600 pb-4 text-lg leading-relaxed">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
