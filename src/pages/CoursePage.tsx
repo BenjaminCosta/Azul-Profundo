@@ -29,7 +29,7 @@ const shortDescription = matchingCourse.description;
       <Navbar />
 
       {/* Hero Section Rediseñada con imagen de fondo */}
-          <div className="pt-36 md:pt-40 pb-16 md:pb-24 relative overflow-hidden">
+          <div className="pt-44 md:pt-40 pb-20 md:pb-24 relative overflow-hidden">
             {/* Fondo con gradiente superpuesto a la imagen */}
             
            {/* Imagen de fondo del curso */}
@@ -55,7 +55,7 @@ const shortDescription = matchingCourse.description;
                   {course.nombre}
                 </h1>
                 
-                <p className="text-xl text-white mb-10 max-w-2xl mx-auto drop-shadow-md font-semibold">
+                <p className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto drop-shadow-md font-semibold">
                   {shortDescription}
                 </p>
 
