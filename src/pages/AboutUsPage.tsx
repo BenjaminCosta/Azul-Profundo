@@ -6,8 +6,12 @@ import {
   MapPin,         // Para "Experiencias Únicas"
   // ... otros iconos que ya tengas importados
 } from "lucide-react";
+import { useState } from "react";
 
 export default function AboutUsPage() {
+  const [showEduardo, setShowEduardo] = useState(false);
+  const [showJuan, setShowJuan] = useState(false);
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -118,91 +122,131 @@ export default function AboutUsPage() {
           </div>
 
           {/* Nuestro Equipo */}
-          <div className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-ocean mb-4">Nuestro Equipo</h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-6">
-                Conoce a los profesionales que hacen de Azul Profundo una experiencia única
-              </p>
-              <div className="w-20 h-1 bg-ocean mx-auto"></div>
-            </div>
+<div className="mb-16">
+  <div className="text-center mb-12">
+    <h2 className="text-4xl font-bold text-ocean mb-4">Nuestro Equipo</h2>
+    <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-6">
+      Conoce a los profesionales que hacen de Azul Profundo una experiencia única
+    </p>
+    <div className="w-20 h-1 bg-ocean mx-auto"></div>
+  </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Eduardo Cosentino */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                <div className="p-6">
-                  <div className="flex flex-col sm:flex-row gap-6">
-                    <img
-                      src="/imagenes/edu2.avif"
-                      alt="Eduardo Cosentino"
-                      className="w-44 h-44 rounded-full object-cover mx-auto sm:mx-0 border-4 border-ocean-100 shadow-md"
-                    />
-                    <div className="text-center sm:text-left">
-                      <h3 className="text-xl font-bold text-gray-800">Eduardo Cosentino</h3>
-                      <p className="text-ocean font-medium mb-3">Director General</p>
-                      <p className="text-gray-600 text-sm mb-4">Fundador del Centro de Buceo Azul Profundo con más de 40 años de experiencia en buceo.</p>
-                    </div>
-                  </div>
-                  <div className="mt-6 pt-6 border-t border-gray-100">
-                    <h4 className="font-semibold text-gray-800 mb-3">Credenciales:</h4>
-                    <ul className="text-sm text-gray-600 space-y-2 columns-2">
-                      <li>Instructor NAUI</li>
-                      <li>Instructor FAAS-CMAS</li>
-                      <li>Instructor de Nitrox</li>
-                      <li>Buzo 2° categoría PNA</li>
-                      <li>Buzo Intro to Tec NAUI</li>
-                      <li>Buzo Técnicas Descompresivas</li>
-                      <li>Buzo Trimix NAUI</li>
-                      <li>Primeros auxilios DAN</li>
-                      <li>Proveedor de Oxígeno DAN</li>
-                      <li>Especialista en Vida Marina</li>
-                      <li>Medicina Hiperbárica</li>
-                      <li>Arqueología Subacuática</li>
-                      <li>Timonel de yate</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              
-
-              {/* Juan Cosentino */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                <div className="p-6">
-                  <div className="flex flex-col sm:flex-row gap-6">
-                    <img
-                      src="/imagenes/juan2.avif"
-                      alt="Juan Cosentino"
-                      className="w-44 h-44 rounded-full object-cover mx-auto sm:mx-0 border-4 border-ocean-100 shadow-md"
-                    />
-                    <div className="text-center sm:text-left">
-                      <h3 className="text-xl font-bold text-gray-800">Juan Cosentino</h3>
-                      <p className="text-ocean font-medium mb-3">Coordinador de Cursos</p>
-                      <p className="text-gray-600 text-sm mb-4">Apasionado por la docencia y el buceo desde los 12 años.</p>
-                    </div>
-                  </div>
-                  <div className="mt-6 pt-6 border-t border-gray-100">
-                    <h4 className="font-semibold text-gray-800 mb-3">Credenciales:</h4>
-                    <ul className="text-sm text-gray-600 space-y-2 columns-2">
-                      <li>Instructor Técnico NAUI</li>
-                      <li>Instructor Recreativo NAUI</li>
-                      <li>Instructor FAAS-CMAS</li>
-                      <li>Instructor SSI/SN.SI</li>
-                      <li>Instructor de Nitrox</li>
-                      <li>Instructor Stress & Rescate</li>
-                      <li>Instructor Primeros Auxilios</li>
-                      <li>Instructor Proveedor Oxígeno</li>
-                      <li>Buzo Técnicas Descompresivas</li>
-                      <li>Buzo Trimix NAUI</li>
-                      <li>Buzo Rebreather Prism II</li>
-                      <li>Medicina Hiperbárica</li>
-                      <li>Arqueología Subacuática</li>
-                      <li>Timonel de yate</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div className="grid md:grid-cols-2 gap-8 items-start"> {/* Agregamos items-start aquí */}
+    {/* Eduardo Cosentino */}
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+      <div className="p-6">
+        <div className="flex flex-col sm:flex-row gap-6">
+          <img
+            src="/imagenes/edu2.avif"
+            alt="Eduardo Cosentino"
+            className="w-44 h-44 rounded-full object-cover mx-auto sm:mx-0 border-4 border-ocean-100 shadow-md"
+          />
+          <div className="text-center sm:text-left">
+            <h3 className="text-xl font-bold text-gray-800">Eduardo Cosentino</h3>
+            <p className="text-ocean font-medium mb-3">Director General</p>
+            <p className="text-gray-600 text-sm mb-4">Fundador del Centro de Buceo Azul Profundo con más de 40 años de experiencia en buceo.</p>
           </div>
+        </div>
+        <div className="mt-4 flex justify-center sm:justify-start">
+          <button 
+            onClick={() => setShowEduardo(!showEduardo)}
+            className="flex items-center text-ocean font-medium"
+          >
+            {showEduardo ? 'Ocultar credenciales' : 'Ver credenciales'}
+            <svg 
+              className={`w-5 h-5 ml-1 transition-transform duration-300 ${showEduardo ? 'rotate-180' : ''}`}
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+        {showEduardo && (
+          <div className="mt-4 pt-4 border-t border-gray-100">
+            <h4 className="font-semibold text-gray-800 mb-3">Credenciales:</h4>
+            <ul className="text-sm text-gray-600 space-y-2 columns-2">
+              {/* Lista de credenciales */}
+                 <li>Instructor NAUI</li>
+              <li>Instructor FAAS-CMAS</li>
+              <li>Instructor de Nitrox</li>
+              <li>Buzo 2° categoría PNA</li>
+              <li>Buzo Intro to Tec NAUI</li>
+              <li>Buzo Técnicas Descompresivas</li>
+              <li>Buzo Trimix NAUI</li>
+              <li>Primeros auxilios DAN</li>
+              <li>Proveedor de Oxígeno DAN</li>
+              <li>Especialista en Vida Marina</li>
+              <li>Medicina Hiperbárica</li>
+              <li>Arqueología Subacuática</li>
+              <li>Timonel de yate</li>
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+    
+    {/* Juan Cosentino */}
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+      <div className="p-6">
+        <div className="flex flex-col sm:flex-row gap-6">
+          <img
+            src="/imagenes/juan2.avif"
+            alt="Juan Cosentino"
+            className="w-44 h-44 rounded-full object-cover mx-auto sm:mx-0 border-4 border-ocean-100 shadow-md"
+          />
+          <div className="text-center sm:text-left">
+            <h3 className="text-xl font-bold text-gray-800">Juan Cosentino</h3>
+            <p className="text-ocean font-medium mb-3">Coordinador de Cursos</p>
+            <p className="text-gray-600 text-sm mb-4">Apasionado por la docencia y el buceo desde los 12 años.</p>
+          </div>
+        </div>
+        <div className="mt-4 flex justify-center sm:justify-start">
+          <button 
+            onClick={() => setShowJuan(!showJuan)}
+            className="flex items-center text-ocean font-medium"
+          >
+            {showJuan ? 'Ocultar credenciales' : 'Ver credenciales'}
+            <svg 
+              className={`w-5 h-5 ml-1 transition-transform duration-300 ${showJuan ? 'rotate-180' : ''}`}
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+        {showJuan && (
+          <div className="mt-4 pt-4 border-t border-gray-100">
+            <h4 className="font-semibold text-gray-800 mb-3">Credenciales:</h4>
+            <ul className="text-sm text-gray-600 space-y-2 columns-2">
+              {/* Lista de credenciales */}
+              <li>Instructor Técnico NAUI</li>
+              <li>Instructor Recreativo NAUI</li>
+              <li>Instructor FAAS-CMAS</li>
+              <li>Instructor SSI/SN.SI</li>
+              <li>Instructor de Nitrox</li>
+              <li>Instructor Stress & Rescate</li>
+              <li>Instructor Primeros Auxilios</li>
+              <li>Instructor Proveedor Oxígeno</li>
+              <li>Buzo Técnicas Descompresivas</li>
+              <li>Buzo Trimix NAUI</li>
+              <li>Buzo Rebreather Prism II</li>
+              <li>Medicina Hiperbárica</li>
+              <li>Arqueología Subacuática</li>
+              <li>Timonel de yate</li>
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</div>
+
 
           
 
@@ -210,48 +254,52 @@ export default function AboutUsPage() {
           {/* Sección Compromiso - Versión Final */}
 <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
   <div className="flex flex-col lg:flex-row h-full">
+    
     {/* Contenido de texto - Izquierda */}
     <div className="w-full lg:w-1/2 p-10 lg:p-12 flex flex-col justify-center">
       <div className="mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-ocean-dark mb-4 relative pb-3">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-ocean-dark mb-4 relative pb-3">
           Nuestro Compromiso
           <span className="absolute bottom-0 left-0 w-24 h-[3px] bg-ocean-light rounded-full"></span>
         </h2>
-        <p className="text-gray-700">Lo que nos diferencia y nos impulsa cada día</p>
+        <p className="text-gray-800 font-medium">Lo que nos diferencia y nos impulsa cada día</p>
       </div>
       
       <div className="space-y-6">
-        {[
-          {
-            title: "Excelencia en Formación",
-            content: "Programas educativos actualizados con los últimos estándares internacionales.",
-            icon: <GraduationCap className="h-6 w-6" />
-          },
-          {
-            title: "Equipo de Calidad",
-            content: "Utilizamos equipos de primera línea, mantenidos con los más altos estándares.",
-            icon: <ShieldCheck className="h-6 w-6" />
-          },
-          {
-            title: "Experiencias Únicas",
-            content: "Viajes y expediciones a los mejores destinos de buceo del mundo.",
-            icon: <MapPin className="h-6 w-6" />
-          }
-        ].map((item, idx) => (
-          <div 
-            key={idx} 
-            className="flex items-start p-4 hover:bg-ocean-light/5 rounded-lg transition-colors"
-          >
-            <div className="bg-ocean-light/10 p-2.5 rounded-lg mr-4 text-ocean-dark">
-              {item.icon}
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-1.5">{item.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{item.content}</p>
-            </div>
-          </div>
-        ))}
+  {[
+    {
+      title: "Excelencia en Formación",
+      content: "Programas educativos actualizados con los últimos estándares internacionales.",
+      icon: <GraduationCap className="h-6 w-6" />
+    },
+    {
+      title: "Equipo de Calidad",
+      content: "Utilizamos equipos de primera línea, mantenidos con los más altos estándares.",
+      icon: <ShieldCheck className="h-6 w-6" />
+    },
+    {
+      title: "Experiencias Únicas",
+      content: "Viajes y expediciones a los mejores destinos de buceo del mundo.",
+      icon: <MapPin className="h-6 w-6" />
+    }
+  ].map((item, idx) => (
+    <div 
+      key={idx} 
+      className="flex items-start p-4 hover:bg-ocean-light/10 rounded-lg transition-colors"
+    >
+      <div className="bg-ocean-light/20 p-2.5 rounded-lg mr-4 text-ocean-dark shadow-sm">
+        {item.icon}
       </div>
+      <div>
+        <h3 className="text-lg font-semibold text-ocean-dark mb-1.5">{item.title}</h3>
+        <p className="text-gray-800 text-base leading-relaxed tracking-wide font-medium">
+          {item.content}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
     </div>
     
     {/* Imagen - Derecha */}
@@ -265,6 +313,7 @@ export default function AboutUsPage() {
     </div>
   </div>
 </div>
+
         </div>
       </section>
 
