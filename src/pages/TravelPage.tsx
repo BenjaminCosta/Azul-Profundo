@@ -173,7 +173,7 @@ export default function TravelPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <Navbar />
 
       {/* Hero Section */}
@@ -208,7 +208,7 @@ export default function TravelPage() {
               </span>
             </div>
             
-            <div className="flex flex-wrap gap-3 mb-8">
+            <div className="flex flex-wrap gap-3 mb-8 ">
               <span className="bg-ocean/90 px-4 py-2 rounded-full text-sm backdrop-blur-sm">
                 Nivel: {travel.level}
               </span>
@@ -230,7 +230,7 @@ export default function TravelPage() {
       </div>
 
       {/* Content Sections */}
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-ocean/5">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
             {/* Main Content */}

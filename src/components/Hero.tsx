@@ -18,10 +18,10 @@ export default function Hero() {
       className="relative h-[105vh] overflow-hidden"
     >
       <motion.div
-        className="absolute inset-0 bg-hero-pattern bg-cover bg-center"
+        className="absolute inset-0 md:bg-fixed bg-hero-pattern bg-cover bg-center"
         style={{
           backgroundImage: "url('/imagenes/tiburon.jpeg')",
-          y: yBg
+
         }}
       />
       
@@ -100,7 +100,7 @@ export default function Hero() {
       whileHover={{ zIndex: 50, scale: 1.05 }}
     >
       <img 
-        src="/imagenes/tortuga.jpeg" 
+        src="/imagenes/carousel9.jpg" 
         alt="Buceo 3" 
         className="w-full h-full object-cover"
       />

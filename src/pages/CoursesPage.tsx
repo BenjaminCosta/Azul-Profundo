@@ -86,8 +86,29 @@ export const allCourses = [
     price: "$180",
     image: "/imagenes/auxilios2.jpg",
     icon: <HeartPulse className="text-ocean" />
+  },
+  {
+    id: "sidemount-diver",
+    title: "Sidemount Diver",
+    description: "Optimizá tu flotabilidad y movilidad con esta configuración lateral. Ideal para buceo en cuevas, naufragios o técnico recreativo.",
+    duration: "2-3 días",
+    level: "Avanzado",
+    price: "$390",
+    image: "/imagenes/sidemount.jpg",
+  
+  },
+  {
+    id: "freediving",
+    title: "Freediving",
+    description: "Explorá el mundo submarino a pulmón. Técnicas de respiración, relajación y control mental en un entorno seguro y controlado.",
+    duration: "2-3 días",
+    level: "Todos los niveles",
+    price: "$280",
+    image: "/imagenes/freediving.jpg",
+
   }
 ];
+
 
 
 export default function CoursesPage() {

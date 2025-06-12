@@ -25,7 +25,7 @@ if (!course || !matchingCourse) return <NotFound />;
 
 const shortDescription = matchingCourse.description;
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-blue-100 to-ocean-light/20">
       <Navbar />
 
       {/* Hero Section Rediseñada con imagen de fondo */}
@@ -61,7 +61,7 @@ const shortDescription = matchingCourse.description;
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contacto">
-                    <Button className="bg-white/20 text-black hover:bg-blue-100 border-2 border-black font-bold px-8 py-6 text-lg rounded-sm shadow-lg transition-all hover:scale-105">
+                    <Button className="bg-white/20 text-black hover:bg-blue-100 border-2 border-black font-bold px-8 py-6 text-lg rounded-sm shadow-lg transition-all hover:scale-105 backdrop-blur-sm">
                       <GraduationCap className="mr-2" />
                       ¡Quiero certificarme!
                     </Button>

@@ -377,7 +377,97 @@ const coursesData = {
     ]
     ,
     image: "/imagenes/auxilios2.jpg",
-  }
+  },
+  "sidemount-diver": {
+  nombre: "Sidemount Diver",
+  frase: "libertad y equilibrio bajo el agua",
+  descripcion:
+    "El curso de buceo Sidemount te enseña a bucear con una o dos botellas montadas a los costados del cuerpo. Esta configuración mejora el equilibrio, optimiza el perfil hidrodinámico y ofrece mayor seguridad por el acceso directo a los reguladores. Ideal para buzos que desean explorar cuevas, naufragios o realizar buceo técnico. Incluye teoría en aula y E-learning, junto con prácticas en pileta utilizando arnés y alas específicas. Aprendé a configurar tu equipo, gestionar el gas eficientemente y moverte con máxima comodidad.",
+  temas: {
+    aula: [
+      "Ventajas del sistema Sidemount",
+      "Configuración del equipo",
+      "Gestión de gas con múltiples tanques",
+      "Procedimientos de emergencia",
+      "Hidrodinámica y control del trim"
+    ],
+    pileta: [
+      "Montaje y ajuste del arnés",
+      "Control de flotabilidad y trim",
+      "Cambio de regulador y gestión de gas",
+      "Simulación de fallos y emergencias",
+      "Ingreso y egreso del agua con configuración Sidemount"
+    ]
+  },
+  destacado: [
+    "Configuración personalizada del equipo",
+    "Mayor movilidad y confort",
+    "2/3 sesiones teóricas de 90 minutos",
+    "2 prácticas en piscina de 120 minutos"
+  ],
+  requisitos: [
+    "Certificación Advanced Diver",
+    "[N° mínimo] de inmersiones previas",
+    "Saber nadar",
+    "Buena condición física",
+    "Certificado médico",
+    "Edad mínima 15 años"
+  ],
+  incluye: [
+    "Material de estudio digital",
+    "Acceso a E-learning",
+    "Arnés, alas y equipos específicos",
+    "Asistencia permanente de instructores certificados",
+    "Tramitación de brevet internacional (*)",
+    "Bitácora digital de buceo (*)",
+    "Diploma (*)"
+  ],
+  image: "/imagenes/sidemount.jpg"
+},
 
+"freediving": {
+  nombre: "Freediving",
+  frase: "conectá con tu respiración",
+  descripcion:
+    "Descubrí el mundo submarino a pulmón. Este curso está diseñado para quienes desean aprender técnicas de apnea segura, mejorar el control de la respiración y explorar sus límites de manera consciente. Ideal para quienes buscan mejorar su rendimiento en el agua, relajarse y fortalecer el vínculo con el medio marino. El curso combina teoría, prácticas en piscina y técnicas de respiración y relajación. No requiere experiencia previa.",
+  temas: {
+    aula: [
+      "Fisiología de la apnea",
+      "Técnicas de respiración y relajación",
+      "Tipos de apnea (estática, dinámica, profunda)",
+      "Igualación de presión",
+      "Seguridad y rescate en apnea"
+    ],
+    pileta: [
+      "Apnea estática y dinámica",
+      "Respiración diafragmática",
+      "Entrenamiento de tolerancia al CO₂",
+      "Compensación",
+      "Simulación de rescates"
+    ]
+  },
+  destacado: [
+    "Curso sin equipos pesados",
+    "Mejora la capacidad pulmonar y el autocontrol",
+    "3 sesiones teóricas de 90 minutos",
+    "2/3 sesiones prácticas de 120 minutos"
+  ],
+  requisitos: [
+    "Saber nadar",
+    "Buena salud general",
+    "Certificado médico",
+    "Edad mínima 15 años"
+  ],
+  incluye: [
+    "Material de estudio digital",
+    "Acceso a E-learning",
+    "Entrenamiento respiratorio guiado",
+    "Asistencia permanente de instructores certificados",
+    "Acceso a piscina climatizada",
+    "Tramitación de certificación (*)",
+    "Diploma (*)"
+  ],
+  image: "/imagenes/freediving.jpg"
+}
 };
 export default coursesData;
