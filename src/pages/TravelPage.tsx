@@ -172,11 +172,11 @@ export default function TravelPage() {
     return <NotFound />;
   }
 
-  return (
+   return (
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero Section (sin cambios) */}
       <div className="pt-24 h-screen max-h-[700px] relative bg-ocean-dark overflow-hidden">
         {travel.image && (
           <img 
@@ -229,23 +229,27 @@ export default function TravelPage() {
         </div>
       </div>
 
-      {/* Content Sections */}
-      <div className="py-16 bg-ocean/5">
+      {/* Content Sections - Mejoras en el diseño de texto */}
+      <div className="py-16 bg-gradient-to-b from-white to-ocean/5">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
             {/* Main Content */}
             <div className="md:col-span-2">
               {/* About Section */}
               <Section title="Sobre esta experiencia" icon={<Anchor />}>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">{travel.description}</p>
+                <p className="text-lg text-gray-800 leading-relaxed mb-6 font-medium">
+                  {travel.description}
+                </p>
                 
-                <div className="bg-ocean-light/10 p-6 rounded-xl border border-ocean-light/20 mb-8">
-                  <h3 className="font-bold text-lg text-ocean-dark mb-3">Lo más destacado:</h3>
-                  <ul className="space-y-2">
+                <div className="bg-ocean-light/10 p-6 rounded-xl border border-ocean-light/20 mb-8 backdrop-blur-sm">
+                  <h3 className="font-bold text-xl text-ocean-dark mb-3 flex items-center">
+                    <span className="text-ocean mr-2">✨</span> Lo más destacado
+                  </h3>
+                  <ul className="space-y-3">
                     {travel.highlights.map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="text-ocean mr-2 mt-1">•</span>
-                        <span>{item.text}</span>
+                        <span className="text-ocean mr-2 mt-1 font-bold">•</span>
+                        <span className="text-gray-700 font-medium">{item.text}</span>
                       </li>
                     ))}
                   </ul>
@@ -258,16 +262,16 @@ export default function TravelPage() {
                   {travel.itinerary.map((item, index) => (
                     <div key={index} className="flex group">
                       <div className="flex flex-col items-center mr-4">
-                        <div className="w-20 h-10 rounded-full bg-ocean text-white text-sm flex items-center justify-center font-bold">
+                        <div className="w-20 h-10 rounded-full bg-gradient-to-r from-ocean to-ocean-dark text-white text-sm flex items-center justify-center font-bold shadow-md">
                           {item.day}
                         </div>
                         {index < travel.itinerary.length - 1 && (
-                          <div className="w-1 h-full bg-gray-200 group-hover:bg-ocean transition-colors"></div>
+                          <div className="w-1 h-full bg-gradient-to-b from-ocean/30 to-ocean-light/30 group-hover:from-ocean group-hover:to-ocean-dark transition-all"></div>
                         )}
                       </div>
                       <div className="pb-6 flex-1">
-                        <h3 className="font-bold text-lg text-gray-800 mb-1">{item.title}</h3>
-                        <p className="text-gray-600">{item.description}</p>
+                        <h3 className="font-bold text-xl text-gray-800 mb-1">{item.title}</h3>
+                        <p className="text-gray-700 font-medium">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -279,19 +283,21 @@ export default function TravelPage() {
             <div className="md:col-span-1">
               <div className="sticky top-24 space-y-6">
                 {/* Included Section */}
-                <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm">
+                <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
                   <h2 className="text-2xl font-bold mb-4 text-gray-800 flex items-center">
-                    <span className="text-ocean mr-2">✓</span> Incluye
+                    <span className="text-ocean mr-2 text-2xl">✓</span> Incluye
                   </h2>
                   <div className="space-y-5">
                     {travel.included.map((category, index) => (
                       <div key={index}>
-                        <h3 className="font-semibold text-gray-800 mb-2">{category.category}</h3>
-                        <ul className="space-y-1">
+                        <h3 className="font-semibold text-lg text-gray-800 mb-2 border-b border-gray-100 pb-1">
+                          {category.category}
+                        </h3>
+                        <ul className="space-y-2">
                           {category.items.map((item, itemIndex) => (
-                            <li key={itemIndex} className="flex items-start text-gray-600">
-                              <span className="text-ocean mr-2 mt-1">•</span>
-                              <span>{item}</span>
+                            <li key={itemIndex} className="flex items-start text-gray-700">
+                              <span className="text-ocean mr-2 mt-1 font-bold">•</span>
+                              <span className="font-medium">{item}</span>
                             </li>
                           ))}
                         </ul>
@@ -301,11 +307,11 @@ export default function TravelPage() {
                 </div>
 
                 {/* CTA Box */}
-                <div className="bg-ocean-dark text-white p-6 rounded-xl text-center">
-                  <h3 className="font-bold text-xl mb-3">¿Listo para la aventura?</h3>
-                  <p className="mb-4 text-ocean-light">Plazas limitadas - Reserva tu lugar</p>
+                <div className="bg-gradient-to-br from-ocean-dark to-ocean text-white p-6 rounded-xl text-center shadow-lg">
+                  <h3 className="font-bold text-2xl mb-3">¿Listo para la aventura?</h3>
+                  <p className="mb-4 text-ocean-light/90 font-medium">Plazas limitadas - Reserva tu lugar</p>
                   <Link to="/contacto">
-                    <Button className="w-full bg-white text-ocean-dark hover:bg-gray-100 font-bold py-3">
+                    <Button className="w-full bg-white text-ocean-dark hover:bg-gray-100 font-bold py-3 text-lg shadow-md hover:scale-[1.02] transition-transform">
                       {travel.buttonText || "Contactar ahora"}
                     </Button>
                   </Link>
@@ -321,12 +327,12 @@ export default function TravelPage() {
   );
 }
 
-// Componente de sección reutilizable (sin cambios)
+// Componente de sección reutilizable con mejoras
 function Section({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) {
   return (
-    <section className="mb-12">
-      <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center">
-        <span className="text-ocean mr-3">{icon}</span>
+    <section className="mb-16">
+      <h2 className="text-3xl font-bold mb-8 text-gray-800 flex items-center border-b border-gray-100 pb-4">
+        <span className="text-ocean mr-3 bg-ocean/10 p-2 rounded-lg">{icon}</span>
         {title}
       </h2>
       {children}
