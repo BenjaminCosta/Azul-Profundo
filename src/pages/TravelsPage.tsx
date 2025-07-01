@@ -14,7 +14,7 @@ const allTravels = [
     date: "Destino con salidas frecuentes",
     description: "Descubre las maravillosas playas y aguas cristalinas y cálidas de esta joya brasileña que con sus más de 300 islas ofrece un sinfín de experiencias, con abundante vida marina.",
     image: "/imagenes/angra2.jpg",
-    spots: "con alojamiento"
+    spots: "embarcado"
   },
   {
     id: "galapagos",
@@ -24,7 +24,7 @@ const allTravels = [
     date: "Destino con salidas frecuentes",
     description: "Ubicadas en un aislado sector del Océano Pacífico, las Islas Galápagos representan uno de los lugares de mayor biodiversidad del Planeta, siendo uno de los tres mejores lugares del mundo para bucear.",
     image: "/imagenes/galapagos.jpg",
-    spots: "a bordo"
+    spots: "embarcado"
   },
   {
     id: "egipto",
@@ -34,7 +34,7 @@ const allTravels = [
     date: "Destino con salidas frecuentes",
     description: "Las pirámides de Egipto y el río Nilo se combinan con las aguas cristalinas, coloridos arrecifes y muchos naufragios rodeados de una abundante vida marina en este destino.",
     image: "/imagenes/egypt2.jpg",
-    spots: "a bordo"
+    spots: "embarcado"
   },
   {
     id: "bonaire",
@@ -44,7 +44,7 @@ const allTravels = [
     date: "Destino con salidas frecuentes",
     description: "Conocido como el paraíso de los buceadores, esta isla de las Antillas Holandesas ofrece acceso fácil a más de 60 sitios de inmersión y un ecosistema marino protegido con visibilidad excepcional y agua cálida.",
     image: "/imagenes/bonaire2.jpg",
-    spots: "con alojamiento"
+    spots: "desde costa"
   },
   {
     id: "cenotes",
@@ -54,7 +54,7 @@ const allTravels = [
     date: "Destino con salidas frecuentes",
     description: "Las cuevas de los cenotes mexicanos son escenarios únicos para aquellos intrépidos que quieren conocer las entrañas de la Tierra.",
     image: "/imagenes/cenote2.jpg",
-    spots: "con alojamiento"
+    spots: "desde costa"
   },
   {
     id: "roatan",
@@ -64,9 +64,10 @@ const allTravels = [
     date: "Destino con salidas frecuentes",
     description: "Esta famosa isla del mar Caribe de aguas transparentes y cálidas te permite bucear en cañadones sumergidos y con un gran arrecife de coral.",
     image: "/imagenes/roatan2.jpg",
-    spots: "con alojamiento"
+    spots: "embarcado"
   }
 ];
+
 
 
 export default function TravelsPage() {
