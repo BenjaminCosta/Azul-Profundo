@@ -49,9 +49,9 @@ export default function AboutUsPage() {
             
             <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
             <p className="text-gray-600 text-xl leading-relaxed">
-                En nuestro <strong>centro de buceo</strong>, te invitamos a descubrir el <strong>mundo submarino</strong> de manera segura y llena de aventura. Con un enfoque <strong>cercano y profesional</strong>, nuestros <strong>cursos personalizados</strong> te acompañarán en cada paso para que te conviertas en un <strong>buzo confiado</strong> y disfrutes al máximo cada inmersión.
+                En nuestro <strong>centro de buceo</strong>, te invitamos a descubrir el <strong>mundo submarino</strong> de manera segura y llena de aventura. Con un enfoque <strong>cercano y profesional</strong>, nuestros <strong>cursos personalizados</strong> te acompañarán en cada paso para que te conviertas en un <strong>buzo seguro</strong> y disfrutes al máximo cada inmersión.
                 <br /><br />
-                Contamos con un <strong>equipo de instructores apasionados</strong> y con <strong>amplia experiencia</strong> para guiarte y compartir con vos <strong>experiencias increíbles</strong> bajo el agua. ¡Prepárate para vivir <strong>momentos inolvidables</strong> y convertirte en un verdadero <strong>explorador acuático</strong>!
+                Contamos con un <strong>equipo de instructores y divemasters apasionados</strong> y con <strong>amplia experiencia</strong> para guiarte y compartir con vos <strong>experiencias increíbles</strong> bajo el agua. ¡Prepárate para vivir <strong>momentos inolvidables</strong> y convertirte en un verdadero <strong>explorador acuático</strong>!
               </p>
               <img 
                 src="/imagenes/nosotros4.jpg" 

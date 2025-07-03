@@ -130,7 +130,7 @@ export default function CoursePage() {
                     <ClipboardList className="text-purple-600 h-6 w-6" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-800">
-                    Plan de estudios
+                    Temas destacados en este curso
                   </h2>
                 </div>
                 

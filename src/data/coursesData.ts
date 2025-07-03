@@ -199,7 +199,7 @@ const coursesData = {
   },
     "dive-master": {
     nombre: "Dive Master",
-    frase: "el primer paso hacia el liderazgo",
+    frase: "liderar bajo el agua",
     descripcion:
       "Este curso es el inicio de tu carrera profesional en el buceo. Como Dive Master certificado, podrás asistir en cursos, liderar grupos y planificar inmersiones. El programa de NAUI combina teoría avanzada, prácticas en pileta y múltiples actividades en ambiente natural, donde aprenderás a gestionar grupos, resolver emergencias y supervisar buceos recreativos. También te preparamos para el rol pedagógico, desarrollando tu capacidad para asistir al instructor en distintas etapas del aprendizaje. Duración personalizada.",
     temas: {
@@ -250,7 +250,7 @@ const coursesData = {
   },
     "rescue-diver": {
     nombre: "Rescue Diver",
-    frase: "preparado para actuar y ayudar",
+    frase: "saber ayudar",
     descripcion:
       "Este curso te brinda las habilidades necesarias para prevenir problemas y responder eficazmente ante emergencias subacuáticas. Aprenderás a reconocer signos de estrés, manejar situaciones complicadas bajo el agua y en superficie, y asistir a otros buceadores en peligro. Una formación esencial para quienes quieren bucear de manera segura y cuidar a su grupo.",
     temas: {
@@ -296,7 +296,7 @@ const coursesData = {
   },
     "intro-to-tech": {
     nombre: "Intro to Tech",
-    frase: "una puerta al buceo técnico",
+    frase: "la evolución del buzo",
     descripcion:
       "Este curso es ideal para buzos avanzados que buscan perfeccionar su técnica, mejorar su control en el agua y conocer las bases del buceo técnico. Aprenderás a utilizar configuraciones específicas (tipo Hogarthian), dominar la flotabilidad, planificar inmersiones con mayor precisión y adquirir hábitos propios del buceo técnico recreativo. También es una excelente preparación para especialidades más exigentes.",
     temas: {
@@ -341,7 +341,7 @@ const coursesData = {
   },
     "primeros-auxilios": {
     nombre: "Primeros Auxilios",
-    frase: "actuar con seguridad puede salvar vidas",
+    frase: "saber qué hacer",
     descripcion:
       "Este curso enseña las habilidades básicas de primeros auxilios y reanimación cardiopulmonar (RCP), enfocadas tanto en accidentes comunes como en situaciones relacionadas al buceo. Es una capacitación esencial para cualquier buzo, instructores en formación o personas que desean estar preparadas para emergencias. Válido como requisito para cursos avanzados como Rescue Diver o Dive Master.",
     temas: {
@@ -380,7 +380,7 @@ const coursesData = {
   },
   "sidemount-diver": {
   nombre: "Sidemount Diver",
-  frase: "libertad y equilibrio bajo el agua",
+  frase: "otra forma de bucear",
   descripcion:
     "El curso de buceo Sidemount te enseña a bucear con una o dos botellas montadas a los costados del cuerpo. Esta configuración mejora el equilibrio, optimiza el perfil hidrodinámico y ofrece mayor seguridad por el acceso directo a los reguladores. Ideal para buzos que desean explorar cuevas, naufragios o realizar buceo técnico. Incluye teoría en aula y E-learning, junto con prácticas en pileta utilizando arnés y alas específicas. Aprendé a configurar tu equipo, gestionar el gas eficientemente y moverte con máxima comodidad.",
   temas: {
@@ -427,7 +427,7 @@ const coursesData = {
 
 "freediving": {
   nombre: "Freediving",
-  frase: "conectá con tu respiración",
+  frase: "la libertad de moverte",
   descripcion:
     "Descubrí el mundo submarino a pulmón. Este curso está diseñado para quienes desean aprender técnicas de apnea segura, mejorar el control de la respiración y explorar sus límites de manera consciente. Ideal para quienes buscan mejorar su rendimiento en el agua, relajarse y fortalecer el vínculo con el medio marino. El curso combina teoría, prácticas en piscina y técnicas de respiración y relajación. No requiere experiencia previa.",
   temas: {

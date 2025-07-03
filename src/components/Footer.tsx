@@ -10,8 +10,8 @@ const quickLinks = [
 ];
 const socialLinks = [
   { icon: <Facebook size={24} />, href: "https://facebook.com", color: "hover:bg-blue-600" },
-  { icon: <Instagram size={24} />, href: "https://instagram.com", color: "hover:bg-pink-600" },
-  { icon: <MessageCircle size={24} />, href: "https://wa.me/1234567890", color: "hover:bg-green-500" },
+  { icon: <Instagram size={24} />, href: "https://https://www.instagram.com/buceoazulprofundo/", color: "hover:bg-pink-600" },
+  { icon: <MessageCircle size={24} />, href: "https://wa.me/5491136302150", color: "hover:bg-green-500" },
   { icon: <Globe size={24} />, href: "https://azulprofundo.com", color: "hover:bg-blue-400" },
 ];
 
@@ -79,6 +79,12 @@ export default function Footer() {
                 <MapPin size={18} className="text-ocean mt-1" />
                 <div className="text-gray-400 text-sm leading-snug">
                   Av. Combatiente de Malvinas 3236
+                </div>
+              </div>
+               <div className="flex items-start gap-2">
+                <MapPin size={18} className="text-ocean mt-1" />
+                <div className="text-gray-400 text-sm leading-snug">
+                  E. Scott 2452, Bella Vista
                 </div>
               </div>
 
