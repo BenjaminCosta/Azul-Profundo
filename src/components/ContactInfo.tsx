@@ -5,6 +5,10 @@ import { MapPin, Phone, Mail, Clock, ChevronLeft, ChevronRight } from "lucide-re
 
 const mapData = [
   {
+    title: "Showroom",
+    src: "imagenes/showroom.jpeg",
+  },
+  {
     title: "Sede CABA",
     src: "https://maps.google.com/maps?q=Av.%20Combatiente%20de%20Malvinas%203236,%20CABA&z=14&output=embed",
   },
@@ -90,16 +94,24 @@ export default function ContactInfo() {
           </h3>
 
           <div className="relative w-full h-80 rounded-lg overflow-hidden">
-            <iframe
-              title={mapData[currentMap].title}
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              scrolling="no"
-              src={mapData[currentMap].src}
-              className="rounded-lg"
-              loading="lazy"
-            />
+            {mapData[currentMap].title === "Showroom" ? (
+              <img
+                src={mapData[currentMap].src}
+                alt="Showroom"
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <iframe
+                title={mapData[currentMap].title}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                scrolling="no"
+                src={mapData[currentMap].src}
+                className="rounded-lg"
+                loading="lazy"
+              />
+            )}
 
             {/* Controles izquierda y derecha */}
             <button

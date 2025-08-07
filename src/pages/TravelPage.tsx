@@ -78,7 +78,7 @@ const travelsData = {
       { category: "Movilidad", items: ["Alquiler de vehículo incluido"] },
       { category: "Gastronomía", items: ["Desayuno buffet"] }
     ],
-    level: "Recomendado para autónomos",
+    level: "Intermedio",
     spots: "Grupo mediano",
     image: "/imagenes/bonaire3.jpg",
     buttonText: "Consultar"
@@ -121,12 +121,12 @@ const travelsData = {
     description: "Las pirámides de Egipto y el río Nilo se combinan con las aguas cristalinas, coloridos arrecifes y muchos naufragios rodeados de una abundante vida marina en este destino. La combinación perfecta: Recorrer las maravillas del mundo antiguo y bucear en un vida abordo privado por el Mar Rojo son cosas que obligatoriamente hay que hacer en esta vida. Las grandes pirámides de Ghiza y templos milenarios son las claras señales de que estamos en tierra de faraones. Como salido de un cuento de Agatha Christie, el crucero por el Nilo completa esta parte del viaje de “turismo”. Luego, vivimos una semana a bordo de un yate de lujo recorriendo el Mar Rojo y buceando en puntos emblemáticos (arrecifes coralinos y grandes naufragios, algunos de la segunda guerra mundial). Alojados en camarotes dobles, dispondremos de 4 tanques de buceo diarios para hacer las inmersiones más maravillosas que la famosa ruta norte de los naufragios del Mar Rojo nos puede ofrecer.",
     itinerary: [
       { day: "Días 1-3", title: "El Cairo", description: "Visita a las pirámides y museos" },
-      { day: "Días 4-10", title: "Mar Rojo", description: "Semana de buceo en yate privado" },
-      { day: "Días 11-14", title: "Nilo", description: "Crucero visitando templos faraónicos" }
+      { day: "Días 4-10", title: "Nilo", description: "Crucero visitando templos faraónicos" },
+      { day: "Días 11-14", title: "Mar Rojo", description: "Semana de buceo en yate privado" }
     ],
     included: [
       { category: "Hospedaje", items: ["3 noches El Cairo", "7 noches en yate", "4 noches crucero"] },
-      { category: "Experiencia", items: ["4 buceos diarios", "Guías expertos"] },
+      { category: "Experiencia", items: ["22 buceos", "Guías expertos"] },
       { category: "Gastronomía", items: ["Pensión completa", "Bebidas no alcohólicas"] },
       { category: "Logística", items: ["Transfer aeropuerto", "Vuelo El Cairo-Luxor", "Transfer Aswan-Hurghada"] }
     ],
