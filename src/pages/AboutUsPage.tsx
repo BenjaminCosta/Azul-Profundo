@@ -103,7 +103,7 @@ export default function AboutUsPage() {
 
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Seguridad Primero</h3>
                 <p className="text-gray-600 mb-6">
-                  Mantenemos los más altos <strong>estándares de seguridad</strong> en cada curso y salida de buceo.inculcando a nuestros alumnos a priorizar siempre la seguridad en sus inmersiones. Nuestro equipo de profesionales está certificado en primeros auxilios y asistencia en el agua.
+                  Mantenemos los más altos <strong>estándares de seguridad</strong> en cada curso y salida de buceo inculcando a nuestros alumnos a priorizar siempre la seguridad en sus inmersiones. Nuestro equipo de profesionales está certificado en primeros auxilios y asistencia en el agua.
                 </p>  
 
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Conservación Marina</h3>
@@ -169,12 +169,10 @@ export default function AboutUsPage() {
             <h4 className="font-semibold text-gray-800 mb-3">Credenciales:</h4>
             <ul className="text-sm text-gray-600 space-y-2 columns-2">
               {/* Lista de credenciales */}
-                 <li>Instructor NAUI</li>
+              <li>Instructor NAUI</li>
               <li>Instructor FAAS-CMAS</li>
               <li>Instructor de Nitrox</li>
               <li>Buzo 2° categoría PNA</li>
-              <li>Buzo Intro to Tec NAUI</li>
-              <li>Buzo Técnicas Descompresivas</li>
               <li>Buzo Trimix NAUI</li>
               <li>Primeros auxilios DAN</li>
               <li>Proveedor de Oxígeno DAN</li>
@@ -224,22 +222,21 @@ export default function AboutUsPage() {
           <div className="mt-4 pt-4 border-t border-gray-100">
             <h4 className="font-semibold text-gray-800 mb-3">Credenciales:</h4>
             <ul className="text-sm text-gray-600 space-y-2 columns-2">
-              {/* Lista de credenciales */}
-              <li>Instructor Técnico NAUI</li>
-              <li>Instructor Recreativo NAUI</li>
-              <li>Instructor FAAS-CMAS</li>
-              <li>Instructor SSI/SN.SI</li>
-              <li>Instructor de Nitrox</li>
-              <li>Instructor Stress & Rescate</li>
-              <li>Instructor Primeros Auxilios</li>
-              <li>Instructor Proveedor Oxígeno</li>
-              <li>Buzo Técnicas Descompresivas</li>
-              <li>Buzo Trimix NAUI</li>
-              <li>Buzo Rebreather Prism II</li>
-              <li>Medicina Hiperbárica</li>
-              <li>Arqueología Subacuática</li>
-              <li>Timonel de yate</li>
-            </ul>
+  <li>Instructor Técnico NAUI</li>
+  <li>Instructor Recreativo NAUI</li>
+  <li>Instructor FAAS-CMAS</li>
+  <li>Instructor de Nitrox</li>
+  <li>Instructor Primeros Auxilios (DAN)</li>
+  <li>Instructor Proveedor Oxígeno (DAN)</li>
+  <li>Instructor 1° auxilios de lesiones por vida marina (DAN)</li>
+  <li>Buzo Técnicas Descompresivas</li>
+  <li>Buzo Trimix NAUI</li>
+  <li>Buzo Rebreather Prism II</li>
+  <li>Medicina Hiperbárica</li>
+  <li>Arqueología Subacuática</li>
+  <li>Timonel de yate</li>
+</ul>
+
           </div>
         )}
       </div>

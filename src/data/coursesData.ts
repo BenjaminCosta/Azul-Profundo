@@ -127,7 +127,7 @@ const coursesData = {
     ],
     requisitos: [
       "Certificación Advanced + Nitrox (cualquier agencia)",
-      "[N° mínimo] de inmersiones previas",
+      "[10 mínimo] de inmersiones previas",
       "Saber nadar",
       "Buena condición física",
       "Certificado médico",
@@ -230,7 +230,7 @@ const coursesData = {
     requisitos: [
       "Certificación Master Scuba Diver",
       "Certificación Nitrox",
-      "[N° mínimo] de inmersiones previas (recomendado 60+)",
+      "inmersiones previas (recomendado 60+)",
       "Saber nadar",
       "Excelente condición física",
       "Certificado médico",
@@ -275,7 +275,8 @@ const coursesData = {
       "Simulacros realistas y progresivos",
       "Entrenamiento en seguridad y liderazgo",
       "Preparación para situaciones reales",
-      "Material teórico y práctica constante"
+      "Material teórico y práctica constante",
+      "Tramitación brevet internacional"
     ],
     requisitos: [
       "Certificación Advanced Scuba Diver o equivalente",
@@ -290,7 +291,6 @@ const coursesData = {
       "Simulacros personalizados",
       "Evaluación integral",
       "Diploma NAUI Rescue Diver",
-      "Bitácora actualizada"
     ],
     image: "/imagenes/rescue.jpg",
   },
