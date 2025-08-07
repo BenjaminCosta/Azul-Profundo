@@ -14,7 +14,7 @@ export const allCourses = [
     duration: "4-5 días",
     level: "Principiante",
     price: "$450",
-    image: "/imagenes/open3.jpg",
+    image: "/imagenes/carousel3.jpg",
     icon: <Anchor className="text-ocean" />
   },
   {
@@ -24,7 +24,7 @@ export const allCourses = [
     duration: "2-3 días",
     level: "Intermedio",
     price: "$380",
-    image: "/imagenes/avanzado3.jpg",
+    image: "/imagenes/carousel1.jpg",
     icon: <Gauge className="text-ocean" />
   },
   {
@@ -44,7 +44,7 @@ export const allCourses = [
     duration: "5-7 días",
     level: "Experto",
     price: "$650",
-    image: "/imagenes/master2.jpg",
+    image: "/imagenes/carousel2.jpg",
     icon: <Star className="text-ocean" />
   },
   {
@@ -64,7 +64,7 @@ export const allCourses = [
     duration: "4-6 semanas",
     level: "Profesional",
     price: "$950",
-    image: "/imagenes/dive-master.jpg",
+    image: "/imagenes/carousel11.jpeg",
     icon: <UserCheck className="text-ocean" />
   },
   {

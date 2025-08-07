@@ -42,7 +42,7 @@ const coursesData = {
       "Bitácora digital de buceo (*)",
       "Diploma (*)"
     ],
-    image: "/imagenes/open3.jpg",
+    image: "/imagenes/carousel3.jpg",
   
   },
   "advanced-diver": {
@@ -93,7 +93,7 @@ const coursesData = {
       "Bitácora digital de buceo (*)",
       "Diploma (*)"
     ],
-     image: "/imagenes/avanzado3.jpg",
+     image: "/imagenes/carousel1.jpg",
   },
   "master-diver": {
     nombre: "Master Scuba Diver",
@@ -145,7 +145,7 @@ const coursesData = {
       "Bitácora digital de buceo (*)",
       "Diploma (*)"
     ],
-     image: "/imagenes/master2.jpg",
+     image: "/imagenes/carousel2.jpg",
      
     
 
@@ -246,7 +246,7 @@ const coursesData = {
       "Bitácora profesional digital (*)",
       "Diploma de Dive Master (*)"
     ],
-    image: "/imagenes/dive-master.jpg",
+    image: "/imagenes/carousel11.jpeg",
   },
     "rescue-diver": {
     nombre: "Rescue Diver",
