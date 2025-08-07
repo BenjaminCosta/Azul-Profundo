@@ -4,7 +4,7 @@ const coursesData = {
     nombre: "Open Water Diver",
     frase: "donde todo comienza",
     descripcion:
-      "Tu pasaporte al mundo sumergido. Con este curso de certificación internacional estarás habilitado para bucear en cualquier parte del mundo, hasta una profundidad de 18 metros. Nuestro programa de buceo recreativo Open Water Diver de NAUI está diseñado para que cualquier persona (sin experiencia previa ni habilidades especiales) pueda convertirse en un buzo seguro, autónomo y responsable. En el aula y mediante la modalidad digital E-learning, aprenderás la teoría esencial del buceo. En la pileta practicarás habilidades fundamentales usando una configuración moderna (N-Rec) y equipos de última generación. Los cursos son personalizados, por lo que la duración se adapta a tu ritmo y disponibilidad. Al finalizar, realizarás inmersiones en ambiente natural para consolidar todo lo aprendido.",
+      "Con este curso de certificación internacional estarás habilitado para bucear en cualquier parte del mundo, hasta una profundidad de 18 metros. Nuestro programa de buceo recreativo Open Water Diver de NAUI está diseñado para que cualquier persona (sin experiencia previa ni habilidades especiales) pueda convertirse en un buzo seguro, autónomo y responsable. En el aula con el profesor y a través de la modalidad digital “E-learning” aprenderás como se relaciona el ambiente con el buzo durante las inmersiones, los posibles problemas y sus soluciones. En la pileta se explicarán y practicarás todas las habilidades necesarias para disfrutar cada inmersión a través de una configuración de vanguardia (N-Rec) con equipos de buceo de última generación. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Equipo de buceo",
@@ -49,7 +49,7 @@ const coursesData = {
     nombre: "Advanced Scuba Diver",
     frase: "el camino a seguir",
     descripcion:
-      "Ahora que sabés bucear, conocé todos los escenarios posibles. Este curso NAUI está dirigido a buzos certificados (de cualquier agencia) que quieran ampliar sus habilidades y conocimientos para realizar inmersiones más complejas (nocturnas, profundas, en naufragios, etc.). Combina teoría en aula y E-learning con prácticas específicas en pileta. Aprenderás a planificar buceos avanzados, usar el compás, desplegar boyas, reflotar objetos y más. La duración se adapta a tu ritmo y disponibilidad.",
+      "Este curso de buceo Advanced Scuba Diver de NAUI está orientado a todos los buzos del nivel inicial de cualquier certificadora que quieran expandir sus límites y progresar en sus conocimientos al adquirir nuevas habilidades (orientación, utilización del compás, nociones de fotografía y de vida marina) para poder planificar inmersiones en diversos escenarios (buceo nocturno, buceo en naufragios, buceo profundo). En el aula, con el profesor y a través de la modalidad digital “E-learning”, aprenderás a analizar las distintas situaciones en las que podrás sumergirte y advertir los posibles problemas para planificar sus soluciones. En la pileta desarrollarás habilidades específicas para cada situación para así poder disfrutar cada nueva inmersión que hagas. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Fotografía submarina",
@@ -75,7 +75,7 @@ const coursesData = {
     ],
     requisitos: [
       "Certificación Open Water (cualquier agencia)",
-      "[N° mínimo] de inmersiones previas",
+      "[10 mínimo] de inmersiones previas",
       "Saber nadar",
       "Buena condición física",
       "Certificado médico",
@@ -99,7 +99,7 @@ const coursesData = {
     nombre: "Master Scuba Diver",
     frase: "la ciencia del buceo",
     descripcion:
-      "Máximo nivel del buceo recreativo antes del liderazgo. Este curso intensivo profundiza todas las áreas del buceo e incorpora nuevos conocimientos como descompresión avanzada, hipobárico, traje seco y nociones de buceo técnico. Mejorarás habilidades previas, incorporarás el uso de stage (tanque lateral) y ampliarás tu autonomía. Teoría a través del aula y E-learning, combinada con prácticas específicas en piscina. Curso personalizado con duración flexible.",
+      "Este es el nivel más alto que puedes acceder en el buceo recreativo antes de ingresar al área de liderazgo. El curso de Master Diver de NAUI es uno de los cursos más exigentes e intensos donde repasarás con mayor profundidad y detalle especialidades ya vistas y además aprenderás sobre buceo hipobárico, teoría de la descompresión, traje seco y nociones de buceo técnico y náutica. En el aula, con el profesor y a través de la modalidad digital “E-learning”, aprenderás a analizar las distintas situaciones en las que podrás sumergirte y advertir los posibles problemas para planificar sus soluciones. En la pileta desarrollarás habilidades específicas para cada situación para así poder disfrutar cada nueva inmersión que hagas. En la pileta se mejoran todas las habilidades aprendidas en cursos anteriores y otras nuevas, para poder continuar siendo un buzo independiente y seguro en todos los escenarios posibles que te propongas, incorporando la utilización del stage (tanque montado del costado izquierdo) como gas adicional y de redundancia. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Teoría de la descompresión",
@@ -127,7 +127,7 @@ const coursesData = {
     ],
     requisitos: [
       "Certificación Advanced + Nitrox (cualquier agencia)",
-      "[10 mínimo] de inmersiones previas",
+      "[25 mínimo] de inmersiones previas",
       "Saber nadar",
       "Buena condición física",
       "Certificado médico",
@@ -154,7 +154,7 @@ const coursesData = {
     nombre: "Nitrox Diver",
     frase: "respirar lo que corresponde",
     descripcion:
-      "Planificá y buceá con mezclas con hasta 40% de oxígeno. Este curso NAUI te enseña a elegir la mezcla ideal para cada situación, disminuyendo la absorción de nitrógeno, reduciendo la fatiga y aumentando tu tiempo de fondo. Teoría a través del aula y E-learning. Prácticas con análisis de mezcla, rotulación y configuración del ordenador de buceo.",
+      "Este curso te habilitará a planificar y bucear con mezclas respirables con un porcentaje mayor de oxígeno que con aire (hasta un 40 %). ​El curso de buceo Nitrox Scuba Diver de NAUI está diseñado para que el buzo pueda decidir y escoger la mezcla ideal que quiere respirar en sus inmersiones para hacerlas más seguras al lograr una menor absorción de nitrógeno, menor fatiga celular o extender su tiempo de fondo e intervalos de superficie más cortos En el aula, con el profesor y a través de la modalidad digital “E-learning”, comprenderás por qué hay una mezcla “ideal” para cada situación y aprenderás a calcularla y escoger el nitrox adecuado para cada profundidad. En las prácticas, comprenderás cómo analizar el Nitrox de los tanques de buceo, rotularlos y configurar la computadora para esa mezcla. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Fisiología del buceo",
@@ -201,7 +201,7 @@ const coursesData = {
     nombre: "Dive Master",
     frase: "liderar bajo el agua",
     descripcion:
-      "Este curso es el inicio de tu carrera profesional en el buceo. Como Dive Master certificado, podrás asistir en cursos, liderar grupos y planificar inmersiones. El programa de NAUI combina teoría avanzada, prácticas en pileta y múltiples actividades en ambiente natural, donde aprenderás a gestionar grupos, resolver emergencias y supervisar buceos recreativos. También te preparamos para el rol pedagógico, desarrollando tu capacidad para asistir al instructor en distintas etapas del aprendizaje. Duración personalizada.",
+      "Este curso de buceo DiveMaster de NAUI es el primer paso para ser un profesional del buceo, coordinando, planificando y guiando inmersiones seguras y divertidas. También aprenderás a asistir a instructores durante los cursos y las inmersiones y podrás enseñar en cursos de apnea y los de actualización de cada nivel (refresh). En el aula, con el profesor y a través de la modalidad digital “E-learning”, aprenderás sobre los fundamentos del liderazgo, sus funciones, obligaciones y autoridad que tiene durante su trabajo, a guiar y escoltar inmersiones grupales inculcando la protección al medio ambiente, aconsejar y manejar problemas con los alumnos, prevenir accidentes, principios de la náutica aplicadas para el buceo, diseñar y ejecutar planes de emergencia y de evacuación. Adquirirás habilidades excepcionales, experiencia y conocimientos para asistir a los instructores en los cursos y también para los cursos de apnea y de actualización que estés a cargo. En la pileta, repasaras todas las habilidades aprendidas en los cursos anteriores, estrategias de grupos, posicionamiento de los buzos en los grupos, resolución de problemas en el agua y anticipación del estrés. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso.",
     temas: {
       aula: [
         "Filosofía del buceo NAUI",
@@ -230,7 +230,7 @@ const coursesData = {
     requisitos: [
       "Certificación Master Scuba Diver",
       "Certificación Nitrox",
-      "inmersiones previas (recomendado 60+)",
+      "Inmersiones previas: (recomendado 60+)",
       "Saber nadar",
       "Excelente condición física",
       "Certificado médico",
@@ -252,7 +252,7 @@ const coursesData = {
     nombre: "Rescue Diver",
     frase: "saber ayudar",
     descripcion:
-      "Este curso te brinda las habilidades necesarias para prevenir problemas y responder eficazmente ante emergencias subacuáticas. Aprenderás a reconocer signos de estrés, manejar situaciones complicadas bajo el agua y en superficie, y asistir a otros buceadores en peligro. Una formación esencial para quienes quieren bucear de manera segura y cuidar a su grupo.",
+      "Con este curso de certificación internacional aprenderás a advertir, prevenir y resolver problemas que te puedan ocurrir a vos o a tu compañero. En este curso Rescue Scuba Diver de NAUI entenderás que anticiparse a posibles dificultades y manejar el estrés que se puede generar durante un buceo es clave para alcanzar la meta de “accidente cero”. En el aula con el profesor y a través de la modalidad digital “E-learning” aprenderás a prevenir situaciones que pueden desencadenar problemas, manejo del estrés, meta “accidente cero”, preparación previa a la inmersión, situaciones durante y después del buceo, planes de emergencia, tratamiento de accidentes de buceo, primeros auxilios básicos. En la pileta, se explicarán y practicarás todas las habilidades necesarias para brindar asistencia, transporte y rescate en superficie y bajo el agua, con o sin equipo de buceo y el manejo de accidentes de buceo. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Prevención de accidentes",
@@ -298,7 +298,7 @@ const coursesData = {
     nombre: "Intro to Tech",
     frase: "la evolución del buzo",
     descripcion:
-      "Este curso es ideal para buzos avanzados que buscan perfeccionar su técnica, mejorar su control en el agua y conocer las bases del buceo técnico. Aprenderás a utilizar configuraciones específicas (tipo Hogarthian), dominar la flotabilidad, planificar inmersiones con mayor precisión y adquirir hábitos propios del buceo técnico recreativo. También es una excelente preparación para especialidades más exigentes.",
+      "Este curso de buceo Intro to Tech de NAUI es el primer paso para convertirte en buzo técnico y poder usar bibotellas y stage hasta 40 mts. de profundidad sin descompresión e incrementar su conocimiento en el buceo. En el Aula, con el profesor, aprenderás sobre los fundamentos del buceo técnico, los principios y filosofía de la configuración técnica N-Tec, equipamiento específico de buceo técnico, análisis profundo de física, fisiología, descompresión y planificación de inmserciones. En la pileta, trabajaras en mejorar mejorar sustancialmente tu flotabilidad, trim, destrezas de seguridad y aprenderás a manipular y utilizar la configuración técnica NTEC. También adoptarás nuevas formas de propulsión (patada rana, rana modificada, helicóptero y retroceso) el uso y ensamble de cilindros de stage (tanque de costado para estación de descompresión), uso de spools y boyas como así también practicarás paradas de deco estática.  Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Filosofía del buceo técnico",
@@ -382,7 +382,7 @@ const coursesData = {
   nombre: "Sidemount Diver",
   frase: "otra forma de bucear",
   descripcion:
-    "El curso de buceo Sidemount te enseña a bucear con una o dos botellas montadas a los costados del cuerpo. Esta configuración mejora el equilibrio, optimiza el perfil hidrodinámico y ofrece mayor seguridad por el acceso directo a los reguladores. Ideal para buzos que desean explorar cuevas, naufragios o realizar buceo técnico. Incluye teoría en aula y E-learning, junto con prácticas en pileta utilizando arnés y alas específicas. Aprendé a configurar tu equipo, gestionar el gas eficientemente y moverte con máxima comodidad.",
+    "Este curso Sidemount recreativo de NAUI esta diseñado para los amantes del buceo que buscan experiencias en nuevas configuraciones y con mayor cantidad de gas para respirar. Con la posición de los tanques en los costados eliminarás el dolor de espalda durante las inmersiones, tendrás a la vista los tanques para manipularlos y, dependiendo los lugares de buceo, no tendrás que cargar con el tanque en la espalda, sino que podrás colocártelos en el agua. En el aula, con el profesor, aprenderás sobre los fundamentos de la configuración de montaje lateral, equipamiento específico y su utilización. En la pileta, adquirirás las habilidades necesarias para manipular tanques de buceo montados lateralmente, habilidades propias de esta modalidad y mejorar sustancialmente tu flotabilidad, trim, destrezas de seguridad.  Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
   temas: {
     aula: [
       "Ventajas del sistema Sidemount",

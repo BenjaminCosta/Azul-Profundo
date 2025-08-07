@@ -10,7 +10,7 @@ export const allCourses = [
   {
     id: "open-water-diver",
     title: "Open Water Diver",
-    description: "Tu pasaporte al mundo submarino. Aprende las habilidades esenciales para bucear hasta 18 metros con seguridad y confianza.",
+    description: "Tu pasaporte al mundo sumergido",
     duration: "4-5 días",
     level: "Principiante",
     price: "$450",
@@ -20,7 +20,7 @@ export const allCourses = [
   {
     id: "advanced-diver",
     title: "Advanced Diver",
-    description: "Amplía tus límites hasta 30 metros y domina especialidades como buceo nocturno, navegación submarina y fotografía acuática.",
+    description: "Ahora que sabes bucear, vení a conocer todos los escenarios donde podes sumergirte.",
     duration: "2-3 días",
     level: "Intermedio",
     price: "$380",
@@ -30,7 +30,7 @@ export const allCourses = [
   {
     id: "rescue-diver",
     title: "Rescue Diver",
-    description: "Desarrolla habilidades para prevenir y manejar emergencias. El curso más desafiante y gratificante de tu formación como buceador.",
+    description: "Estar preparado para resolver problemas.",
     duration: "4 días",
     level: "Avanzado",
     price: "$420",
@@ -40,7 +40,7 @@ export const allCourses = [
   {
     id: "master-diver",
     title: "Master Diver",
-    description: "El pináculo del buceo recreativo. Combina especialidades avanzadas para convertirte en un buceador experto y versátil.",
+    description: "Este es el nivel más alto que puedes acceder en el buceo recreativo antes de ingresar al área de liderazgo",
     duration: "5-7 días",
     level: "Experto",
     price: "$650",
@@ -50,7 +50,7 @@ export const allCourses = [
   {
     id: "nitrox",
     title: "Especialidad Nitrox",
-    description: "Bucea con mezclas enriquecidas para prolongar tus tiempos de fondo y reducir la fatiga post-inmersión. Ideal para viajeros.",
+    description: "Este curso te habilitará a planificar y bucear con mezclas respirables con un porcentaje mayor de oxígeno que con aire (hasta un 40 %).",
     duration: "2 días",
     level: "Intermedio",
     price: "$220",
@@ -60,7 +60,7 @@ export const allCourses = [
   {
     id: "dive-master",
     title: "Dive Master",
-    description: "Tu primer paso profesional. Aprende a liderar inmersiones y asistir en la formación de nuevos buceadores. Carrera en el mundo del buceo.",
+    description: "Convertite en el líder de las inmersiones y ayudá a otros a cumplir sus sueños.",
     duration: "4-6 semanas",
     level: "Profesional",
     price: "$950",
@@ -70,7 +70,7 @@ export const allCourses = [
   {
     id: "intro-to-tech",
     title: "Intro to Tech",
-    description: "Introducción al buceo técnico. Configuraciones avanzadas, planificación rigurosa y técnicas para inmersiones más exigentes.",
+    description: "Este curso es para los que se animan a desafiar los límites del buceo. Para los que buscan evolucionar como buzos y perfeccionar las habilidades de buceo recreativo.",
     duration: "3-4 días",
     level: "Avanzado",
     price: "$580",
@@ -90,7 +90,7 @@ export const allCourses = [
   {
     id: "sidemount-diver",
     title: "Sidemount Diver",
-    description: "Optimizá tu flotabilidad y movilidad con esta configuración lateral. Ideal para buceo en cuevas, naufragios o técnico recreativo.",
+    description: "Desde hace algún tiempo el montaje lateral de los tanques en las inmersiones dejó de ser solo para los que se adentran en las cuevas y pasó a tener un gran espacio en la comunidad del buceo en general.",
     duration: "2-3 días",
     level: "Avanzado",
     price: "$390",
