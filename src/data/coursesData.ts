@@ -49,7 +49,7 @@ const coursesData = {
     nombre: "Advanced Scuba Diver",
     frase: "el camino a seguir",
     descripcion:
-      "Este curso de buceo Advanced Scuba Diver de NAUI está orientado a todos los buzos del nivel inicial de cualquier certificadora que quieran expandir sus límites y progresar en sus conocimientos al adquirir nuevas habilidades (orientación, utilización del compás, nociones de fotografía y de vida marina) para poder planificar inmersiones en diversos escenarios (buceo nocturno, buceo en naufragios, buceo profundo). En el aula, con el profesor y a través de la modalidad digital “E-learning”, aprenderás a analizar las distintas situaciones en las que podrás sumergirte y advertir los posibles problemas para planificar sus soluciones. En la pileta desarrollarás habilidades específicas para cada situación para así poder disfrutar cada nueva inmersión que hagas. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
+      "Este curso de buceo Advanced Scuba Diver de NAUI está orientado a todos los buzos del nivel inicial de cualquier certificadora que quieran expandir sus límites y progresar en sus conocimientos al adquirir nuevas habilidades (orientación, utilización del compás, nociones de fotografía y de vida marina) para poder planificar inmersiones en diversos escenarios (buceo nocturno, buceo en naufragios, buceo profundo). En el aula, con el profesor y a través de la modalidad digital “E-learning”, aprenderás a analizar las distintas situaciones en las que podrás sumergirte y advertir los posibles problemas para planificar sus soluciones. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Fotografía submarina",
@@ -75,7 +75,7 @@ const coursesData = {
     ],
     requisitos: [
       "Certificación Open Water (cualquier agencia)",
-      "[10 mínimo] de inmersiones previas",
+      "10 inmersiones previas ",
       "Saber nadar",
       "Buena condición física",
       "Certificado médico",
@@ -127,7 +127,7 @@ const coursesData = {
     ],
     requisitos: [
       "Certificación Advanced + Nitrox (cualquier agencia)",
-      "[25 mínimo] de inmersiones previas",
+      "10 inmersiones previas ",
       "Saber nadar",
       "Buena condición física",
       "Certificado médico",
@@ -154,7 +154,7 @@ const coursesData = {
     nombre: "Nitrox Diver",
     frase: "respirar lo que corresponde",
     descripcion:
-      "Este curso te habilitará a planificar y bucear con mezclas respirables con un porcentaje mayor de oxígeno que con aire (hasta un 40 %). ​El curso de buceo Nitrox Scuba Diver de NAUI está diseñado para que el buzo pueda decidir y escoger la mezcla ideal que quiere respirar en sus inmersiones para hacerlas más seguras al lograr una menor absorción de nitrógeno, menor fatiga celular o extender su tiempo de fondo e intervalos de superficie más cortos En el aula, con el profesor y a través de la modalidad digital “E-learning”, comprenderás por qué hay una mezcla “ideal” para cada situación y aprenderás a calcularla y escoger el nitrox adecuado para cada profundidad. En las prácticas, comprenderás cómo analizar el Nitrox de los tanques de buceo, rotularlos y configurar la computadora para esa mezcla. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
+      "​El curso de buceo Nitrox Scuba Diver de NAUI está diseñado para que el buzo pueda decidir y escoger la mezcla ideal que quiere respirar en sus inmersiones para hacerlas más seguras al lograr una menor absorción de nitrógeno, menor fatiga celular o extender su tiempo de fondo e intervalos de superficie más cortos En el aula, con el profesor y a través de la modalidad digital “E-learning”, comprenderás por qué hay una mezcla “ideal” para cada situación y aprenderás a calcularla y escoger el nitrox adecuado para cada profundidad. En las prácticas, comprenderás cómo analizar el Nitrox de los tanques de buceo, rotularlos y configurar la computadora para esa mezcla. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Fisiología del buceo",
@@ -179,7 +179,7 @@ const coursesData = {
       "1 práctica de 120 minutos"
     ],
     requisitos: [
-      "Certificación Open Water o superior",
+      "Certificado open water (de cualquier agencia)",
       "Saber nadar",
       "Buena condición física",
       "Certificado médico",
@@ -189,7 +189,7 @@ const coursesData = {
       "Material de estudio digital",
       "Acceso a E-learning",
       "Analizador de oxígeno durante la cursada",
-      "Tablas de descompresión Nitrox 32 y 36",
+      "Tablas de descompresión Nitrox 32% y 36% (R.G.B.M. y U.S. Navy)",
       "Asistencia permanente de instructores y divemasters certificados",
       "Tramitación de brevet internacional (*)",
       "Bitácora digital de buceo (*)",
@@ -230,11 +230,12 @@ const coursesData = {
     requisitos: [
       "Certificación Master Scuba Diver",
       "Certificación Nitrox",
-      "Inmersiones previas: (recomendado 60+)",
+      "80 inmersiones previas ",
       "Saber nadar",
       "Excelente condición física",
       "Certificado médico",
-      "Edad mínima 18 años"
+      "Edad mínima 18 años",
+      "Certificación en primeros auxilios"
     ],
     incluye: [
       "Manual y material de estudio profesional",
@@ -274,13 +275,11 @@ const coursesData = {
       "Curso clave para formación avanzada",
       "Simulacros realistas y progresivos",
       "Entrenamiento en seguridad y liderazgo",
-      "Preparación para situaciones reales",
-      "Material teórico y práctica constante",
-      "Tramitación brevet internacional"
+      "Preparación para situaciones reales"
     ],
     requisitos: [
       "Certificación Advanced Scuba Diver o equivalente",
-      "Curso de Primeros Auxilios vigente",
+      "Curso de Primeros Auxilios vigente (se puede cursar en simultaneo)",
       "Saber nadar",
       "Buena condición física",
       "Edad mínima 15 años"
@@ -291,6 +290,10 @@ const coursesData = {
       "Simulacros personalizados",
       "Evaluación integral",
       "Diploma NAUI Rescue Diver",
+      "Asistencia permanente de instructores", 
+      "Acceso a la piscina", 
+      "Tramitacion de brevet", 
+      "Diploma"
     ],
     image: "/imagenes/rescue.jpg",
   },
@@ -298,7 +301,7 @@ const coursesData = {
     nombre: "Intro to Tech",
     frase: "la evolución del buzo",
     descripcion:
-      "Este curso de buceo Intro to Tech de NAUI es el primer paso para convertirte en buzo técnico y poder usar bibotellas y stage hasta 40 mts. de profundidad sin descompresión e incrementar su conocimiento en el buceo. En el Aula, con el profesor, aprenderás sobre los fundamentos del buceo técnico, los principios y filosofía de la configuración técnica N-Tec, equipamiento específico de buceo técnico, análisis profundo de física, fisiología, descompresión y planificación de inmserciones. En la pileta, trabajaras en mejorar mejorar sustancialmente tu flotabilidad, trim, destrezas de seguridad y aprenderás a manipular y utilizar la configuración técnica NTEC. También adoptarás nuevas formas de propulsión (patada rana, rana modificada, helicóptero y retroceso) el uso y ensamble de cilindros de stage (tanque de costado para estación de descompresión), uso de spools y boyas como así también practicarás paradas de deco estática.  Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
+      "Este curso de buceo Intro to Tech de NAUI es el primer paso para convertirte en buzo técnico y poder usar bibotellas y stage hasta 40 mts. de profundidad sin descompresión e incrementar su conocimiento en el buceo. En el Aula, con el profesor, aprenderás sobre los fundamentos del buceo técnico, los principios y filosofía de la configuración técnica N-Tec, equipamiento específico de buceo técnico, análisis profundo de física, fisiología, descompresión y planificación de inmserciones. En la pileta, trabajaras en mejorar sustancialmente tu flotabilidad, trim, destrezas de seguridad y aprenderás a manipular y utilizar la configuración técnica NTEC. También adoptarás nuevas formas de propulsión (patada rana, rana modificada, helicóptero y retroceso) el uso y ensamble de cilindros de stage (tanque de costado para estación de descompresión), uso de spools y boyas como así también practicarás paradas de deco estática.  Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Filosofía del buceo técnico",
@@ -324,17 +327,19 @@ const coursesData = {
     ],
     requisitos: [
       "Certificación Advanced Scuba Diver",
-      "Curso Nitrox (opcional pero recomendado)",
+      "Curso Nitrox",
       "Manejo fluido de equipo recreativo",
+      "Certificado medico",
       "Buena condición física",
-      "Edad mínima 16 años"
+      "Edad mínima 15 años"
     ],
     incluye: [
-      "Clases teóricas presenciales o E-learning",
-      "Sesiones prácticas con equipo técnico",
-      "Supervisión personalizada",
-      "Evaluación teórico-práctica",
-      "Diploma de participación Intro to Tech"
+      "Material de estudio digital",
+      "Equipo técnico de vanguardia", 
+      "Asistencia permanente", 
+      "Acceso a la piscina",
+      "Tramitación de brevet", 
+      "Diploma"
     ],
     image: "/imagenes/tech.jpg",
 
@@ -369,7 +374,7 @@ const coursesData = {
       "Buena disposición para actuar en emergencias"
     ],
     incluye: [
-      "Manual de primeros auxilios NAUI",
+      "Manual de primeros auxilios DAN",
       "Simulaciones guiadas",
       "Certificado oficial de RCP y Primeros Auxilios",
       "Diploma NAUI de asistencia",
@@ -417,7 +422,8 @@ const coursesData = {
     "Material de estudio digital",
     "Acceso a E-learning",
     "Arnés, alas y equipos específicos",
-    "Asistencia permanente de instructores certificados",
+    "Asistencia permanente de instructores y divemasters  certificados",
+    "Acceso a la piscina",
     "Tramitación de brevet internacional (*)",
     "Bitácora digital de buceo (*)",
     "Diploma (*)"
@@ -462,7 +468,7 @@ const coursesData = {
     "Material de estudio digital",
     "Acceso a E-learning",
     "Entrenamiento respiratorio guiado",
-    "Asistencia permanente de instructores certificados",
+    "Asistencia permanente de instructores y divemasters certificados",
     "Acceso a piscina climatizada",
     "Tramitación de certificación (*)",
     "Diploma (*)"

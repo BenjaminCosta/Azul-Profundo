@@ -16,7 +16,7 @@ const coursesData = [
       "Certificación PADI/SSI",
       "Grupos reducidos"
     ],
-    image: "/imagenes/open3.jpg"
+    image: "/imagenes/carousel3.jpg"
   },
   {
     id: "advanced-diver",
@@ -30,7 +30,7 @@ const coursesData = [
       "Instructores expertos",
       "Flexibilidad horaria"
     ],
-    image: "/imagenes/avanzado3.jpg"
+    image: "/imagenes/carousel1.jpg"
   },
   {
     id: "rescue-diver",

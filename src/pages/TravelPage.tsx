@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,7 @@ const travelsData = {
     destination: "Angra dos Reis",
     location: "Brasil",
     flag: "/imagenes/br.svg",
+    gallery: ["ar1.jpeg", "ar2.jpeg", "ar3.jpeg", "ar4.jpeg"],
     highlights: [
       { icon: <Ship className="text-yellow-200" />, text: "8 inmersiones embarcadas" },
       { icon: <Fish className="text-yellow-200" />, text: "Aguas cálidas (20-26°C)" },
@@ -35,12 +37,13 @@ const travelsData = {
     destination: "Islas Galápagos",
     location: "Ecuador",
     flag: "/imagenes/ec.svg",
+    gallery: ["gl1.jpeg", "gl2.jpeg", "gl3.jpeg", "gl4.jpeg"],
     highlights: [
       { icon: <Fish className="text-yellow-200" />, text: "Gran biodiversidad marina" },
       { icon: <Ship className="text-yellow-200" />, text: "12 inmersiones embarcadas" },
       { icon: <Sun className="text-yellow-200" />, text: "Excursiones terrestres" }
     ],
-    description: "Ubicadas en un aislado sector del Océano Pacífico, las Islas Galápagos representan uno de los lugares de mayor biodiversidad del Planeta, siendo uno de los tres mejores lugares del mundo para bucear.Cuna de la teoría de la evolución de Darwin, el archipiélago es visitado constantemente por gigantes cardúmenes de peces de todo tipo, gran variedad de tiburones (ballena, punta blanca, punta negra, galápagos, tigre y martillo) y rayas (moteada, manta, diablo, etc.), el gran mola mola (pez luna) e infinidad de especies marinas (tortugas, lobos marinos, ballenas jorobadas, orcas y delfines). No hay otro lugar en la Tierra así.Los dos buceos diarios son por la mañana y embarcados, regresando al Hotel después de almorzar en un restaurant en el puerto (incluido). Para los que quieren saltearse buceos o los que todavía no se animan a esta pasión submarina hay excursiones a lugares de gran interés que pueden contratarse ahí mismo.",
+    description: "Ubicadas en un aislado sector del Océano Pacífico, las Islas Galápagos representan uno de los lugares de mayor biodiversidad del Planeta, siendo uno de los tres mejores lugares del mundo para bucear. Cuna de la teoría de la evolución de Darwin, el archipiélago es visitado constantemente por gigantes cardúmenes de peces de todo tipo, gran variedad de tiburones (ballena, punta blanca, punta negra, galápagos, tigre y martillo) y rayas (moteada, manta, diablo, etc.), el gran mola mola (pez luna) e infinidad de especies marinas (tortugas, lobos marinos, ballenas jorobadas, orcas y delfines). No hay otro lugar en la Tierra así. Los dos buceos diarios son por la mañana y embarcados, regresando al Hotel después de almorzar en un restaurant en el puerto (incluido). Para los que quieren saltearse buceos o los que todavía no se animan a esta pasión submarina hay excursiones a lugares de gran interés que pueden contratarse ahí mismo.",
     itinerary: [
       { day: "Día 1", title: "Llegada", description: "Transfer al hotel y briefing inicial" },
       { day: "Días 2-7", title: "Buceo y exploración", description: "2 buceos diarios embarcados por la mañana" },
@@ -61,6 +64,7 @@ const travelsData = {
     destination: "Bonaire",
     location: "Caribe Holandés",
     flag: "/imagenes/nl.svg",
+    gallery: ["bn1.jpeg", "bn2.jpeg", "bn3.jpeg", "bn4.jpeg"],
     highlights: [
       { icon: <Zap className="text-yellow-200" />, text: "Buceos ilimitados" },
       { icon: <Fish className="text-yellow-200" />, text: "30m de visibilidad" },
@@ -87,6 +91,7 @@ const travelsData = {
     destination: "Cenotes Mayas",
     location: "México",
     flag: "/imagenes/mx.svg",
+    gallery: ["ce1.jpeg", "ce2.jpeg", "ce3.jpeg", "ce4.jpeg"],
     highlights: [
       { icon: <Zap className="text-yellow-200" />, text: "12 buceos en cenotes" },
       { icon: <Waves className="text-yellow-200" />, text: "Aguas cristalinas" },
@@ -113,6 +118,7 @@ const travelsData = {
     destination: "Mar Rojo & Egipto",
     location: "Egipto",
     flag: "/imagenes/eg.svg",
+    gallery: ["eg1.jpeg", "eg2.jpeg", "eg3.jpeg", "eg4.jpeg"],
     highlights: [
       { icon: <Ship className="text-yellow-200" />, text: "Yate privado de buceo" },
       { icon: <Fish className="text-yellow-200" />, text: "Turismo en El Cairo" },
@@ -139,6 +145,7 @@ const travelsData = {
     destination: "Roatán",
     location: "Honduras",
     flag: "/imagenes/hn.svg",
+    gallery: ["ro1.jpeg", "ro2.jpeg", "ro3.jpeg", "ro4.jpeg"],
     highlights: [
       { icon: <Fish className="text-yellow-200" />, text: "18 buceos embarcados" },
       { icon: <Waves className="text-yellow-200" />, text: "30m de visibilidad" },
@@ -163,7 +170,6 @@ const travelsData = {
   }
 };
 
-
 export default function TravelPage() {
   const { travelId } = useParams();
   const travel = travelId ? travelsData[travelId as keyof typeof travelsData] : null;
@@ -176,7 +182,7 @@ export default function TravelPage() {
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero Section (sin cambios) */}
+      {/* Hero Section */}
       <div className="pt-24 h-screen max-h-[700px] relative bg-ocean-dark overflow-hidden">
         {travel.image && (
           <img 
@@ -185,6 +191,51 @@ export default function TravelPage() {
             className="w-full h-full object-cover absolute inset-0 opacity-60"
           />
         )}
+        
+        {/* Galería de imágenes cuadradas - Versión aumentada */}
+<div className="hidden lg:block absolute right-5 lg:right-10 top-1/4 z-10 w-[35%] max-w-sm">
+  <div className="grid grid-cols-2 gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+    {/* Imagen 1 */}
+    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 hover:z-20">
+      <img 
+        src={`/imagenes/${travel.gallery[0]}`} 
+        alt={`${travel.destination} 1`} 
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+    </div>
+    
+    {/* Imagen 2 */}
+    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 hover:z-20">
+      <img 
+        src={`/imagenes/${travel.gallery[1]}`} 
+        alt={`${travel.destination} 2`} 
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+    </div>
+    
+    {/* Imagen 3 */}
+    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 hover:z-20">
+      <img 
+        src={`/imagenes/${travel.gallery[2]}`} 
+        alt={`${travel.destination} 3`} 
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+    </div>
+
+    {/* Imagen 4 */}
+    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 hover:z-20">
+      <img 
+        src={`/imagenes/${travel.gallery[3]}`} 
+        alt={`${travel.destination} 4`} 
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+    </div>
+  </div>
+</div>
         
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center text-white">
           <Link to="/viajes" className="flex items-center text-white hover:text-ocean-light mb-6 transition-colors w-fit">
@@ -229,7 +280,7 @@ export default function TravelPage() {
         </div>
       </div>
 
-      {/* Content Sections - Mejoras en el diseño de texto */}
+      {/* Content Sections */}
       <div className="py-16 bg-gradient-to-b from-white to-ocean/5">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">

@@ -94,9 +94,10 @@ export default function CoursePage() {
                     Sobre este curso
                   </h2>
                 </div>
-                <p className="text-gray-800 leading-relaxed text-lg font-medium">
-                  {course.descripcion}
-                </p>
+                <p className="text-gray-800 leading-relaxed text-lg font-medium text-justify">
+  {course.descripcion}
+</p>
+
               </section>
 
               {/* Lo más destacado */}

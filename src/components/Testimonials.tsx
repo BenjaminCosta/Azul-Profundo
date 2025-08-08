@@ -7,31 +7,31 @@ import { Button } from "@/components/ui/button";
 const testimonials = [
   {
     id: 1,
-    name: "Laura Martínez",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150",
-    role: "Open Water Diver",
-    quote: "Mi experiencia con Azul Profundo fue increíble. Los instructores son muy profesionales y pacientes. Me sentí segura en todo momento y aprendí muchísimo. ¡No puedo esperar para hacer mi próximo curso con ellos!"
+    name: "Lisandro Dimarsi",
+    image: "imagenes/test1.jpeg",
+    role: "Buzo Técnico",
+    quote: "Mi camino en el buceo creció junto a Azul Profundo: desde el Open Water hasta cursos como Advanced, Nitrox e Introducción al Buceo Técnico. También compartimos viajes inolvidables a Brasil, Bonaire, Puerto Madryn y, recientemente, el Mar Rojo en Egipto. Juan y Edu están en cada detalle, transmiten su pasión con profesionalismo y hacen que cada inmersión sea una experiencia única. ¡Un placer seguir aprendiendo y viajando con ellos!"
   },
   {
     id: 2,
-    name: "Carlos Ramírez",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150",
-    role: "Advanced Open Water Diver",
-    quote: "Hice mi curso Advanced con Azul Profundo y la experiencia fue excelente. El instructor me ayudó a mejorar mis habilidades y ganar confianza bajo el agua. Las inmersiones fueron espectaculares."
+    name: "Tomás Allende",
+    image: "imagenes/test2.jpeg",
+    role: "Buzo Master Diver",
+    quote: "“Después de haber realizado diversos cursos con otros instructores, puedo afirmar que la profesionalidad, dedicación y pasión que Azul Profundo pone en la enseñanza son realmente sobresalientes. Una experiencia formativa de primer nivel. 100 % recomendable.”"
   },
   {
     id: 3,
-    name: "Sofía García",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150",
-    role: "Rescue Diver",
-    quote: "El curso de Rescue Diver fue desafiante pero increíblemente gratificante. Los instructores de Azul Profundo son muy experimentados y te preparan para manejar situaciones complejas bajo el agua."
+    name: "Federico Prietto",
+    image: "imagenes/test3.jpeg",
+    role: "Buzo Advanced",
+    quote: "Con la Escuela de Buceo Azul Profundo hice 3 cursos, open, Nitrox y Advanced. Han sido una gran experiencia de aprendizaje sobre las técnicas de buceo, la salud, y el cuidado del ecosistema marino. Voy a continuar este camino de buceo para aprender mas y tener lindas experiencias con Azul Profundo."
   },
   {
     id: 4,
-    name: "Javier López",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150",
-    role: "Divemaster",
-    quote: "Convertirme en Divemaster con Azul Profundo fue la mejor decisión. El programa es completo y los instructores son de primer nivel. Ahora trabajo con ellos y sigo aprendiendo cada día."
+    name: "Cristian Gerace",
+    image: "imagenes/test4.jpeg",
+    role: "Buzo Master Diver",
+    quote: "Los elegiría por la profesionalidad, seriedad y pasión con la que transmiten el buceo. El bonus track es que son excelentes personas y generan un gran ambiente para disfrutar de la actividad"
   }
 ];
 

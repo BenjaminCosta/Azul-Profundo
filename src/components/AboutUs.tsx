@@ -15,7 +15,7 @@ export default function AprendeABucear() {
           <span className="text-ocean-dark"> Sumergite en una experiencia única</span> de la mano de <span className="text-ocean-dark">instructores certificados</span> y viví el mundo submarino como nunca antes...
           <Link to="/nosotros">
   <p className=" text-ocean-dark  font-semibold hover:text-ocean-light transition-all duration-300">
-    Leer más
+    Leer más...
   </p>
 </Link>
         </p>
