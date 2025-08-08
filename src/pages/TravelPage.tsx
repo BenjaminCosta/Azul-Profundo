@@ -193,49 +193,50 @@ export default function TravelPage() {
         )}
         
         {/* Galería de imágenes cuadradas - Versión aumentada */}
-<div className="hidden lg:block absolute right-5 lg:right-10 top-1/4 z-10 w-[35%] max-w-sm">
-  <div className="grid grid-cols-2 gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+<div className="hidden lg:block absolute right-6 lg:right-12 top-40 z-10 w-[38%] max-w-md">
+  <div className="grid grid-cols-2 gap-5 p-5 bg-white/15 backdrop-blur-sm rounded-2xl border-2 border-white/25">
     {/* Imagen 1 */}
-    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 hover:z-20">
+    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl transform transition-transform hover:scale-105 hover:z-20">
       <img 
         src={`/imagenes/${travel.gallery[0]}`} 
         alt={`${travel.destination} 1`} 
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
     </div>
     
     {/* Imagen 2 */}
-    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 hover:z-20">
+    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl transform transition-transform hover:scale-105 hover:z-20">
       <img 
         src={`/imagenes/${travel.gallery[1]}`} 
         alt={`${travel.destination} 2`} 
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
     </div>
     
     {/* Imagen 3 */}
-    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 hover:z-20">
+    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl transform transition-transform hover:scale-105 hover:z-20">
       <img 
         src={`/imagenes/${travel.gallery[2]}`} 
         alt={`${travel.destination} 3`} 
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
     </div>
 
     {/* Imagen 4 */}
-    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-xl transform transition-transform hover:scale-105 hover:z-20">
+    <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl transform transition-transform hover:scale-105 hover:z-20">
       <img 
         src={`/imagenes/${travel.gallery[3]}`} 
         alt={`${travel.destination} 4`} 
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
     </div>
   </div>
 </div>
+
         
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center text-white">
           <Link to="/viajes" className="flex items-center text-white hover:text-ocean-light mb-6 transition-colors w-fit">
