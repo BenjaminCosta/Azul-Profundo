@@ -120,7 +120,7 @@ export default function Hero() {
             Explora los mares con <span className="text-ocean-light">expertos en buceo</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 leading-relaxed">
-            Descubre un nuevo mundo bajo el agua con instructores profesionales y certificados.
+            Descubrí un nuevo mundo bajo el agua con instructores profesionales.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link to="/cursos" className="w-full sm:w-auto">

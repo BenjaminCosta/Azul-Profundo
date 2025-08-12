@@ -1,4 +1,3 @@
-
 import { Facebook, Instagram, MessageCircle, Globe, Phone, MapPin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -126,6 +125,16 @@ export default function Footer() {
           className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-50 transition-all hover:scale-110"
         >
           <MessageCircle size={28} />
+        </a>
+        
+        {/* Instagram floating button */}
+        <a
+          href="https://www.instagram.com/buceoazulprofundo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-20 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white p-3 rounded-full shadow-lg z-50 transition-all hover:scale-110"
+        >
+          <Instagram size={28} />
         </a>
       </div>
     </footer>
