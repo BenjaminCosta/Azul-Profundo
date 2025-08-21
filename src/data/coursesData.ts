@@ -4,7 +4,7 @@ const coursesData = {
     nombre: "Open Water Diver",
     frase: "donde todo comienza",
     descripcion:
-      "Con este curso de certificación internacional estarás habilitado para bucear en cualquier parte del mundo, hasta una profundidad de 18 metros. Nuestro programa de buceo recreativo Open Water Diver de NAUI está diseñado para que cualquier persona (sin experiencia previa ni habilidades especiales) pueda convertirse en un buzo seguro, autónomo y responsable. En el aula con el profesor y a través de la modalidad digital “E-learning” aprenderás como se relaciona el ambiente con el buzo durante las inmersiones, los posibles problemas y sus soluciones. En la pileta se explicarán y practicarás todas las habilidades necesarias para disfrutar cada inmersión a través de una configuración de vanguardia (N-Rec) con equipos de buceo de última generación. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
+      "Tu pasaporte al mundo sumergido. Con este curso de certificación internacional estarás habilitado para bucear en cualquier parte del mundo, hasta una profundidad de 18 metros. Nuestro programa de buceo recreativo Open Water Diver de NAUI está diseñado para que cualquier persona (sin experiencia previa ni habilidades especiales) pueda convertirse en un buzo seguro, autónomo y responsable. En el aula con el profesor y a través de la modalidad digital “E-learning” aprenderás como se relaciona el ambiente con el buzo durante las inmersiones, los posibles problemas y sus soluciones. En la pileta se explicarán y practicarás todas las habilidades necesarias para disfrutar cada inmersión a través de una configuración de vanguardia (N-Rec) con equipos de buceo de última generación. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Equipo de buceo",
@@ -43,13 +43,13 @@ const coursesData = {
       "Diploma (*)"
     ],
     image: "/imagenes/carousel3.jpg",
-  
+
   },
   "advanced-diver": {
     nombre: "Advanced Scuba Diver",
     frase: "el camino a seguir",
     descripcion:
-      "Este curso de buceo Advanced Scuba Diver de NAUI está orientado a todos los buzos del nivel inicial de cualquier certificadora que quieran expandir sus límites y progresar en sus conocimientos al adquirir nuevas habilidades (orientación, utilización del compás, nociones de fotografía y de vida marina) para poder planificar inmersiones en diversos escenarios (buceo nocturno, buceo en naufragios, buceo profundo). En el aula, con el profesor y a través de la modalidad digital “E-learning”, aprenderás a analizar las distintas situaciones en las que podrás sumergirte y advertir los posibles problemas para planificar sus soluciones. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
+      "Ahora que sabes bucear, vení a conocer todos los escenarios donde podes sumergirte. Este curso de buceo Advanced Scuba Diver de NAUI está orientado a todos los buzos del nivel inicial de cualquier certificadora que quieran expandir sus límites y progresar en sus conocimientos al adquirir nuevas habilidades (orientación, utilización del compás, nociones de fotografía y de vida marina) para poder planificar inmersiones en diversos escenarios (buceo nocturno, buceo en naufragios, buceo profundo). En el aula, con el profesor y a través de la modalidad digital “E-learning”, aprenderás a analizar las distintas situaciones en las que podrás sumergirte y advertir los posibles problemas para planificar sus soluciones. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Fotografía submarina",
@@ -93,7 +93,7 @@ const coursesData = {
       "Bitácora digital de buceo (*)",
       "Diploma (*)"
     ],
-     image: "/imagenes/carousel1.jpg",
+    image: "/imagenes/carousel1.jpg",
   },
   "master-diver": {
     nombre: "Master Scuba Diver",
@@ -145,16 +145,16 @@ const coursesData = {
       "Bitácora digital de buceo (*)",
       "Diploma (*)"
     ],
-     image: "/imagenes/carousel2.jpg",
-     
-    
+    image: "/imagenes/carousel2.jpg",
+
+
 
   },
   "nitrox": {
     nombre: "Nitrox Diver",
     frase: "respirar lo que corresponde",
     descripcion:
-      "​El curso de buceo Nitrox Scuba Diver de NAUI está diseñado para que el buzo pueda decidir y escoger la mezcla ideal que quiere respirar en sus inmersiones para hacerlas más seguras al lograr una menor absorción de nitrógeno, menor fatiga celular o extender su tiempo de fondo e intervalos de superficie más cortos En el aula, con el profesor y a través de la modalidad digital “E-learning”, comprenderás por qué hay una mezcla “ideal” para cada situación y aprenderás a calcularla y escoger el nitrox adecuado para cada profundidad. En las prácticas, comprenderás cómo analizar el Nitrox de los tanques de buceo, rotularlos y configurar la computadora para esa mezcla. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
+      "Este curso te habilitará a planificar y bucear con mezclas respirables con un porcentaje mayor de oxígeno que con aire (hasta un 40 %). ​El curso de buceo Nitrox Scuba Diver de NAUI está diseñado para que el buzo pueda decidir y escoger la mezcla ideal que quiere respirar en sus inmersiones para hacerlas más seguras al lograr una menor absorción de nitrógeno, menor fatiga celular o extender su tiempo de fondo e intervalos de superficie más cortos En el aula, con el profesor y a través de la modalidad digital “E-learning”, comprenderás por qué hay una mezcla “ideal” para cada situación y aprenderás a calcularla y escoger el nitrox adecuado para cada profundidad. En las prácticas, comprenderás cómo analizar el Nitrox de los tanques de buceo, rotularlos y configurar la computadora para esa mezcla. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Fisiología del buceo",
@@ -176,7 +176,6 @@ const coursesData = {
       "Mayor tiempo de fondo",
       "Menor intervalo en superficie",
       "3 sesiones teóricas de 90 minutos",
-      "1 práctica de 120 minutos"
     ],
     requisitos: [
       "Certificado open water (de cualquier agencia)",
@@ -197,11 +196,11 @@ const coursesData = {
     ],
     image: "/imagenes/nitrox.jpg",
   },
-    "dive-master": {
+  "dive-master": {
     nombre: "Dive Master",
     frase: "liderar bajo el agua",
     descripcion:
-      "Este curso de buceo DiveMaster de NAUI es el primer paso para ser un profesional del buceo, coordinando, planificando y guiando inmersiones seguras y divertidas. También aprenderás a asistir a instructores durante los cursos y las inmersiones y podrás enseñar en cursos de apnea y los de actualización de cada nivel (refresh). En el aula, con el profesor y a través de la modalidad digital “E-learning”, aprenderás sobre los fundamentos del liderazgo, sus funciones, obligaciones y autoridad que tiene durante su trabajo, a guiar y escoltar inmersiones grupales inculcando la protección al medio ambiente, aconsejar y manejar problemas con los alumnos, prevenir accidentes, principios de la náutica aplicadas para el buceo, diseñar y ejecutar planes de emergencia y de evacuación. Adquirirás habilidades excepcionales, experiencia y conocimientos para asistir a los instructores en los cursos y también para los cursos de apnea y de actualización que estés a cargo. En la pileta, repasaras todas las habilidades aprendidas en los cursos anteriores, estrategias de grupos, posicionamiento de los buzos en los grupos, resolución de problemas en el agua y anticipación del estrés. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso.",
+      "Convertite en el líder de las inmersiones y ayudá a otros a cumplir sus sueños. Este curso de buceo DiveMaster de NAUI es el primer paso para ser un profesional del buceo, coordinando, planificando y guiando inmersiones seguras y divertidas. También aprenderás a asistir a instructores durante los cursos y las inmersiones y podrás enseñar en cursos de apnea y los de actualización de cada nivel (refresh). En el aula, con el profesor y a través de la modalidad digital “E-learning”, aprenderás sobre los fundamentos del liderazgo, sus funciones, obligaciones y autoridad que tiene durante su trabajo, a guiar y escoltar inmersiones grupales inculcando la protección al medio ambiente, aconsejar y manejar problemas con los alumnos, prevenir accidentes, principios de la náutica aplicadas para el buceo, diseñar y ejecutar planes de emergencia y de evacuación. Adquirirás habilidades excepcionales, experiencia y conocimientos para asistir a los instructores en los cursos y también para los cursos de apnea y de actualización que estés a cargo. En la pileta, repasaras todas las habilidades aprendidas en los cursos anteriores, estrategias de grupos, posicionamiento de los buzos en los grupos, resolución de problemas en el agua y anticipación del estrés. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso.",
     temas: {
       aula: [
         "Filosofía del buceo NAUI",
@@ -249,11 +248,11 @@ const coursesData = {
     ],
     image: "/imagenes/carousel11.jpeg",
   },
-    "rescue-diver": {
+  "rescue-diver": {
     nombre: "Rescue Diver",
     frase: "saber ayudar",
     descripcion:
-      "Con este curso de certificación internacional aprenderás a advertir, prevenir y resolver problemas que te puedan ocurrir a vos o a tu compañero. En este curso Rescue Scuba Diver de NAUI entenderás que anticiparse a posibles dificultades y manejar el estrés que se puede generar durante un buceo es clave para alcanzar la meta de “accidente cero”. En el aula con el profesor y a través de la modalidad digital “E-learning” aprenderás a prevenir situaciones que pueden desencadenar problemas, manejo del estrés, meta “accidente cero”, preparación previa a la inmersión, situaciones durante y después del buceo, planes de emergencia, tratamiento de accidentes de buceo, primeros auxilios básicos. En la pileta, se explicarán y practicarás todas las habilidades necesarias para brindar asistencia, transporte y rescate en superficie y bajo el agua, con o sin equipo de buceo y el manejo de accidentes de buceo. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
+      "Estar preparado para resolver problemas. Con este curso de certificación internacional aprenderás a advertir, prevenir y resolver problemas que te puedan ocurrir a vos o a tu compañero. En este curso Rescue Scuba Diver de NAUI entenderás que anticiparse a posibles dificultades y manejar el estrés que se puede generar durante un buceo es clave para alcanzar la meta de “accidente cero”. En el aula con el profesor y a través de la modalidad digital “E-learning” aprenderás a prevenir situaciones que pueden desencadenar problemas, manejo del estrés, meta “accidente cero”, preparación previa a la inmersión, situaciones durante y después del buceo, planes de emergencia, tratamiento de accidentes de buceo, primeros auxilios básicos. En la pileta, se explicarán y practicarás todas las habilidades necesarias para brindar asistencia, transporte y rescate en superficie y bajo el agua, con o sin equipo de buceo y el manejo de accidentes de buceo. Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Prevención de accidentes",
@@ -290,18 +289,17 @@ const coursesData = {
       "Simulacros personalizados",
       "Evaluación integral",
       "Diploma NAUI Rescue Diver",
-      "Asistencia permanente de instructores", 
-      "Acceso a la piscina", 
-      "Tramitacion de brevet", 
-      "Diploma"
+      "Asistencia permanente de instructores",
+      "Acceso a la piscina",
+      "Tramitacion de brevet",
     ],
     image: "/imagenes/rescue.jpg",
   },
-    "intro-to-tech": {
+  "intro-to-tech": {
     nombre: "Intro to Tech",
     frase: "la evolución del buzo",
     descripcion:
-      "Este curso de buceo Intro to Tech de NAUI es el primer paso para convertirte en buzo técnico y poder usar bibotellas y stage hasta 40 mts. de profundidad sin descompresión e incrementar su conocimiento en el buceo. En el Aula, con el profesor, aprenderás sobre los fundamentos del buceo técnico, los principios y filosofía de la configuración técnica N-Tec, equipamiento específico de buceo técnico, análisis profundo de física, fisiología, descompresión y planificación de inmserciones. En la pileta, trabajaras en mejorar sustancialmente tu flotabilidad, trim, destrezas de seguridad y aprenderás a manipular y utilizar la configuración técnica NTEC. También adoptarás nuevas formas de propulsión (patada rana, rana modificada, helicóptero y retroceso) el uso y ensamble de cilindros de stage (tanque de costado para estación de descompresión), uso de spools y boyas como así también practicarás paradas de deco estática.  Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
+      "Este curso es para los que se animan a desafiar los límites del buceo. Para los que buscan evolucionar como buzos y perfeccionar las habilidades de buceo recreativo. Este curso de buceo Intro to Tech de NAUI es el primer paso para convertirte en buzo técnico y poder usar bibotellas y stage hasta 40 mts. de profundidad sin descompresión e incrementar su conocimiento en el buceo. En el Aula, con el profesor, aprenderás sobre los fundamentos del buceo técnico, los principios y filosofía de la configuración técnica N-Tec, equipamiento específico de buceo técnico, análisis profundo de física, fisiología, descompresión y planificación de inmserciones. En la pileta, trabajaras en mejorar sustancialmente tu flotabilidad, trim, destrezas de seguridad y aprenderás a manipular y utilizar la configuración técnica NTEC. También adoptarás nuevas formas de propulsión (patada rana, rana modificada, helicóptero y retroceso) el uso y ensamble de cilindros de stage (tanque de costado para estación de descompresión), uso de spools y boyas como así también practicarás paradas de deco estática.  Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
     temas: {
       aula: [
         "Filosofía del buceo técnico",
@@ -335,20 +333,20 @@ const coursesData = {
     ],
     incluye: [
       "Material de estudio digital",
-      "Equipo técnico de vanguardia", 
-      "Asistencia permanente", 
+      "Equipo técnico de vanguardia",
+      "Asistencia permanente",
       "Acceso a la piscina",
-      "Tramitación de brevet", 
+      "Tramitación de brevet",
       "Diploma"
     ],
     image: "/imagenes/tech.jpg",
 
   },
-    "primeros-auxilios": {
+  "primeros-auxilios": {
     nombre: "Primeros Auxilios",
     frase: "saber qué hacer",
     descripcion:
-      "Este curso enseña las habilidades básicas de primeros auxilios y reanimación cardiopulmonar (RCP), enfocadas tanto en accidentes comunes como en situaciones relacionadas al buceo. Es una capacitación esencial para cualquier buzo, instructores en formación o personas que desean estar preparadas para emergencias. Válido como requisito para cursos avanzados como Rescue Diver o Dive Master.",
+      "Aprende RCP, uso de DEA y manejo de emergencias médicas. Certificación esencial para Rescue Diver y requisito profesional.Este curso enseña las habilidades básicas de primeros auxilios y reanimación cardiopulmonar (RCP), enfocadas tanto en accidentes comunes como en situaciones relacionadas al buceo. Es una capacitación esencial para cualquier buzo, instructores en formación o personas que desean estar preparadas para emergencias. Válido como requisito para cursos avanzados como Rescue Diver o Dive Master.",
     temas: {
       aula: [
         "Cadena de supervivencia",
@@ -384,96 +382,96 @@ const coursesData = {
     image: "/imagenes/auxilios2.jpg",
   },
   "sidemount-diver": {
-  nombre: "Sidemount Diver",
-  frase: "otra forma de bucear",
-  descripcion:
-    "Este curso Sidemount recreativo de NAUI esta diseñado para los amantes del buceo que buscan experiencias en nuevas configuraciones y con mayor cantidad de gas para respirar. Con la posición de los tanques en los costados eliminarás el dolor de espalda durante las inmersiones, tendrás a la vista los tanques para manipularlos y, dependiendo los lugares de buceo, no tendrás que cargar con el tanque en la espalda, sino que podrás colocártelos en el agua. En el aula, con el profesor, aprenderás sobre los fundamentos de la configuración de montaje lateral, equipamiento específico y su utilización. En la pileta, adquirirás las habilidades necesarias para manipular tanques de buceo montados lateralmente, habilidades propias de esta modalidad y mejorar sustancialmente tu flotabilidad, trim, destrezas de seguridad.  Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
-  temas: {
-    aula: [
-      "Ventajas del sistema Sidemount",
-      "Configuración del equipo",
-      "Gestión de gas con múltiples tanques",
-      "Procedimientos de emergencia",
-      "Hidrodinámica y control del trim"
+    nombre: "Sidemount Diver",
+    frase: "otra forma de bucear",
+    descripcion:
+      "Desde hace algún tiempo el montaje lateral de los tanques en las inmersiones dejó de ser solo para los que se adentran en las cuevas y pasó a tener un gran espacio en la comunidad del buceo en general. Este curso Sidemount recreativo de NAUI esta diseñado para los amantes del buceo que buscan experiencias en nuevas configuraciones y con mayor cantidad de gas para respirar. Con la posición de los tanques en los costados eliminarás el dolor de espalda durante las inmersiones, tendrás a la vista los tanques para manipularlos y, dependiendo los lugares de buceo, no tendrás que cargar con el tanque en la espalda, sino que podrás colocártelos en el agua. En el aula, con el profesor, aprenderás sobre los fundamentos de la configuración de montaje lateral, equipamiento específico y su utilización. En la pileta, adquirirás las habilidades necesarias para manipular tanques de buceo montados lateralmente, habilidades propias de esta modalidad y mejorar sustancialmente tu flotabilidad, trim, destrezas de seguridad.  Como los cursos son personalizados su duración depende de la velocidad de tu aprendizaje y de la intensidad de tiempo del que dispongas, lo importante es lograr los objetivos planteados al comienzo del curso. ",
+    temas: {
+      aula: [
+        "Ventajas del sistema Sidemount",
+        "Configuración del equipo",
+        "Gestión de gas con múltiples tanques",
+        "Procedimientos de emergencia",
+        "Hidrodinámica y control del trim"
+      ],
+      pileta: [
+        "Montaje y ajuste del arnés",
+        "Control de flotabilidad y trim",
+        "Cambio de regulador y gestión de gas",
+        "Simulación de fallos y emergencias",
+        "Ingreso y egreso del agua con configuración Sidemount"
+      ]
+    },
+    destacado: [
+      "Configuración personalizada del equipo",
+      "Mayor movilidad y confort",
+      "2/3 sesiones teóricas de 90 minutos",
+      "2 prácticas en piscina de 120 minutos"
     ],
-    pileta: [
-      "Montaje y ajuste del arnés",
-      "Control de flotabilidad y trim",
-      "Cambio de regulador y gestión de gas",
-      "Simulación de fallos y emergencias",
-      "Ingreso y egreso del agua con configuración Sidemount"
-    ]
+    requisitos: [
+      "Certificación Advanced Diver",
+      "[N° mínimo] de inmersiones previas",
+      "Saber nadar",
+      "Buena condición física",
+      "Certificado médico",
+      "Edad mínima 15 años"
+    ],
+    incluye: [
+      "Material de estudio digital",
+      "Acceso a E-learning",
+      "Arnés, alas y equipos específicos",
+      "Asistencia permanente de instructores y divemasters  certificados",
+      "Acceso a la piscina",
+      "Tramitación de brevet internacional (*)",
+      "Bitácora digital de buceo (*)",
+      "Diploma (*)"
+    ],
+    image: "/imagenes/sidemount.jpg"
   },
-  destacado: [
-    "Configuración personalizada del equipo",
-    "Mayor movilidad y confort",
-    "2/3 sesiones teóricas de 90 minutos",
-    "2 prácticas en piscina de 120 minutos"
-  ],
-  requisitos: [
-    "Certificación Advanced Diver",
-    "[N° mínimo] de inmersiones previas",
-    "Saber nadar",
-    "Buena condición física",
-    "Certificado médico",
-    "Edad mínima 15 años"
-  ],
-  incluye: [
-    "Material de estudio digital",
-    "Acceso a E-learning",
-    "Arnés, alas y equipos específicos",
-    "Asistencia permanente de instructores y divemasters  certificados",
-    "Acceso a la piscina",
-    "Tramitación de brevet internacional (*)",
-    "Bitácora digital de buceo (*)",
-    "Diploma (*)"
-  ],
-  image: "/imagenes/sidemount.jpg"
-},
 
-"freediving": {
-  nombre: "Freediving",
-  frase: "la libertad de moverte",
-  descripcion:
-    "Descubrí el mundo submarino a pulmón. Este curso está diseñado para quienes desean aprender técnicas de apnea segura, mejorar el control de la respiración y explorar sus límites de manera consciente. Ideal para quienes buscan mejorar su rendimiento en el agua, relajarse y fortalecer el vínculo con el medio marino. El curso combina teoría, prácticas en piscina y técnicas de respiración y relajación. No requiere experiencia previa.",
-  temas: {
-    aula: [
-      "Fisiología de la apnea",
-      "Técnicas de respiración y relajación",
-      "Tipos de apnea (estática, dinámica, profunda)",
-      "Igualación de presión",
-      "Seguridad y rescate en apnea"
+  "freediving": {
+    nombre: "Freediving",
+    frase: "la libertad de moverte",
+    descripcion:
+      "Explorá el mundo submarino a pulmón. Técnicas de respiración, relajación y control mental en un entorno seguro y controlado. Este curso está diseñado para quienes desean aprender técnicas de apnea segura, mejorar el control de la respiración y explorar sus límites de manera consciente. Ideal para quienes buscan mejorar su rendimiento en el agua, relajarse y fortalecer el vínculo con el medio marino. El curso combina teoría, prácticas en piscina y técnicas de respiración y relajación. No requiere experiencia previa.",
+    temas: {
+      aula: [
+        "Fisiología de la apnea",
+        "Técnicas de respiración y relajación",
+        "Tipos de apnea (estática, dinámica, profunda)",
+        "Igualación de presión",
+        "Seguridad y rescate en apnea"
+      ],
+      pileta: [
+        "Apnea estática y dinámica",
+        "Respiración diafragmática",
+        "Entrenamiento de tolerancia al CO₂",
+        "Compensación",
+        "Simulación de rescates"
+      ]
+    },
+    destacado: [
+      "Curso sin equipos pesados",
+      "Mejora la capacidad pulmonar y el autocontrol",
+      "3 sesiones teóricas de 90 minutos",
+      "2/3 sesiones prácticas de 120 minutos"
     ],
-    pileta: [
-      "Apnea estática y dinámica",
-      "Respiración diafragmática",
-      "Entrenamiento de tolerancia al CO₂",
-      "Compensación",
-      "Simulación de rescates"
-    ]
-  },
-  destacado: [
-    "Curso sin equipos pesados",
-    "Mejora la capacidad pulmonar y el autocontrol",
-    "3 sesiones teóricas de 90 minutos",
-    "2/3 sesiones prácticas de 120 minutos"
-  ],
-  requisitos: [
-    "Saber nadar",
-    "Buena salud general",
-    "Certificado médico",
-    "Edad mínima 15 años"
-  ],
-  incluye: [
-    "Material de estudio digital",
-    "Acceso a E-learning",
-    "Entrenamiento respiratorio guiado",
-    "Asistencia permanente de instructores y divemasters certificados",
-    "Acceso a piscina climatizada",
-    "Tramitación de certificación (*)",
-    "Diploma (*)"
-  ],
-  image: "/imagenes/freediving.jpg"
-}
+    requisitos: [
+      "Saber nadar",
+      "Buena salud general",
+      "Certificado médico",
+      "Edad mínima 15 años"
+    ],
+    incluye: [
+      "Material de estudio digital",
+      "Acceso a E-learning",
+      "Entrenamiento respiratorio guiado",
+      "Asistencia permanente de instructores y divemasters certificados",
+      "Acceso a piscina climatizada",
+      "Tramitación de certificación (*)",
+      "Diploma (*)"
+    ],
+    image: "/imagenes/freediving.jpg"
+  }
 };
 export default coursesData;

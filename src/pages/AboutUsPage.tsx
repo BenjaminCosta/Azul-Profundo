@@ -51,7 +51,7 @@ export default function AboutUsPage() {
             <p className="text-gray-600 text-xl leading-relaxed">
                 En nuestro <strong>centro de buceo</strong>, te invitamos a descubrir el <strong>mundo submarino</strong> de manera segura y llena de aventura. Con un enfoque <strong>cercano y profesional</strong>, nuestros <strong>cursos personalizados</strong> te acompañarán en cada paso para que te conviertas en un <strong>buzo seguro</strong> y disfrutes al máximo cada inmersión.
                 <br /><br />
-                Contamos con un <strong>equipo de instructores y divemasters apasionados</strong> y con <strong>amplia experiencia</strong> para guiarte y compartir con vos <strong>experiencias increíbles</strong> bajo el agua. ¡Prepárate para vivir <strong>momentos inolvidables</strong> y convertirte en un verdadero <strong>explorador acuático</strong>!
+                Contamos con un <strong>equipo de instructores y divemasters apasionados,</strong>  con <strong>amplia experiencia</strong> para guiarte y compartir con vos <strong>experiencias increíbles</strong> bajo el agua. ¡Prepárate para vivir <strong>momentos inolvidables</strong> y convertirte en un verdadero <strong>explorador acuático</strong>!
               </p>
               <img 
                 src="/imagenes/nosotros4.jpg" 
@@ -169,7 +169,7 @@ export default function AboutUsPage() {
             <h4 className="font-semibold text-gray-800 mb-3">Credenciales:</h4>
             <ul className="text-sm text-gray-600 space-y-2 columns-2">
               {/* Lista de credenciales */}
-              <li>Instructor NAUI</li>
+              <li>Instructor Recreativo NAUI</li>
               <li>Instructor FAAS-CMAS</li>
               <li>Instructor de Nitrox</li>
               <li>Buzo 2° categoría PNA</li>
@@ -180,6 +180,7 @@ export default function AboutUsPage() {
               <li>Medicina Hiperbárica</li>
               <li>Arqueología Subacuática</li>
               <li>Timonel de yate</li>
+              <li>Buzo Técnicas Descompresivas NAUI</li>
             </ul>
           </div>
         )}
@@ -230,6 +231,7 @@ export default function AboutUsPage() {
   <li>Instructor Proveedor Oxígeno (DAN)</li>
   <li>Instructor 1° auxilios de lesiones por vida marina (DAN)</li>
   <li>Buzo Técnicas Descompresivas</li>
+  <li>Instructor Sidemount NAUI</li>
   <li>Buzo Trimix NAUI</li>
   <li>Buzo Rebreather Prism II</li>
   <li>Medicina Hiperbárica</li>

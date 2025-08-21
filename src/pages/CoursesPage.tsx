@@ -10,7 +10,7 @@ export const allCourses = [
   {
     id: "open-water-diver",
     title: "Open Water Diver",
-    description: "Tu pasaporte al mundo sumergido",
+    description: "Donde todo comienza",
     duration: "4-5 días",
     level: "Principiante",
     price: "$450",
@@ -20,7 +20,7 @@ export const allCourses = [
   {
     id: "advanced-diver",
     title: "Advanced Diver",
-    description: "Ahora que sabes bucear, vení a conocer todos los escenarios donde podes sumergirte.",
+    description: "El camino a seguir",
     duration: "2-3 días",
     level: "Intermedio",
     price: "$380",
@@ -30,7 +30,7 @@ export const allCourses = [
   {
     id: "rescue-diver",
     title: "Rescue Diver",
-    description: "Estar preparado para resolver problemas.",
+    description: "Saber ayudar",
     duration: "4 días",
     level: "Avanzado",
     price: "$420",
@@ -40,7 +40,7 @@ export const allCourses = [
   {
     id: "master-diver",
     title: "Master Diver",
-    description: "Este es el nivel más alto que puedes acceder en el buceo recreativo antes de ingresar al área de liderazgo",
+    description: "La ciencia del buceo",
     duration: "5-7 días",
     level: "Experto",
     price: "$650",
@@ -50,7 +50,7 @@ export const allCourses = [
   {
     id: "nitrox",
     title: "Especialidad Nitrox",
-    description: "Este curso te habilitará a planificar y bucear con mezclas respirables con un porcentaje mayor de oxígeno que con aire (hasta un 40 %).",
+    description: "Respirar lo que corresponde",
     duration: "2 días",
     level: "Intermedio",
     price: "$220",
@@ -60,7 +60,7 @@ export const allCourses = [
   {
     id: "dive-master",
     title: "Dive Master",
-    description: "Convertite en el líder de las inmersiones y ayudá a otros a cumplir sus sueños.",
+    description: "Liderar bajo el agua",
     duration: "4-6 semanas",
     level: "Profesional",
     price: "$950",
@@ -70,7 +70,7 @@ export const allCourses = [
   {
     id: "intro-to-tech",
     title: "Intro to Tech",
-    description: "Este curso es para los que se animan a desafiar los límites del buceo. Para los que buscan evolucionar como buzos y perfeccionar las habilidades de buceo recreativo.",
+    description: "La evolución del buzo",
     duration: "3-4 días",
     level: "Avanzado",
     price: "$580",
@@ -80,7 +80,7 @@ export const allCourses = [
   {
     id: "primeros-auxilios",
     title: "Primeros Auxilios",
-    description: "Aprende RCP, uso de DEA y manejo de emergencias médicas. Certificación esencial para Rescue Diver y requisito profesional.",
+    description: "Saber que hacer",
     duration: "2 días",
     level: "Todos los niveles",
     price: "$180",
@@ -90,25 +90,22 @@ export const allCourses = [
   {
     id: "sidemount-diver",
     title: "Sidemount Diver",
-    description: "Desde hace algún tiempo el montaje lateral de los tanques en las inmersiones dejó de ser solo para los que se adentran en las cuevas y pasó a tener un gran espacio en la comunidad del buceo en general.",
+    description: "Otra forma de bucear",
     duration: "2-3 días",
     level: "Avanzado",
     price: "$390",
-    image: "/imagenes/sidemount.jpg",
-  
+    image: "/imagenes/sidemount.jpg"
   },
   {
     id: "freediving",
     title: "Freediving",
-    description: "Explorá el mundo submarino a pulmón. Técnicas de respiración, relajación y control mental en un entorno seguro y controlado.",
+    description: "La libertad de moverte",
     duration: "2-3 días",
     level: "Todos los niveles",
     price: "$280",
-    image: "/imagenes/freediving.jpg",
-
+    image: "/imagenes/freediving.jpg"
   }
 ];
-
 
 
 export default function CoursesPage() {
@@ -160,8 +157,11 @@ export default function CoursesPage() {
                 </CardHeader>
                 
                 <CardContent className="pb-4">
-                  <p className="text-gray-600 text-sm line-clamp-3">{course.description}</p>
-                </CardContent>
+  <p className="text-base text-gray-800 font-medium leading-relaxed">
+    "{course.description}"
+  </p>
+</CardContent>
+
                 
                 <CardFooter>
                   <Link to={`/cursos/${course.id}`} className="w-full">
