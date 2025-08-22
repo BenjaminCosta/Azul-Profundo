@@ -334,10 +334,11 @@ const coursesData = {
     incluye: [
       "Material de estudio digital",
       "Equipo técnico de vanguardia",
-      "Asistencia permanente",
+       "Asistencia permanente de instructores y divemasters  certificados",
       "Acceso a la piscina",
-      "Tramitación de brevet",
-      "Diploma"
+      "Tramitación de brevet internacional (*)",
+      "Bitácora digital de buceo (*)",
+      "Diploma (*)"
     ],
     image: "/imagenes/tech.jpg",
 
@@ -410,7 +411,7 @@ const coursesData = {
     ],
     requisitos: [
       "Certificación Advanced Diver",
-      "[N° mínimo] de inmersiones previas",
+      "25 inmersiones previas",
       "Saber nadar",
       "Buena condición física",
       "Certificado médico",

@@ -88,7 +88,7 @@ export default function FaqPage() {
                       <AccordionTrigger className="text-lg md:text-2xl font-semibold text-gray-800 hover:text-ocean py-4">
                         <span className="text-left">{faq.question}</span>
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-600 pb-4 text-lg leading-relaxed">
+                      <AccordionContent className="text-gray-600 text-justify pb-4 text-lg leading-relaxed">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>

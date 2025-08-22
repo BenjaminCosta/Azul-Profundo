@@ -36,14 +36,14 @@ const testimonials = [
   {
     id: 5,
     name: "Cristian Lago",
-    image: "imagenes/test5.png",
+    image: "imagenes/test5.jpeg",
     role: "Buzo Técnico",
     quote: "Haber logrado \"INTRO TO TECH\" con AP me deja asegurar que los instructores logran de este deporte, el perfecto balance entre aventura, desafío y técnica. El profesionalismo demostrado en todos los cursos y viajes, hace que sea la escuela que elijo para la certificación de mis hijos!"
   },
   {
     id: 6,
     name: "Sofia Mañan",
-    image: "imagenes/test6.png",
+    image: "imagenes/test6.jpeg",
     role: "Buzo Advanced",
     quote: "Me contacté con Eduardo y Juan hace más de un año con la intención de aprender a bucear. Lo que ellos me dieron y me siguen dando fue inesperado en ese momento. Me cambiaron la manera de viajar, me despertaron una curiosidad por el mar, el placer de estar inmersa y un grupo increíble con el que compartimos el mismo placer. Bucear no es una actividad hoy, sino parte de mi vida."
   }

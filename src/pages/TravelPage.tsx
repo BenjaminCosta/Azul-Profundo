@@ -289,7 +289,7 @@ export default function TravelPage() {
             <div className="md:col-span-2">
               {/* About Section */}
               <Section title="Sobre esta experiencia" icon={<Anchor />}>
-                <p className="text-lg text-gray-800 leading-relaxed mb-6 font-medium">
+                <p className="text-lg text-gray-800 leading-relaxed mb-6 font-medium text-justify">
                   {travel.description}
                 </p>
                 
