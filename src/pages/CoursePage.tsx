@@ -157,7 +157,7 @@ export default function CoursePage() {
                     <div>
                       <h3 className="font-semibold text-xl text-blue-700 mb-6 flex items-center">
                         <Activity className="mr-3 h-6 w-6" />
-                        Prácticas en agua
+                        Prácticas
                       </h3>
                       <ul className="space-y-4">
                         {course.temas.pileta.map((tema, i) => (
