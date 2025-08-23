@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; 
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import logo from "/imagenes/logo.png";
+import logo3 from "/imagenes/logo3.png";
 
 const navLinks = [
   { name: "Nosotros", href: "/nosotros" },
@@ -18,17 +19,19 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  const isHome = location.pathname === "/";
+
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [scrolled]);
+  }, []);
+
+  // Lógica para elegir qué logo mostrar
+  const currentLogo = isHome && !scrolled ? logo3 : logo;
 
   return (
     <>
@@ -42,15 +45,18 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img 
-              src={logo} 
+              src={currentLogo} 
               alt="Logo" 
               className={cn(
                 "h-28 w-auto transition-all duration-300 group-hover:opacity-90",
-                scrolled ? "h-24 md:h-28" : "h-28 md:h-36"
+                scrolled 
+                  ? "h-24 md:h-28 2xl:h-32" 
+                  : "h-28 md:h-36 2xl:h-44"
               )} 
             />
           </Link>
 
+          {/* Navegación desktop */}
           <nav className="hidden md:flex items-center mt-7 space-x-2">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.href;
@@ -114,7 +120,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Navigation Menu - afuera del header */}
+      {/* Mobile Navigation Menu */}
       <div
         className={cn(
           "fixed inset-0 z-[999] bg-white transition-transform duration-300",
