@@ -7,7 +7,7 @@ export default function Hero() {
       <img
         src="/imagenes/tiburon.jpeg"
         alt="Escena submarina"
-        className="absolute inset-0 w-full h-full object-cover md:fixed md:top-0 md:left-0"
+        className="absolute inset-0 w-full h-full object-cover md:top-0 md:left-0"
         loading="eager"
         fetchPriority="high"
         decoding="async"
