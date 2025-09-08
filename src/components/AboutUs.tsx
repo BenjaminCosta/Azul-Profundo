@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 export default function AprendeABucear() {
   return (
@@ -37,13 +35,9 @@ export default function AprendeABucear() {
                 "Descubrí esta actividad gracias a mi padre, quien me inculcó la dedicación y el amor por el buceo prácticamente desde mi niñez.",
             },
           ].map((instructor, idx) => (
-            <motion.div
+            <div
               key={idx}
               className="bg-white rounded-2xl shadow-lg overflow-hidden border-t-4 border-ocean-dark"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
             >
               <div className="p-6">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
@@ -51,16 +45,17 @@ export default function AprendeABucear() {
                     src={instructor.img}
                     alt={instructor.name}
                     className="w-32 h-32 rounded-full object-cover ring-4 ring-ocean-dark"
+                    loading="lazy"
                   />
                   <div className="text-left">
                     <h4 className="text-xl font-bold text-gray-800">{instructor.name}</h4>
                     <p className="text-ocean-dark font-semibold mb-2">{instructor.role}</p>
                     <p className="text-gray-800 italic">"{instructor.quote}"</p>
-                    
+
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>

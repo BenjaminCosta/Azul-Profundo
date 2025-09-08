@@ -1,5 +1,4 @@
 import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -185,9 +184,9 @@ export default function TravelPage() {
       {/* Hero Section */}
       <div className="pt-24 h-screen max-h-[700px] relative bg-ocean-dark overflow-hidden">
         {travel.image && (
-          <img 
-            src={travel.image} 
-            alt={travel.destination} 
+          <img
+            src={travel.image}
+            alt={travel.destination}
             className="w-full h-full object-cover absolute inset-0 opacity-60"
           />
         )}
@@ -197,40 +196,44 @@ export default function TravelPage() {
   <div className="grid grid-cols-2 gap-5 p-5 bg-white/15 backdrop-blur-sm rounded-2xl border-2 border-white/25">
     {/* Imagen 1 */}
     <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl transform transition-transform hover:scale-105 hover:z-20">
-      <img 
-        src={`/imagenes/${travel.gallery[0]}`} 
-        alt={`${travel.destination} 1`} 
+      <img
+        src={`/imagenes/${travel.gallery[0]}`}
+        alt={`${travel.destination} 1`}
         className="w-full h-full object-cover"
+        loading="lazy"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
     </div>
     
     {/* Imagen 2 */}
     <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl transform transition-transform hover:scale-105 hover:z-20">
-      <img 
-        src={`/imagenes/${travel.gallery[1]}`} 
-        alt={`${travel.destination} 2`} 
+      <img
+        src={`/imagenes/${travel.gallery[1]}`}
+        alt={`${travel.destination} 2`}
         className="w-full h-full object-cover"
+        loading="lazy"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
     </div>
     
     {/* Imagen 3 */}
     <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl transform transition-transform hover:scale-105 hover:z-20">
-      <img 
-        src={`/imagenes/${travel.gallery[2]}`} 
-        alt={`${travel.destination} 3`} 
+      <img
+        src={`/imagenes/${travel.gallery[2]}`}
+        alt={`${travel.destination} 3`}
         className="w-full h-full object-cover"
+        loading="lazy"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
     </div>
 
     {/* Imagen 4 */}
     <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl transform transition-transform hover:scale-105 hover:z-20">
-      <img 
-        src={`/imagenes/${travel.gallery[3]}`} 
-        alt={`${travel.destination} 4`} 
+      <img
+        src={`/imagenes/${travel.gallery[3]}`}
+        alt={`${travel.destination} 4`}
         className="w-full h-full object-cover"
+        loading="lazy"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
     </div>
@@ -251,10 +254,11 @@ export default function TravelPage() {
               <span className="text-2xl flex items-center">
                 {travel.location}
                 {travel.flag && (
-                  <img 
-                    src={travel.flag} 
-                    alt={`Bandera de ${travel.location}`} 
+                  <img
+                    src={travel.flag}
+                    alt={`Bandera de ${travel.location}`}
                     className="ml-2 h-5 w-auto object-contain"
+                    loading="lazy"
                   />
                 )}
               </span>

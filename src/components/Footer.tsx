@@ -1,6 +1,5 @@
 import { Facebook, Instagram, MessageCircle, Globe, Phone, MapPin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 const quickLinks = [
   { name: "Inicio", href: "/" },
   { name: "Cursos", href: "/cursos" },
@@ -32,17 +31,15 @@ export default function Footer() {
             </p>
            <div className="flex space-x-3">
               {socialLinks.map((social, index) => (
-                <motion.a
+                <a
                   key={index}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`bg-gray-700 text-white p-3 rounded-full transition-all duration-300 ${social.color} hover:text-white hover:shadow-lg`}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                  className={`bg-gray-700 text-white p-3 rounded-full transition-transform duration-300 ${social.color} hover:text-white hover:shadow-lg transform-gpu hover:scale-110 active:scale-90`}
                 >
                   {social.icon}
-                </motion.a>
+                </a>
               ))}
             </div>
           </div>

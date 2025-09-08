@@ -46,10 +46,11 @@ export default function Courses() {
           {courses.map((course, index) => (
             <Card key={index} className="overflow-hidden transition-all hover:-translate-y-2 hover:shadow-lg">
               <div className="h-48 overflow-hidden">
-                <img 
-                  src={course.image} 
-                  alt={course.title} 
+                <img
+                  src={course.image}
+                  alt={course.title}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <CardHeader>

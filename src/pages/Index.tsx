@@ -1,25 +1,25 @@
 
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import AboutUs from "@/components/AboutUs";
-import Courses from "@/components/Courses";
-import Travels from "@/components/Travels";
-import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import FaqSection from "@/components/FaqSection";
-import CursosCarousel from "@/components/CursosCarousel";
-import ImagesCarousel from "@/components/ImagesCarousel"
+
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const AboutUs = lazy(() => import("@/components/AboutUs"));
+const ImagesCarousel = lazy(() => import("@/components/ImagesCarousel"));
+const CursosCarousel = lazy(() => import("@/components/CursosCarousel"));
+const Footer = lazy(() => import("@/components/Footer"));
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <Testimonials />
-      <AboutUs />
-      <ImagesCarousel />
-      <CursosCarousel />
-      <Footer />
+      <Suspense fallback={null}>
+        <Testimonials />
+        <AboutUs />
+        <ImagesCarousel />
+        <CursosCarousel />
+        <Footer />
+      </Suspense>
     </div>
   );
 };
