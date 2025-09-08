@@ -13,7 +13,7 @@ const coursesData = [
     benefits: [
       "Clases teóricas y prácticas",
       "Equipo incluido",
-      "Certificación PADI/SSI",
+      "Certificación NAUI",
       "Grupos reducidos"
     ],
     image: "/imagenes/carousel3.jpg"
