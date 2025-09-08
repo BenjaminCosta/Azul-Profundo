@@ -46,6 +46,8 @@ export default function AprendeABucear() {
                     alt={instructor.name}
                     className="w-32 h-32 rounded-full object-cover ring-4 ring-ocean-dark"
                     loading="lazy"
+                    width={128}
+                    height={128}
                   />
                   <div className="text-left">
                     <h4 className="text-xl font-bold text-gray-800">{instructor.name}</h4>

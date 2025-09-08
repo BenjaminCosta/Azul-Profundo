@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
+import { LazyMotion, domAnimation, m, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -50,7 +50,7 @@ const testimonials = [
   {
     id: 7,
     name: "Emi Angeli",
-    image: "images/test7.jpeg",
+    image: "imagenes/test7.jpeg",
     role: "Buzo Open Water",
     quote: "Hice mi curso de buceo y el Advanced en Azul Profundo con Juan y Eduardo, y fue una experiencia excelente. Son sumamente profesionales, están en cada detalle y priorizan siempre la seguridad, logrando que uno aprenda y disfrute con total confianza. Manejan muy bien los grupos, generan un clima divertido y, al mismo tiempo, acompañan a cada alumno de forma individual. Viajé con ellos a Bonaire y Brasil, y cada propuesta fue desafiante, cuidada y adaptada a lo que cada buceador busca. Además de invitarte a diferentes propuestas todos los años. Desde el primer día me sentí parte de la escuela, y eso es gracias a ellos. Recomiendo este espacio sin dudarlo."
   }
@@ -60,6 +60,13 @@ export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const shouldReduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (shouldReduceMotion) {
+      setIsAutoPlaying(false);
+    }
+  }, [shouldReduceMotion]);
 
   const nextTestimonial = () => {
     setDirection(1);
@@ -108,7 +115,7 @@ export default function Testimonials() {
         <div className="absolute inset-0 bg-gradient-to-b from-ocean-dark/80 via-ocean/70 to-ocean-light/60 backdrop-blur-sm"></div>
 
         {/* Burbujas decorativas */}
-        <style>{`@keyframes bubble {0% {transform: translateY(0); opacity: .5;}100% {transform: translateY(-100px); opacity: 0;}} .animate-bubble {animation: bubble linear infinite;}`}</style>
+        <style>{`@keyframes bubble {0% {transform: translateY(0); opacity: .5;}100% {transform: translateY(-100px); opacity: 0;}} .animate-bubble {animation: bubble linear infinite;} @media (prefers-reduced-motion: reduce) { .animate-bubble {animation: none;} }`}</style>
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
             <div
@@ -150,26 +157,27 @@ export default function Testimonials() {
                     <m.div
                       key={`${testimonial.id}-${currentIndex}`}
                       custom={direction}
-                      initial={{ opacity: 0, x: 80 * direction, scale: 0.95 }}
+                      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: 80 * direction, scale: 0.95 }}
                       animate={{
                         opacity: 1,
                         x: 0,
                         scale: 1,
-                        transition: {
-                          duration: 0.6,
-                          ease: [0.16, 1, 0.3, 1]
-                        }
+                        transition: shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
                       }}
-                      exit={{
-                        opacity: 0,
-                        x: -80 * direction,
-                        scale: 0.95,
-                        transition: {
-                          duration: 0.4,
-                          ease: [0.7, 0, 0.84, 0]
-                        }
-                      }}
-                      transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                      exit={
+                        shouldReduceMotion
+                          ? { opacity: 0 }
+                          : {
+                              opacity: 0,
+                              x: -80 * direction,
+                              scale: 0.95,
+                              transition: {
+                                duration: 0.4,
+                                ease: [0.7, 0, 0.84, 0]
+                              }
+                            }
+                      }
+                      transition={shouldReduceMotion ? { duration: 0 } : { type: "spring", stiffness: 300, damping: 25 }}
                       className="w-full max-w-sm flex-shrink-0"
                     >
 
@@ -177,19 +185,16 @@ export default function Testimonials() {
                         <CardContent className="pt-24 pb-8 px-6 text-center h-full flex flex-col">
 
                           <div className="absolute pt-12 -top-10 left-1/2 transform -translate-x-1/2">
-                            <m.div
-                              initial={{ scale: 0.8 }}
-                              animate={{ scale: 1 }}
-                              transition={{ delay: 0.2, type: "spring" }}
-                              className="w-20 h-20 rounded-full overflow-hidden border-3 border-white shadow-lg bg-white"
-                            >
+                            <div className="w-20 h-20 rounded-full overflow-hidden border-3 border-white shadow-lg bg-white">
                               <img
                                 src={testimonial.image}
                                 alt={testimonial.name}
                                 className="w-full h-full object-cover"
                                 loading="lazy"
+                                width={80}
+                                height={80}
                               />
-                            </m.div>
+                            </div>
                           </div>
                           <div className="text-4xl text-ocean-light mb-2 opacity-30">"</div>
                           <p className="text-gray-600 mb-4 italic text-base leading-relaxed flex-grow">

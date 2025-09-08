@@ -4,9 +4,15 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <section className="relative h-[105vh] overflow-hidden">
-      <div
-        className="absolute inset-0 md:bg-fixed bg-hero-pattern bg-cover bg-center"
-        style={{ backgroundImage: "url('/imagenes/tiburon.jpeg')" }}
+      <img
+        src="/imagenes/tiburon.jpeg"
+        alt="Escena submarina"
+        className="absolute inset-0 w-full h-full object-cover md:fixed md:top-0 md:left-0"
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+        width={1920}
+        height={1080}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/30"></div>
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-start">
@@ -39,15 +45,15 @@ export default function Hero() {
         <div className="relative h-64">
           {/* Imagen 1 */}
           <div className="absolute right-0 -top-8 xl:right-0 xl:-top-20 w-32 h-40 xl:w-56 xl:h-80 rounded-lg overflow-hidden border-4 border-white shadow-xl transform-gpu transition-transform hover:scale-105">
-            <img src="/imagenes/barco.jpeg" alt="Buceo 1" className="w-full h-full object-cover" loading="lazy" />
+            <img src="/imagenes/barco.jpeg" alt="Buceo 1" className="w-full h-full object-cover" loading="lazy" width={128} height={160} />
           </div>
           {/* Imagen 2 */}
           <div className="absolute right-32 top-4 xl:right-44 xl:top-0 w-44 h-24 xl:w-80 xl:h-44 rounded-lg overflow-hidden border-4 border-white shadow-xl transform-gpu transition-transform hover:scale-105">
-            <img src="/imagenes/foca.jpg" alt="Buceo 2" className="w-full h-full object-cover" loading="lazy" />
+            <img src="/imagenes/foca.jpg" alt="Buceo 2" className="w-full h-full object-cover" loading="lazy" width={176} height={96} />
           </div>
           {/* Imagen 3 */}
           <div className="absolute right-16 top-32 xl:right-24 xl:top-40 w-28 h-32 xl:w-56 xl:h-52 rounded-lg overflow-hidden border-4 border-white shadow-xl -rotate-3 transform-gpu transition-transform hover:scale-105">
-            <img src="/imagenes/carousel9.jpg" alt="Buceo 3" className="w-full h-full object-cover" loading="lazy" />
+            <img src="/imagenes/carousel9.jpg" alt="Buceo 3" className="w-full h-full object-cover" loading="lazy" width={112} height={128} />
           </div>
         </div>
       </div>

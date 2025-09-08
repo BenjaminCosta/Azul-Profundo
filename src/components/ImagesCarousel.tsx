@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
+import { LazyMotion, domAnimation, m, AnimatePresence, useReducedMotion } from "framer-motion";
 
 const divingImages = [
   {
@@ -32,18 +32,26 @@ export default function DivingCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [progress, setProgress] = useState(0);
+  const shouldReduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (shouldReduceMotion) {
+      setIsAutoPlaying(false);
+    }
+  }, [shouldReduceMotion]);
 
   useEffect(() => {
     let interval;
-    if (isAutoPlaying) {
+    if (isAutoPlaying && !shouldReduceMotion) {
       interval = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % divingImages.length);
       }, 7000);
     }
     return () => clearInterval(interval);
-  }, [isAutoPlaying]);
+  }, [isAutoPlaying, shouldReduceMotion]);
 
   useEffect(() => {
+    if (shouldReduceMotion) return;
     let percent = 0;
     const progressInterval = setInterval(() => {
       percent += 1.43;
@@ -51,7 +59,7 @@ export default function DivingCarousel() {
       setProgress(percent);
     }, 100);
     return () => clearInterval(progressInterval);
-  }, [currentIndex]);
+  }, [currentIndex, shouldReduceMotion]);
 
   return (
     <LazyMotion features={domAnimation}>
@@ -59,10 +67,14 @@ export default function DivingCarousel() {
         <AnimatePresence mode="wait">
           <m.div
             key={divingImages[currentIndex].id}
-            initial={{ opacity: 0, y: 40, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -40, scale: 0.95 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
+            initial={shouldReduceMotion ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 40, scale: 0.95 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              transition: shouldReduceMotion ? { duration: 0 } : { duration: 1, ease: "easeInOut" }
+            }}
+            exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -40, scale: 0.95 }}
             className="absolute inset-0 w-full h-full"
           >
             <div
@@ -75,17 +87,15 @@ export default function DivingCarousel() {
               <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
                 <div className="text-center text-ocean-light max-w-2xl px-4 z-20">
                   <m.h3
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1, duration: 0.6 }}
+                    initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0, transition: shouldReduceMotion ? { duration: 0 } : { delay: 1, duration: 0.6 } }}
                     className="text-3xl md:text-5xl font-bold mb-4 text-ocean-light drop-shadow-[0_10px_14px_rgba(0,0,0,0.9)]"
                   >
                     {divingImages[currentIndex].title}
                   </m.h3>
                   <m.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 2, duration: 0.6 }}
+                    initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0, transition: shouldReduceMotion ? { duration: 0 } : { delay: 2, duration: 0.6 } }}
                     className="text-lg md:text-xl max-w-xl mx-auto text-gray-100 drop-shadow-[0_6x_8px_rgba(0,0,0,0.6)]"
                   >
                     {divingImages[currentIndex].description}
