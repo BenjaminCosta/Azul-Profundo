@@ -41,7 +41,7 @@ export default function Navbar() {
           scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm py-1" : "bg-transparent py-2"
         )}
       >
-        <div className="container mx-auto px-6 flex items-start justify-between">
+        <div className="container mx-auto px-6 2xl:px-0 flex items-start justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img 

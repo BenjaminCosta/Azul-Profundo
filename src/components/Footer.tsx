@@ -18,7 +18,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gradient-to-b from-[#1c2d48] to-[#0f1a2e] text-white">
-      <div className="container mx-auto px-16 pt-12 pb-8">
+      <div className="container mx-auto px-16 2xl:px-0 pt-12 pb-8">
         {/* Secciones principales */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Azul Profundo - Primera columna */}

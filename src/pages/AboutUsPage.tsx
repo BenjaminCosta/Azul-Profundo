@@ -139,7 +139,7 @@ export default function AboutUsPage() {
           <img
             src="/imagenes/edu2.avif"
             alt="Eduardo Cosentino"
-            className="w-44 h-44 rounded-full object-cover mx-auto sm:mx-0 border-4 border-ocean-100 shadow-md"
+            className="w-52 h-52 rounded-full object-cover mx-auto sm:mx-0 border-4 border-ocean-100 shadow-md object-top"
           />
           <div className="text-center sm:text-left">
             <h3 className="text-xl font-bold text-gray-800">Eduardo Cosentino</h3>
@@ -171,6 +171,7 @@ export default function AboutUsPage() {
               {/* Lista de credenciales */}
               <li>Instructor Recreativo NAUI</li>
               <li>Instructor FAAS-CMAS</li>
+              <li>Instructor de buceo adaptado FAAS-CMAS</li>
               <li>Instructor de Nitrox</li>
               <li>Buzo 2° categoría PNA</li>
               <li>Buzo Trimix NAUI</li>
@@ -194,7 +195,7 @@ export default function AboutUsPage() {
           <img
             src="/imagenes/juan2.avif"
             alt="Juan Cosentino"
-            className="w-44 h-44 rounded-full object-cover mx-auto sm:mx-0 border-4 border-ocean-100 shadow-md"
+            className="w-52 h-52 rounded-full object-cover mx-auto sm:mx-0 border-4 border-ocean-100 shadow-md object-top"
           />
           <div className="text-center sm:text-left">
             <h3 className="text-xl font-bold text-gray-800">Juan Cosentino</h3>

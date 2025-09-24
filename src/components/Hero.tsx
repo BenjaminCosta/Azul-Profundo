@@ -1,14 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { OptimizedImage } from "@/components/ui/optimized-image";
-import { getImageUrl, preloadCriticalImages } from "@/lib/image-utils";
-import { useEffect } from "react";
 
 export default function Hero() {
-  useEffect(() => {
-    preloadCriticalImages();
-  }, []);
-
   return (
     <section className="relative h-[105vh] overflow-hidden">
       <img
