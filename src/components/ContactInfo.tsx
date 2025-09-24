@@ -44,7 +44,7 @@ export default function ContactInfo() {
               <div>
                 <h3 className="font-semibold text-gray-800">Sedes:</h3>
                 <p className="text-gray-600">
-                  Av. Combatiente de Malvinas 3236, Piso 6° B, CABA<br />
+                  Av. Combatientes de Malvinas 3236, Piso 6° B, CABA<br />
                   E. Scott 2452, Bella Vista, Buenos Aires
                 </p>
               </div>

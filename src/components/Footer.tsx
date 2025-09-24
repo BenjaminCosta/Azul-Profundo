@@ -74,7 +74,7 @@ export default function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin size={18} className="text-ocean mt-1" />
                 <div className="text-gray-400 text-sm leading-snug">
-                  Av. Combatiente de Malvinas 3236
+                  Av. Combatientes de Malvinas 3236
                 </div>
               </div>
                <div className="flex items-start gap-2">
