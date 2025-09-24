@@ -16,7 +16,7 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/30"></div>
       <div className="relative container mx-auto px-4 2xl:px-0 h-full flex flex-col justify-center items-start">
-        <div className="max-w-2xl xl:max-w-3xl 2xl:max-w-5xl text-white">
+        <div className="max-w-2xl text-white">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Explora los mares con <br /> <span className="text-ocean-light">expertos en buceo</span>
           </h1>

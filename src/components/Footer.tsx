@@ -10,7 +10,7 @@ const socialLinks = [
   { icon: <Facebook size={24} />, href: "https://facebook.com", color: "hover:bg-blue-600" },
   { icon: <Instagram size={24} />, href: "https://https://www.instagram.com/buceoazulprofundo/", color: "hover:bg-pink-600" },
   { icon: <MessageCircle size={24} />, href: "https://wa.me/5491136302150", color: "hover:bg-green-500" },
-  { icon: <Globe size={24} />, href: "https://azulprofundo.com", color: "hover:bg-blue-400" },
+  { icon: <Globe size={24} />, href: "https://buceoazulprofundo.ar", color: "hover:bg-blue-400" },
 ];
 
 export default function Footer() {
